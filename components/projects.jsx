@@ -104,22 +104,14 @@ const Projects = () => {
     },
   ];
 
-  const groupedProjects = projects.reduce((acc, project) => {
-    if (!acc[project.date]) {
-      acc[project.date] = [];
-    }
-    acc[project.date].push(project.title);
-    return acc;
-  }, {});
-
   return (
     <section id="projects" className="projects container-fluid py-5">
       <div className="text-center mb-4">
         <h2>Projects</h2>
       </div>
-      <div className="projects-container d-flex">
+      <div className="projects-container d-flex flex-wrap justify-content-center">
         {/* Projects List */}
-        <ul className="projects-list d-flex flex-wrap justify-content-center flex-grow-3">
+        <ul className="projects-list d-flex flex-wrap justify-content-center w-100">
           {projects.map((project, index) => (
             <li key={index} className="project-item mb-4">
               <div className="project-card p-3 shadow-sm rounded">
@@ -152,28 +144,6 @@ const Projects = () => {
             </li>
           ))}
         </ul>
-
-        {/* Timeline */}
-                {/* Timeline */}
-        <div className="timeline ms-4 flex-grow-1">
-          <h3 className="timeline-title">Timeline</h3>
-          <div className="timeline-list">
-            {Object.entries(groupedProjects)
-              .sort(([yearA], [yearB]) => yearB - yearA) // Reverse the order by year
-              .map(([year, titles], index) => (
-                <div key={index} className="timeline-item">
-                  <span className="timeline-date">{year}</span>
-                  <div className="timeline-projects">
-                    {titles.map((title, titleIndex) => (
-                      <span key={titleIndex} className="timeline-project">
-                        {title}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
       </div>
     </section>
   );

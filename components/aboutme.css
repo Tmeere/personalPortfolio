@@ -51,11 +51,13 @@
 }
 
 .badge {
-  background: linear-gradient(135deg, #61dafb, #3a3f4b);
+  background: linear-gradient(135deg, #61dafb00, #3a3f4b)!important;
   color: #ffffff !important; /* Force the font color to white */
   padding: 0.5rem 1rem;
+  border: 2px solid transparent; /* Make the border transparent */
   border-radius: 0.5rem;
-  font-size: 0.9rem;
+  border-image: linear-gradient(135deg, #61dafb, #3a3f4b) 1; /* Apply gradient to the border */
+  font-size: 1rem;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

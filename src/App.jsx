@@ -6,6 +6,7 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import DraggableCharacter from '../components/DraggableCharacter';
 import ContactSection from '../components/contactSection';
+import Divider from '../components/divider'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
     <div className="app-container"> {/* Updated class name */}
       <HeroSection />
       <Navbar />
+      <Divider/>
       <About />
        <Projects />
        <ContactSection/>
