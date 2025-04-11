@@ -1,0 +1,106 @@
+.projects-list {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Add spacing between rows */
+  padding: 0;
+  list-style: none;
+  width: 100%; /* Ensure the list takes full width */
+}
+
+.project-item {
+  width: 100%; /* Make each project take the full width */
+  max-width: 800px; /* Optional: Limit the width for better readability */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #2a2a3f, #3a3f4b); /* Subtle gradient for the cards */
+  border: 1px solid #444; /* Dark border for a clean look */
+  color: #ffffff; /* White text inside the cards */
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem; /* Rounded corners */
+}
+
+.project-image {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  border-radius: 0.5rem; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .project-item {
+    max-width: 100%; /* Ensure full width on smaller screens */
+  }
+}
+
+.projects {
+  background: linear-gradient(135deg, #0a1f33, #1b3755); /* Dark blue gradient */
+  color: #ffffff; /* Ensure text is readable on the dark background */
+  padding: 2rem 0; /* Add padding for spacing */
+}
+
+.projects h2 {
+  font-family: 'Press Start 2P', cursive; /* Pixel font */
+  font-size: 2rem; /* Slightly smaller size */
+  color: #67a2e9; /* Lighter blue color */
+  text-decoration: underline; /* Underline the text */
+  margin-bottom: 1.5rem; /* Add spacing below the header */
+  text-transform: uppercase; /* Make text uppercase */
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* Space between projects and timeline */
+}
+
+.timeline {
+  flex-basis: 25%; /* Adjust width of the timeline */
+  max-width: 300px;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #5fa8ff; /* Match the header color */
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  margin-bottom: 1rem;
+  border-left: 2px solid #5fa8ff; /* Vertical line for the timeline */
+  padding-left: 1rem;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #67a2e9;
+}
+
+.timeline-title {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .timeline {
+    display: none; /* Hide the timeline on smaller screens */
+  }
+}
+
+

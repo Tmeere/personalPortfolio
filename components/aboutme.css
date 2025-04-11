@@ -1,0 +1,183 @@
+.about-me {
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-me-image {
+  width: 50%; /* Adjust the size of the image */
+  height: auto;
+  border-radius: 50%; /* Make the image circular */
+  border: 5px solid #61dafb; /* Add a border around the image */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.about-me-image:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Intensify the shadow on hover */
+}
+
+.about-me-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.cta-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #4fb0e4;
+  transform: translateY(-3px);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: linear-gradient(135deg, #61dafb, #3a3f4b);
+  color: #ffffff !important; /* Force the font color to white */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Start hidden */
+  animation: fadeInBadge 0.5s ease forwards; /* Apply animation */
+}
+
+.badge:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4), inset 0 -3px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.skill-logo {
+  width: 40px; /* Adjust the size of the logo */
+  height: 40px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.badge-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.badge span {
+  font-size: 1rem; /* Adjust text size */
+  font-weight: bold;
+}
+
+@keyframes fadeInBadge {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.badge:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.badge:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.badge:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.badge:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.badge:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.badge:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+.badge:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+.badge:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+.badge:nth-child(10) {
+  animation-delay: 2s;
+}
+
+.badge:nth-child(11) {
+  animation-delay: 2.2s;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.badge.animate {
+  animation: fadeInUp 0.5s ease-in-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.about-me-content.animate {
+  animation: fadeInUp 0.5s ease-in-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+
+/* Import a pixel font (e.g., Press Start 2P from Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Apply the pixel font to all headers in the AboutMe section */
+/* Apply the pixel font to all headers in the AboutMe section */
+.about-me h1,
+.about-me h2,
+.about-me h3 {
+  font-family: 'Press Start 2P', cursive; /* Use the pixel font */
+  text-transform: uppercase; /* Optional: Make text uppercase for a retro look */
+  color: #61dafb; /* Optional: Match the theme color */
+  font-size: 1.2rem; /* Adjust the font size to make it smaller */
+}
+
+

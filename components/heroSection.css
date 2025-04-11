@@ -1,0 +1,138 @@
+/* General Hero Section Styling */
+.hero-section {
+    background: #1e1e2f; /* Dark background for programming theme */
+    color: #ffffff;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Code', monospace; /* Code-like font */
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px; /* Subtle grid background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Text Column Wrapper */
+.text-column-wrapper {
+    background-color: rgba(30, 30, 47, 0.9); /* Slightly transparent dark background */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Editor Header Styling */
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #282c34; /* Dark editor background */
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.editor-buttons .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.5s infinite ease-in-out;
+    margin-right: 8px; /* Add spacing between circles */
+}
+
+.editor-buttons .circle:last-child {
+    margin-right: 0; /* Remove margin from the last circle */
+}
+
+.editor-buttons .red {
+    background-color: #ff5f56;
+}
+
+.editor-buttons .yellow {
+    background-color: #ffbd2e;
+}
+
+.editor-buttons .green {
+    background-color: #27c93f;
+}
+
+/* Glow Text */
+.glow-text {
+    color: #61dafb;
+    text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #61dafb; /* React blue */
+    color: #1e1e2f; /* Dark text for contrast */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3a3f4b; /* Slightly darker blue on hover */
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Image Styling */
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #61dafb; /* React blue border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceDown 1s ease-out;
+}
+
+.image-column img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Keyframes */
+@keyframes bounceDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .text-column h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-column h2 {
+        font-size: 1.25rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}

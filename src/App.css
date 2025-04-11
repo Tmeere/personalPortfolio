@@ -1,0 +1,12 @@
+/* Import a programming font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+/* General font style for the entire application */
+body {
+    font-family: 'Fira Code', monospace; /* Apply a programming font */
+    color: #333333; /* Dark gray text color for readability */
+    background-color: #f9f9f9; /* Light gray background for a clean look */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improve readability */
+}

@@ -1,0 +1,48 @@
+/* Import the pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 5px 15px; /* Reduced padding to make the navbar smaller */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem; /* Reduced font size */
+  font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+  text-shadow: 2px 2px 4px #000000; /* Add shadow */
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px; /* Reduced padding for links */
+  transition: background-color 0.3s ease;
+  font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+  text-shadow: 1px 1px 2px #000000; /* Add subtle shadow */
+}
+
+.navbar-list a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+  font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+  text-shadow: 1px 1px 2px #000000; /* Add subtle shadow */
+  font-size: 0.9rem; /* Reduced font size for links */
+}
+
+.nav-link:hover {
+  color: #f8d210; /* Highlight color on hover */
+}

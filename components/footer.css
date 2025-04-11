@@ -1,0 +1,35 @@
+/* Import the pixel font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.footer {
+    background-color: #2a2a2a; /* Dark grey background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 0.5rem 0; /* Reduce padding to make it smaller */
+    font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+}
+
+.footer-text {
+    font-size: 0.8rem; /* Reduce font size */
+    color: #d1d1e0; /* Softer white for text */
+    font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+    text-shadow: 1px 1px 2px #000000; /* Add subtle shadow */
+}
+
+
+.back-to-top {
+    background: none; /* Remove background */
+    color: #ffffff; /* Match the background color */
+    text-decoration: none;
+    font-size: 1.1rem; /* Make the font size smaller */
+    padding: 0.2rem 0.5rem; /* Reduce padding */
+    border: none; /* Remove border */
+    font-family: 'Press Start 2P', sans-serif; /* Apply pixel font */
+    text-shadow: none; /* Remove shadow */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #ff9800; /* Change to orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
