@@ -76,27 +76,40 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section id="" className="about-me container-fluid py-5"> {/* Added id="about" */}
+    <section id="" className="about-me container-fluid py-5">
+      {" "}
+      {/* Added id="about" */}
       <div className="row">
         {/* Column 1: Image and About Me */}
-        <div className="col-md-6 d-flex flex-column align-items-center align-items-md-start" ref={aboutMeRef}>
+        <div
+          className="col-md-6 d-flex flex-column align-items-center align-items-md-start"
+          ref={aboutMeRef}
+        >
           <img
-            src="./images/Me.jpg"
+            src="/images/Me.jpg"
             alt="About Me"
             className="about-me-image img-fluid rounded-circle mb-4"
           />
           <div>
             <h1 className="mb-4 text-center text-md-start">About Me</h1>
             <p className="about-me-text text-center text-md-start">
-              Hi, I'm Thomas Meere, a passionate Game Developer currently working at Bitmask Games, where I specialize in Unity-based projects and retro gaming solutions. When I'm not crafting gaming experiences, I focus on full-stack development, constantly exploring new technologies and expanding my skill set. I thrive on tackling new challenges and bringing innovative ideas to life. I’m deeply committed to contributing to the tech community and pushing the boundaries of what’s possible in the ever-evolving world of technology.
+              Hi, I'm Thomas Meere, a passionate Game Developer currently
+              working at Bitmask Games, where I specialize in Unity-based
+              projects and retro gaming solutions. When I'm not crafting gaming
+              experiences, I focus on full-stack development, constantly
+              exploring new technologies and expanding my skill set. I thrive on
+              tackling new challenges and bringing innovative ideas to life. I’m
+              deeply committed to contributing to the tech community and pushing
+              the boundaries of what’s possible in the ever-evolving world of
+              technology.
             </p>
           </div>
         </div>
-  
+
         {/* Column 2: Skills */}
         <div className="col-md-6">
           <h2 className="mb-4">Skills & Badges</h2>
-  
+
           <h3 className="mt-4">Programming Languages</h3>
           <ul className="skills-list list-unstyled d-flex flex-wrap justify-content-start">
             {skills.programmingLanguages.map((skill, index) => (
@@ -114,14 +127,18 @@ const AboutMe = () => {
               </li>
             ))}
           </ul>
-  
+
           <h3 className="mt-4">Frameworks</h3>
           <ul className="skills-list list-unstyled d-flex flex-wrap justify-content-start">
             {skills.frameworks.map((skill, index) => (
               <li
                 key={index + skills.programmingLanguages.length}
                 className="badge bg-light text-dark m-2 p-2 d-flex align-items-center"
-                ref={(el) => (badgeRefs.current[index + skills.programmingLanguages.length] = el)}
+                ref={(el) =>
+                  (badgeRefs.current[
+                    index + skills.programmingLanguages.length
+                  ] = el)
+                }
               >
                 <img
                   src={skill.logo}
@@ -132,14 +149,24 @@ const AboutMe = () => {
               </li>
             ))}
           </ul>
-  
+
           <h3 className="mt-4">Tools</h3>
           <ul className="skills-list list-unstyled d-flex flex-wrap justify-content-start">
             {skills.tools.map((skill, index) => (
               <li
-                key={index + skills.programmingLanguages.length + skills.frameworks.length}
+                key={
+                  index +
+                  skills.programmingLanguages.length +
+                  skills.frameworks.length
+                }
                 className="badge bg-light text-dark m-2 p-2 d-flex align-items-center"
-                ref={(el) => (badgeRefs.current[index + skills.programmingLanguages.length + skills.frameworks.length] = el)}
+                ref={(el) =>
+                  (badgeRefs.current[
+                    index +
+                      skills.programmingLanguages.length +
+                      skills.frameworks.length
+                  ] = el)
+                }
               >
                 <img
                   src={skill.logo}
@@ -150,14 +177,26 @@ const AboutMe = () => {
               </li>
             ))}
           </ul>
-  
+
           <h3 className="mt-4">Technical Skills</h3>
           <ul className="skills-list list-unstyled d-flex flex-wrap justify-content-start">
             {skills.technicalSkills.map((skill, index) => (
               <li
-                key={index + skills.programmingLanguages.length + skills.frameworks.length + skills.tools.length}
+                key={
+                  index +
+                  skills.programmingLanguages.length +
+                  skills.frameworks.length +
+                  skills.tools.length
+                }
                 className="badge bg-light text-dark m-2 p-2 d-flex align-items-center"
-                ref={(el) => (badgeRefs.current[index + skills.programmingLanguages.length + skills.frameworks.length + skills.tools.length] = el)}
+                ref={(el) =>
+                  (badgeRefs.current[
+                    index +
+                      skills.programmingLanguages.length +
+                      skills.frameworks.length +
+                      skills.tools.length
+                  ] = el)
+                }
               >
                 <img
                   src={skill.logo}
@@ -170,26 +209,32 @@ const AboutMe = () => {
           </ul>
         </div>
       </div>
-  
       {/* Full-Width Row: Areas of Expertise */}
       <div className="row mt-5">
         <div className="col-12">
           <h2 className="mb-4 text-center">Areas of Expertise</h2>
           <ul className="expertise-list text-start">
             <li className="mb-2">
-              <strong>Game Development:</strong> Proficient in Unity and Unreal Engine, with experience in creating immersive gameplay and retro gaming solutions.
+              <strong>Game Development:</strong> Proficient in Unity and Unreal
+              Engine, with experience in creating immersive gameplay and retro
+              gaming solutions.
             </li>
             <li className="mb-2">
-              <strong>Full-Stack Development:</strong> Skilled in building scalable web applications using React, Node.js, and Flask.
+              <strong>Full-Stack Development:</strong> Skilled in building
+              scalable web applications using React, Node.js, and Flask.
             </li>
             <li className="mb-2">
-              <strong>3D Modeling & Animation:</strong> Expertise in Blender and 3ds Max for creating high-quality assets and animations.
+              <strong>3D Modeling & Animation:</strong> Expertise in Blender and
+              3ds Max for creating high-quality assets and animations.
             </li>
             <li className="mb-2">
-              <strong>VR/AR Development:</strong> Experienced in designing and developing virtual and augmented reality experiences.
+              <strong>VR/AR Development:</strong> Experienced in designing and
+              developing virtual and augmented reality experiences.
             </li>
             <li className="mb-2">
-              <strong>Quality Assurance:</strong> Proficient in automated testing, manual testing, and test-driven development to ensure software reliability.
+              <strong>Quality Assurance:</strong> Proficient in automated
+              testing, manual testing, and test-driven development to ensure
+              software reliability.
             </li>
           </ul>
         </div>
