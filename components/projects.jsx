@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './projects.css';
 
@@ -7,7 +8,7 @@ const Projects = () => {
       title: 'Games Workshop Website',
       description:
         'Replicated the Games Workshop website using HTML and Bootstrap, focusing on core components. Developed responsive pages (Home, Unique Pages, Product Pages) optimized for all device sizes. Implemented dynamic components to enhance UI/UX and improve user interaction.',
-      link: 'https://github.com/yourusername/games-workshop-website', // Replace with actual link
+      link: '/games-workshop', // Replace with actual link
       image: './images/games-workshop.jpg', // Replace with actual image path
       date: '2025',
       tags: ['HTML', 'Bootstrap', 'Responsive Design'],

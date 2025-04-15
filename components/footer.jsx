@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.css';
+import { FaLinkedin, FaGithub, FaArrowUp } from 'react-icons/fa'; // Import the arrow-up icon
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -20,11 +21,28 @@ const Footer = () => {
             scrollToTop();
           }}
         >
-          RETURN UP?
+          <FaArrowUp/> RETURN UP  <FaArrowUp /> 
+          
         </a>
         <br></br>
-        <p className="footer-text mb-0">
-          Thomas Meere - Technical Designer | Software Engineer
+        <p className="footer-text mb-0 mt-3">
+          Thomas Meere - Technical Designer | Software Engineer | 
+          <a
+            href="https://www.linkedin.com/in/thomasmeere/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-1"
+          >
+            <FaLinkedin size={32} />
+          </a> | 
+          <a
+            href="https://github.com/Tmeere"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white mx-1"
+          >
+            <FaGithub size={32} />
+          </a>
         </p>
       </div>
     </footer>
