@@ -13,7 +13,6 @@ import './App.css';
 function App() {
   return (
     <div className="app-container"> {/* Updated class name */}
-      <HeroSection />
       <Navbar />
       <Divider id="about" />
       <About />
