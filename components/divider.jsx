@@ -1,7 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './divider.css';
 
-const Divider = ({ color = '#0A0A0A' }) => {
-  return <hr className="my-0" style={{ backgroundColor: color, height: '50px', border: 'none' }} />;
+const Divider = ({ id }) => {
+    return (
+        <div id={id} className="navbar-divider">
+          <br></br>
+        </div>
+    );
 };
 
 export default Divider;

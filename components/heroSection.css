@@ -64,23 +64,23 @@
     text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
 }
 
-/* Button Styling */
-.btn-primary {
+#btn-primary {
     background-color: #61dafb; /* React blue */
     color: #1e1e2f; /* Dark text for contrast */
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.25rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #3a3f4b; /* Slightly darker blue on hover */
+#btn-primary:hover {
+    background-color: #4a90e2; /* Vibrant blue on hover */
+    color: white; /* White text for better contrast */
     transform: scale(1.05);
+    box-shadow: 0 0 10px #4a90e2, 0 0 20px #4a90e2; /* Add a glowing effect */
     cursor: pointer;
 }
-
 /* Image Styling */
 .image-column img {
     max-width: 100%;

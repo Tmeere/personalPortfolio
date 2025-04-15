@@ -15,9 +15,11 @@ function App() {
     <div className="app-container"> {/* Updated class name */}
       <HeroSection />
       <Navbar />
-      <Divider/>
+      <Divider id="about" />
       <About />
+      <Divider id="projects"/>
        <Projects />
+       <Divider id="contact"/>
        <ContactSection/>
       <Footer />
     </div>

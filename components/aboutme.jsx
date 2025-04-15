@@ -76,7 +76,7 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <section id="about" className="about-me container-fluid py-5"> {/* Added id="about" */}
+    <section id="" className="about-me container-fluid py-5"> {/* Added id="about" */}
       <div className="row">
         {/* Column 1: Image and About Me */}
         <div className="col-md-6 d-flex flex-column align-items-center align-items-md-start" ref={aboutMeRef}>

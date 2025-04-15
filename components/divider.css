@@ -1,0 +1,5 @@
+.navbar-divider {
+    background-color: rgb(71, 71, 71); /* Dark gray */
+    height: 40px; /* Adjust height as needed */
+    width: 100%; /* Full width */
+}

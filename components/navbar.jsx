@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './navbar.css';
 
 const Navbar = () => {
@@ -15,12 +15,32 @@ const Navbar = () => {
         behavior: "smooth",
       });
     }
+
+    // Close the navbar after clicking a link
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse.classList.contains("show")) {
+      const bootstrapCollapse = new window.bootstrap.Collapse(navbarCollapse);
+      bootstrapCollapse.hide();
+    }
   };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#home">Thomas Meere</a>
+        <a className="navbar-brand d-flex align-items-center" href="#home">
+          <img 
+            src="/Me.svg" 
+            alt="Logo" 
+            style={{ 
+              width: "30px", 
+              height: "30px", 
+              marginRight: "10px", 
+              borderRadius: "50%", 
+              border: "2px solid grey" 
+            }} 
+          />
+          Thomas Meere
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -35,16 +55,30 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#home" onClick={() => scrollToSection('home')}>Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#about" onClick={() => scrollToSection('about')}>About</a> {/* Adjusted */}
+              <a className="nav-link" href="#about" onClick={() => scrollToSection('about')}>About</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects" onClick={() => scrollToSection('projects')}>Projects</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#contact" onClick={() => scrollToSection('contact')}>Contact</a>
+            </li>
+            <li className="nav-item">
+              <a 
+                className="nav-link" 
+                href="/resume/Thomas Meere - 2025 Resume (2).pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => {
+                  const navbarCollapse = document.getElementById("navbarNav");
+                  if (navbarCollapse.classList.contains("show")) {
+                    const bootstrapCollapse = new window.bootstrap.Collapse(navbarCollapse);
+                    bootstrapCollapse.hide();
+                  }
+                }}
+              >
+                Resume
+              </a>
             </li>
           </ul>
         </div>
