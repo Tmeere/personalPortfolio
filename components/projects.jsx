@@ -3,6 +3,9 @@ import React from 'react';
 import './projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMobileAlt, faGamepad, faVrCardboard, faBug, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Add this line
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Add this line
 
 const tagIcons = {
   HTML: faCode,
@@ -49,9 +52,11 @@ const Projects = () => {
     {
       title: 'Ecommerce Website Using React/JS and Product API',
       description:
-        'Developed an eCommerce website using React/JS, fetching product data from an API to display a range of custom products with varying prices, titles, and descriptions. Built reusable, component-based product items with custom inputs for flexibility and scalability. Designed unique Product Details Pages, utilizing props to dynamically pass product information. Created custom Dev Tools for modifying, adding, and deleting products directly from the API.',
-      link: 'https://github.com/yourusername/ecommerce-website', // Replace with actual link
-      image: './images/ecommerce.jpg', // Replace with actual image path
+        'Developed an eCommerce website using React/JS, fetching product data from an API to display a range of custom products with varying prices, titles, and descriptions.',
+      link: 'https://yourwebsite.com',
+      github: 'https://github.com/yourusername/ecommerce-website',
+      externalLink: 'https://external-link.com', // Add external link here
+      image: './images/ecommerce.jpg',
       date: '2025',
       tags: ['React', 'JavaScript', 'API Integration'],
     },
@@ -166,18 +171,44 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-            
-                {project.link && (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary mt-3"
-                  >
-                    View Project
-                  </a>
-                )}
-                    {project.inDevelopment && (
+
+                <div className="project-links mt-3 d-flex justify-content-center">
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-gradient me-2"
+                    >
+                      <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
+                      View Project
+                    </a>
+                  )}
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-dark me-2"
+                    >
+                      <FontAwesomeIcon icon={faGithub} className="me-2" />
+                      GitHub
+                    </a>
+                  )}
+                  {project.externalLink && (
+                    <a
+                      href={project.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-secondary"
+                    >
+                      <FontAwesomeIcon icon={faGlobe} className="me-2" />
+                      Web Link
+                    </a>
+                  )}
+                </div>
+
+                {project.inDevelopment && (
                   <div className="badge-container w-100 text-center mt-3">
                     <span className="badge bg-warning text-dark">
                       <FontAwesomeIcon icon={faTools} className="me-2" />

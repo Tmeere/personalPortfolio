@@ -55,7 +55,7 @@ function HeroSection() {
                 &gt; Passionate about VR/AR development, retro game making, and
                 building innovative solutions.
               </p>
-              <div className="button-container text-center">
+              <div className="button-container text-center mt-5">
                 <button id="btn-primary" onClick={scrollToAbout}>
                   <FaChevronDown /> See More  <FaChevronDown />
                 </button>

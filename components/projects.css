@@ -160,11 +160,26 @@
   color: #ffffff;
 }
 
-
 @media (max-width: 768px) {
   .timeline {
     display: none; /* Hide the timeline on smaller screens */
   }
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0056b3, #0099cc);
+  color: #fff;
+  text-decoration: none;
 }
 
 

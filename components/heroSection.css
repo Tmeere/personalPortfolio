@@ -124,15 +124,23 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .text-column h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem; /* Reduced font size for smaller screens */
     }
 
     .text-column h2 {
-        font-size: 1.25rem;
+        font-size: 1rem; /* Reduced font size for smaller screens */
     }
 
     .btn-primary {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+        font-size: 0.8rem; /* Slightly smaller button text */
+        padding: 0.4rem 0.8rem; /* Adjust padding for smaller buttons */
+    }
+
+    .glow-text {
+        font-size: 1rem; /* Adjust glow text size */
+    }
+
+    #btn-primary {
+        display: none; /* Hide the button on smaller screens */
     }
 }
