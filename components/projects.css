@@ -35,6 +35,70 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Add faint background to project description */
+.project-description {
+  background-color: rgba(255, 255, 255, 0.1); /* Faint white background */
+  padding: 10px; /* Add padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 10px; /* Add spacing below */
+}
+
+/* Add faint background to project tags */
+.project-tag {
+  background: rgba(255, 255, 255, 0.1); /* Faint white background */
+  color: white; /* Ensure text is readable */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+  display: inline-block;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-tag:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+  transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+.project-badge {
+  display: inline-block;
+  color: #ffffff !important; /* Dark text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.badge-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc107; /* Yellow background */
+  padding: 10px; /* Add some padding around the badge */
+  border-radius: 8px; /* Rounded corners */
+  display: inline-block; /* Ensure it wraps tightly around the badge */
+  animation: pulse 1.5s infinite; /* Add pulsing animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  }
+  50% {
+    transform: scale(1.005);
+    box-shadow: 0 0 20px rgba(194, 149, 16, 0.7);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  }
+}
+
 @media (max-width: 768px) {
   .project-item {
     max-width: 100%; /* Ensure full width on smaller screens */

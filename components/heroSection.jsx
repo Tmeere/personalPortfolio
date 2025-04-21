@@ -40,7 +40,7 @@ function HeroSection() {
                 Hello, I'm Thomas Meere!
               </h1>
               <h2 className="h4 text-primary">
-                Game Designer | Software Engineer
+                Technical Designer | Software Engineer
               </h2>
               <hr className="divider" />
               <p className="mt-3">

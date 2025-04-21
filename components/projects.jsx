@@ -1,6 +1,38 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode, faMobileAlt, faGamepad, faVrCardboard, faBug, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
+
+const tagIcons = {
+  HTML: faCode,
+  Bootstrap: faCode,
+  'Responsive Design': faMobileAlt,
+  React: faCode,
+  JavaScript: faCode,
+  'API Integration': faCogs,
+  Unity: faGamepad,
+  'Deck-Building': faGamepad,
+  'Procedural Generation': faCogs,
+  'Turn-Based': faGamepad,
+  'Mobile Game': faMobileAlt,
+  'Unreal Engine': faGamepad,
+  VR: faVrCardboard,
+  'AI Design': faCogs,
+  'Project Management': faCogs,
+  'Steam Release': faGamepad,
+  'Game Design': faGamepad,
+  'Team Leadership': faCogs,
+  Programming: faCode,
+  'Bug Fixing': faBug,
+  'Team Collaboration': faCogs,
+  'Parkour': faGamepad,
+  'Level Design': faGamepad,
+  Multiplayer: faGamepad,
+  Internship: faCogs,
+  'Streaming Apps': faCogs,
+  'Virgin TV Go': faCogs,
+};
 
 const Projects = () => {
   const projects = [
@@ -12,6 +44,7 @@ const Projects = () => {
       image: './images/games-workshop.jpg', // Replace with actual image path
       date: '2025',
       tags: ['HTML', 'Bootstrap', 'Responsive Design'],
+      inDevelopment: true, // Not in development
     },
     {
       title: 'Ecommerce Website Using React/JS and Product API',
@@ -30,6 +63,7 @@ const Projects = () => {
       image: './images/roguelike-card-game.jpg', // Replace with actual image path
       date: '2025',
       tags: ['Unity', 'Deck-Building', 'Procedural Generation'],
+      inDevelopment: true, // Marked as in development
     },
     {
       title: 'Mobile Dungeon Crawler',
@@ -126,11 +160,13 @@ const Projects = () => {
                 <p className="project-date text-muted">Date: {project.date}</p>
                 <div className="project-tags">
                   {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="badge bg-secondary me-2">
+                    <span key={tagIndex} className="project-tag">
+                      <FontAwesomeIcon icon={tagIcons[tag] || faCode} className="me-2" />
                       {tag}
                     </span>
                   ))}
                 </div>
+            
                 {project.link && (
                   <a
                     href={project.link}
@@ -140,6 +176,15 @@ const Projects = () => {
                   >
                     View Project
                   </a>
+                )}
+                    {project.inDevelopment && (
+                  <div className="badge-container w-100 text-center mt-3">
+                    <span className="badge bg-warning text-dark">
+                      <FontAwesomeIcon icon={faTools} className="me-2" />
+                      In Development
+                      <FontAwesomeIcon icon={faTools} className="ms-2" />
+                    </span>
+                  </div>
                 )}
               </div>
             </li>
