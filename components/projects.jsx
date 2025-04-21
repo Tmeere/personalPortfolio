@@ -14,12 +14,12 @@ const tagIcons = {
   React: faCode,
   JavaScript: faCode,
   'API Integration': faCogs,
-  Unity: faGamepad,
+  Unity: <FontAwesomeIcon icon={faGamepad} style={{ color: 'white' }} />, // Unity icon in white
   'Deck-Building': faGamepad,
   'Procedural Generation': faCogs,
   'Turn-Based': faGamepad,
   'Mobile Game': faMobileAlt,
-  'Unreal Engine': faGamepad,
+  'Unreal Engine': <FontAwesomeIcon icon={faGamepad} style={{ color: 'white' }} />, // Unreal Engine icon in white
   VR: faVrCardboard,
   'AI Design': faCogs,
   'Project Management': faCogs,

@@ -247,12 +247,14 @@ const AboutMe = () => {
                 </ul>
               </div>
             </li>
-            <li className="work-experience-item">
-              <img
-                src="/images/Piksel.png"
-                alt="Piksel Logo"
-                className="work-experience-image"
-              />
+            <li className="work-experience-item d-flex align-items-center">
+              <div className="work-experience-logo">
+                <img
+                  src="/images/Piksel.png"
+                  alt="Piksel Logo"
+                  className="work-experience-image"
+                />
+              </div>
               <div className="work-experience-content">
                 <strong>Piksel Student Intern</strong>
                 <em>Piksel | Remote (2020)</em>

@@ -258,6 +258,72 @@
 /* Remove the rule that hides the skill logos */
 @media (max-width: 768px) {
   .work-experience-image {
-    display: none; /* Keep hiding work experience images if needed */
+    display: block; /* Ensure images are always visible */
+    margin: 0 auto; /* Center the images if needed */
+    width: 80px; /* Slightly larger size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .work-experience-item {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center align the items */
+  }
+
+  .work-experience-logo {
+    margin-bottom: 1rem; /* Add spacing below the image */
+  }
+
+  .work-experience-content {
+    text-align: center; /* Center-align the text content */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-experience-item {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center align the items */
+  }
+
+  .work-experience-logo {
+    margin-bottom: 1rem; /* Add spacing below the image */
+  }
+
+  .work-experience-content {
+    text-align: center; /* Center-align the text content */
+  }
+}
+
+/* Add padding around images for smaller screens */
+@media (max-width: 768px) {
+  .work-experience-image {
+    display: block; /* Ensure images are always visible */
+    margin: 10px auto; /* Add vertical spacing and center the images */
+    width: 80px; /* Slightly larger size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    padding: 5px; /* Add padding around the image */
+    border-radius: 8px; /* Keep rounded corners */
+  }
+
+  .work-experience-item {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center align the items */
+  }
+
+  .work-experience-logo {
+    margin-bottom: 1rem; /* Add spacing below the image */
+  }
+
+  .work-experience-content {
+    text-align: center; /* Center-align the text content */
+  }
+}
+
+/* Adjust the "Me" image for smaller screens */
+@media (max-width: 768px) {
+  .about-me-image {
+    width: 80%; /* Make the image take up 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+    border-radius: 8px; /* Optional: Adjust the border radius for a rectangular look */
   }
 }
