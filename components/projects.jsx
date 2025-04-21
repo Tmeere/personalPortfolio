@@ -41,107 +41,128 @@ const Projects = () => {
   const projects = [
     {
       title: 'Games Workshop Website',
-      description:
-        'Replicated the Games Workshop website using HTML and Bootstrap, focusing on core components. Developed responsive pages (Home, Unique Pages, Product Pages) optimized for all device sizes. Implemented dynamic components to enhance UI/UX and improve user interaction.',
-      link: '/games-workshop', // Replace with actual link
-      image: './images/games-workshop.jpg', // Replace with actual image path
+      description: (
+        <>
+          Replicated the <span className="blue-bold">Games Workshop</span> website using <span className="blue-bold">HTML</span> and <span className="blue-bold">Bootstrap</span>, focusing on core components. Developed <span className="blue-bold">responsive pages</span> (Home, Unique Pages, Product Pages) optimized for all device sizes. Implemented <span className="blue-bold">dynamic components</span> to enhance UI/UX and improve user interaction.
+        </>
+      ),
+      link: '/games-workshop',
+      image: './images/games-workshop.jpg',
       date: '2025',
       tags: ['HTML', 'Bootstrap', 'Responsive Design'],
-      inDevelopment: true, // Not in development
+      inDevelopment: true,
     },
     {
       title: 'Ecommerce Website Using React/JS and Product API',
-      description:
-        'Developed an eCommerce website using React/JS, fetching product data from an API to display a range of custom products with varying prices, titles, and descriptions.',
+      description: (
+        <>
+          Developed an <span className="blue-bold">eCommerce website</span> using <span className="blue-bold">React/JS</span>, fetching product data from an <span className="blue-bold">API</span> to display a range of custom products with varying prices, titles, and descriptions.
+        </>
+      ),
       link: 'https://yourwebsite.com',
       github: 'https://github.com/yourusername/ecommerce-website',
-      externalLink: 'https://external-link.com', // Add external link here
+      externalLink: 'https://external-link.com',
       image: './images/ecommerce.jpg',
       date: '2025',
       tags: ['React', 'JavaScript', 'API Integration'],
     },
     {
       title: 'Endless Roguelike Card Game',
-      description:
-        'Developing an endless 2D deck-building card game featuring procedurally generated content, complex gameplay systems, and strategic management elements. Focused on creating a rich, interactive UI/UX with smooth and dynamic game feel.',
-      link: '', // Add link if available
-      image: './images/roguelike-card-game.jpg', // Replace with actual image path
+      description: (
+        <>
+          Developing an endless 2D <span className="blue-bold">deck-building card game</span> featuring <span className="blue-bold">procedurally generated content</span>, complex gameplay systems, and strategic management elements. Focused on creating a rich, interactive <span className="blue-bold">UI/UX</span> with smooth and dynamic game feel.
+        </>
+      ),
+      link: '',
+      image: './images/roguelike-card-game.jpg',
       date: '2025',
       tags: ['Unity', 'Deck-Building', 'Procedural Generation'],
-      inDevelopment: true, // Marked as in development
+      inDevelopment: true,
     },
     {
       title: 'Mobile Dungeon Crawler',
-      description:
-        'Developing a procedural, turn-based dungeon crawler with complex character states, abilities, and classes. Focused on alternating combat mechanics and mobile touch-based gameplay for an immersive user experience.',
-      link: '', // Add link if available
-      image: './images/dungeon-crawler.jpg', // Replace with actual image path
+      description: (
+        <>
+          Developing a procedural, <span className="blue-bold">turn-based dungeon crawler</span> with complex character states, abilities, and classes. Focused on alternating combat mechanics and <span className="blue-bold">mobile touch-based gameplay</span> for an immersive user experience.
+        </>
+      ),
+      link: '',
+      image: './images/dungeon-crawler.jpg',
       date: '2025',
       tags: ['Unity', 'Turn-Based', 'Mobile Game'],
     },
     {
       title: 'VR Arcade Shooter',
-      description:
-        'Leading development as project lead and programmer, designing immersive levels and scalable gameplay systems. Implementing complex AI entities for dynamic combat and creating engaging VR mechanics.',
-      link: '', // Add link if available
-      image: './images/vr-arcade-shooter.jpg', // Replace with actual image path
+      description: (
+        <>
+          Leading development as <span className="blue-bold">project lead</span> and programmer, designing immersive levels and scalable gameplay systems. Implementing complex <span className="blue-bold">AI entities</span> for dynamic combat and creating engaging <span className="blue-bold">VR mechanics</span>.
+        </>
+      ),
+      link: '',
+      image: './images/vr-arcade-shooter.jpg',
       date: '2025',
       tags: ['Unreal Engine', 'VR', 'AI Design'],
     },
     {
       title: 'KAMK Summer Games Exchange Project',
-      description:
-        'Collaborated with students from European universities to develop a VR high-octane shooter for release on Steam. Led the project as Project Lead, overseeing the entire development cycle, providing strategic direction, and ensuring successful project completion.',
-      link: 'https://itch.io', // Replace with actual Itch.io link
-      image: './images/kamk-project.jpg', // Replace with actual image path
+      description: (
+        <>
+          Collaborated with students from European universities to develop a <span className="blue-bold">VR high-octane shooter</span> for release on <span className="blue-bold">Steam</span>. Led the project as <span className="blue-bold">Project Lead</span>, overseeing the entire development cycle, providing strategic direction, and ensuring successful project completion.
+        </>
+      ),
+      link: 'https://itch.io',
+      image: './images/kamk-project.jpg',
       date: '2024',
       tags: ['VR', 'Project Management', 'Steam Release'],
     },
     {
       title: 'Midnight Taxi',
-      description:
-        'Design Lead responsible for the conceptualization and development of game mechanics within a 23-person team. Guided the overall design direction of the game and oversaw and assisted Junior Designers.',
-      link: 'https://itch.io', // Replace with actual Itch.io link
-      image: './images/midnight-taxi.jpg', // Replace with actual image path
+      description: (
+        <>
+          <span className="blue-bold">Design Lead</span> responsible for the conceptualization and development of <span className="blue-bold">game mechanics</span> within a 23-person team. Guided the overall <span className="blue-bold">design direction</span> of the game and oversaw and assisted <span className="blue-bold">Junior Designers</span>.
+        </>
+      ),
+      link: 'https://itch.io',
+      image: './images/midnight-taxi.jpg',
       date: '2024',
       tags: ['Game Design', 'Team Leadership', 'Itch.io'],
     },
     {
       title: 'AI-Appliance',
-      description:
-        'Junior Programmer within a 23-member team. Created core player mechanics and tested and resolved bugs.',
-      link: 'https://itch.io', // Replace with actual Itch.io link
-      image: './images/ai-appliance.jpg', // Replace with actual image path
+      description: (
+        <>
+          <span className="blue-bold">Junior Programmer</span> within a 23-member team. Created <span className="blue-bold">core player mechanics</span> and tested and resolved <span className="blue-bold">bugs</span>.
+        </>
+      ),
+      link: 'https://itch.io',
+      image: './images/ai-appliance.jpg',
       date: '2023',
       tags: ['Programming', 'Bug Fixing', 'Team Collaboration'],
     },
     {
       title: 'High Octane Runner',
-      description:
-        'Developed a high-octane parkour runner in Unreal Engine, featuring advanced player movement mechanics and dynamic enemy AI driven by state machines.',
-      link: '', // Add link if available
-      image: './images/high-octane-runner.jpg', // Replace with actual image path
+      description: (
+        <>
+          Developed a <span className="blue-bold">high-octane parkour runner</span> in <span className="blue-bold">Unreal Engine</span>, featuring advanced <span className="blue-bold">player movement mechanics</span> and dynamic <span className="blue-bold">enemy AI</span> driven by state machines.
+        </>
+      ),
+      link: '',
+      image: './images/high-octane-runner.jpg',
       date: '2022',
       tags: ['Unreal Engine', 'Parkour', 'AI Design'],
     },
     {
       title: 'Team Fortress 2 Community Map',
-      description:
-        'Designed and developed a custom 12v12 King of the Hill map, applying multiplayer level design principles and TF2 gameplay mechanics. Conducted user testing to refine balance, player flow, and performance, ensuring a smooth, engaging multiplayer experience.',
-      link: '', // Add link if available
-      image: './images/tf2-map.jpg', // Replace with actual image path
+      description: (
+        <>
+          Designed and developed a custom <span className="blue-bold">12v12 King of the Hill map</span>, applying <span className="blue-bold">multiplayer level design principles</span> and <span className="blue-bold">TF2 gameplay mechanics</span>. Conducted <span className="blue-bold">user testing</span> to refine balance, player flow, and performance, ensuring a smooth, engaging multiplayer experience.
+        </>
+      ),
+      link: '',
+      image: './images/tf2-map.jpg',
       date: '2021',
       tags: ['TF2', 'Level Design', 'Multiplayer'],
-    },
-    {
-      title: 'Piksel Student Intern',
-      description:
-        'Worked on streaming app editors used to configure films for Virgin TV Go.',
-      link: '', // Add link if available
-      image: './images/piksel-intern.jpg', // Replace with actual image path
-      date: '2020',
-      tags: ['Internship', 'Streaming Apps', 'Virgin TV Go'],
-    },
+    }
   ];
 
   return (

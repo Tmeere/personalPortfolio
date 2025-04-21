@@ -260,6 +260,12 @@ const AboutMe = () => {
                   <li>
                     &#8226; Worked on streaming app editors used to configure films for Virgin TV Go.
                   </li>
+                  <li>
+                    &#8226; Assisted in debugging and optimizing the app's performance to ensure seamless user experience.
+                  </li>
+                  <li>
+                    &#8226; Collaborated with senior developers to implement new features and improve existing workflows.
+                  </li>
                 </ul>
               </div>
             </li>
