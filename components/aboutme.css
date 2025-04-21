@@ -327,3 +327,16 @@
     border-radius: 8px; /* Optional: Adjust the border radius for a rectangular look */
   }
 }
+
+@media (max-width: 768px) {
+  .about-me-text {
+    font-size: 1rem; /* Reduce font size */
+    line-height: 1.7; /* Adjust line height for readability */
+  }
+}
+
+@media (max-width: 768px) {
+  .work-experience-content {
+    text-align: left; /* Align text to the left */
+  }
+}

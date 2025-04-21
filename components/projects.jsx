@@ -76,7 +76,7 @@ const Projects = () => {
       link: '',
       image: './images/roguelike-card-game.jpg',
       date: '2025',
-      tags: ['Unity', 'Deck-Building', 'Procedural Generation'],
+      tags: ['Unity','Deck-Builder', 'Procedural Gen'],
       inDevelopment: true,
     },
     {
@@ -159,7 +159,7 @@ const Projects = () => {
         </>
       ),
       link: '',
-      image: './images/tf2-map.jpg',
+      image: './images/PortsideSplash.jpg',
       date: '2021',
       tags: ['TF2', 'Level Design', 'Multiplayer'],
     }

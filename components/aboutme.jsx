@@ -164,15 +164,15 @@ const AboutMe = () => {
                 <em>Coding Temple | Remote | (Present)</em>
                 <ul>
                   <li>
-                    Completed 9+ hands-on, project-based assignments covering full-stack web development using modern
+                    &#8226; Completed 9+ hands-on, project-based assignments covering full-stack web development using modern
                     technologies including Flask, React.js, SQL, and RESTful APIs.
                   </li>
                   <li>
-                    Actively participated in live workshops, enhancing collaboration and technical problem-solving
+                    &#8226; Actively participated in live workshops, enhancing collaboration and technical problem-solving
                     skills.
                   </li>
                   <li>
-                    Consistently exceeded assignment expectations by implementing advanced features, optimizing
+                    &#8226; Consistently exceeded assignment expectations by implementing advanced features, optimizing
                     functionality, and expanding project scope—while meeting assigned deadlines.
                   </li>
                 </ul>
@@ -189,15 +189,15 @@ const AboutMe = () => {
                 <em>Bitmask Games | Rhode Island (Jan 2024 – Present)</em>
                 <ul>
                   <li>
-                    Developed gameplay mechanics and retro game systems using Unity & NES Maker, contributing to
+                    &#8226; Developed gameplay mechanics and retro game systems using Unity & NES Maker, contributing to
                     successful contract-based project delivery.
                   </li>
                   <li>
-                    Collaborated with cross-functional programming and art teams to refine design features and enhance
+                    &#8226; Collaborated with cross-functional programming and art teams to refine design features and enhance
                     player engagement.
                   </li>
                   <li>
-                    Conducted QA testing and optimized code performance, improving stability and reducing in-game bugs
+                    &#8226; Conducted QA testing and optimized code performance, improving stability and reducing in-game bugs
                     by 30%.
                   </li>
                 </ul>
@@ -214,12 +214,14 @@ const AboutMe = () => {
                 <em>DAQA | Remote (Jan 2024 – Present)</em>
                 <ul>
                   <li>
-                    Provided QA testing services for AAA and indie titles, identifying and reporting over 200 bugs
+                    &#8226; Provided QA testing services for AAA and indie titles, identifying and reporting over 200 bugs
                     across multiple platforms.
                   </li>
-                  <li>Used tools like Jira to streamline communication and improve issue resolution time.</li>
                   <li>
-                    Collaborated with cross-functional teams to enhance gameplay performance and ensure seamless user
+                    &#8226; Used tools like Jira to streamline communication and improve issue resolution time.
+                  </li>
+                  <li>
+                    &#8226; Collaborated with cross-functional teams to enhance gameplay performance and ensure seamless user
                     experience.
                   </li>
                 </ul>
