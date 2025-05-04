@@ -28,11 +28,13 @@
 }
 
 .project-image {
-  width: 100%; /* Make the image responsive */
-  height: auto;
-  border-radius: 0.5rem; /* Add rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  width: 650px;           /* Set a fixed width */
+  height: 650px;          /* Set a fixed height for square images */
+  object-fit: cover;      /* Crop and center the image */
+  border-radius: 0.5rem;  /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;    /* Add spacing below the image */
 }
 
 /* Add faint background to project description */

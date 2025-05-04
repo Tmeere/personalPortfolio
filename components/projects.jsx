@@ -50,7 +50,6 @@ const Projects = () => {
       image: './images/games-workshop.jpg',
       date: '2025',
       tags: ['HTML', 'Bootstrap', 'Responsive Design'],
-      inDevelopment: true,
     },
     {
       title: 'Ecommerce Website Using React/JS and Product API',
@@ -80,7 +79,7 @@ const Projects = () => {
       inDevelopment: true,
     },
     {
-      title: 'Mobile Dungeon Crawler',
+      title: 'Haunts',
       description: (
         <>
           Developing a procedural, <span className="blue-bold">turn-based dungeon crawler</span> with complex character states, abilities, and classes. Focused on alternating combat mechanics and <span className="blue-bold">mobile touch-based gameplay</span> for an immersive user experience.
@@ -92,16 +91,17 @@ const Projects = () => {
       tags: ['Unity', 'Turn-Based', 'Mobile Game'],
     },
     {
-      title: 'VR Arcade Shooter',
+      title: 'BloodDrunk',
       description: (
         <>
           Leading development as <span className="blue-bold">project lead</span> and programmer, designing immersive levels and scalable gameplay systems. Implementing complex <span className="blue-bold">AI entities</span> for dynamic combat and creating engaging <span className="blue-bold">VR mechanics</span>.
         </>
       ),
       link: '',
-      image: './images/vr-arcade-shooter.jpg',
+      image: './images/Site Files/Blood_Drunk.png',
       date: '2025',
       tags: ['Unreal Engine', 'VR', 'AI Design'],
+      inDevelopment: true,
     },
     {
       title: 'KAMK Summer Games Exchange Project',
@@ -111,7 +111,7 @@ const Projects = () => {
         </>
       ),
       link: 'https://itch.io',
-      image: './images/kamk-project.jpg',
+      image: '',
       date: '2024',
       tags: ['VR', 'Project Management', 'Steam Release'],
     },
@@ -123,7 +123,7 @@ const Projects = () => {
         </>
       ),
       link: 'https://itch.io',
-      image: './images/midnight-taxi.jpg',
+      image: './images/Site Files/TechDesign.png',
       date: '2024',
       tags: ['Game Design', 'Team Leadership', 'Itch.io'],
     },
@@ -135,7 +135,7 @@ const Projects = () => {
         </>
       ),
       link: 'https://itch.io',
-      image: './images/ai-appliance.jpg',
+      image: './images/Site Files/AIApplianceDefianceRender.png',
       date: '2023',
       tags: ['Programming', 'Bug Fixing', 'Team Collaboration'],
     },
@@ -147,7 +147,7 @@ const Projects = () => {
         </>
       ),
       link: '',
-      image: './images/high-octane-runner.jpg',
+      image: './images/Site Files/IntroScreen.png',
       date: '2022',
       tags: ['Unreal Engine', 'Parkour', 'AI Design'],
     },
@@ -159,7 +159,7 @@ const Projects = () => {
         </>
       ),
       link: '',
-      image: './images/PortsideSplash.jpg',
+      image: './images/Site Files/Portside.png',
       date: '2021',
       tags: ['TF2', 'Level Design', 'Multiplayer'],
     }
@@ -176,11 +176,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <li key={index} className="project-item mb-4">
               <div className="project-card p-3 shadow-sm rounded">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image mb-3"
-                />
+                {project.image && project.image.trim() !== '' && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="project-image mb-3"
+                    onError={e => (e.target.style.display = 'none')}
+                  />
+                )}
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <p className="project-date text-muted">Date: {project.date}</p>
