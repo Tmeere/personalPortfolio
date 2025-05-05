@@ -66,7 +66,7 @@ const Navbar = () => {
             <li className="nav-item">
               <a 
                 className="nav-link" 
-                href="/resume/Thomas Meere - 2025 Resume (2).pdf" 
+                href="/resume/Thomas Meere - Game Designer _ Technical Designer.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={() => {

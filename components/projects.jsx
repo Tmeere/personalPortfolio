@@ -7,6 +7,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Add th
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Add this line
 
+
 const tagIcons = {
   HTML: faCode,
   Bootstrap: faCode,
@@ -54,7 +55,7 @@ const Projects = () => {
         </>
       ),
       link: "https://warhammermocksite.netlify.app/",
-      github: "https://github.com/yourusername/ecommerce-website",
+      github: "https://github.com/Tmeere/MakingFavouriteWebsite",
       image: "./images/Site Files/GW Website.png", // Replace with the path to your saved image
       date: "2025",
       tags: ["HTML", "Bootstrap", "Responsive Design"],
@@ -145,8 +146,8 @@ const Projects = () => {
         </>
       ),
       link: "", // Add link if hosted
-      github: "https://github.com/Tmeere/Todo-App",
-      image: "./images/Site Files/TodoApp.png",
+      github: "https://github.com/Tmeere/ToDo-Application/tree/main",
+      image: "./images/Site Files/TaskManager.png",
       date: "2025",
       tags: ["Python"],
     },
@@ -163,8 +164,8 @@ const Projects = () => {
         </>
       ),
       link: "", // Add link if hosted
-      github: "https://github.com/Tmeere/Evil-Wizard-Python-Game",
-      image: "./images/Site Files/EvilWizardPythonGame.png",
+      github: "https://github.com/Tmeere/Evil-Wizard-V1",
+      image: "./images/Site Files/Evil Wizard.png",
       date: "2025",
       tags: ["Python", "RPG", "Turn-Based", "ASCII"],
     },
@@ -185,7 +186,7 @@ const Projects = () => {
       ),
       link: "", // Add a live link if deployed
       github: "https://github.com/Tmeere/Event-Center-Website",
-      image: "./images/Site Files/EventCenterWebsite.png",
+      image: "./images/Site Files/Events Page.png",
       date: "2025",
       tags: ["HTML", "CSS", "Bootstrap", "Frontend"],
     },
@@ -200,7 +201,7 @@ const Projects = () => {
           creating engaging <span className="blue-bold">VR mechanics</span>.
         </>
       ),
-      link: "",
+      link: "asasdasd",
       image: "./images/Site Files/Blood_Drunk.png",
       date: "2025",
       tags: ["Unreal Engine", "VR", "AI Design"],
@@ -218,7 +219,6 @@ const Projects = () => {
           successful project completion.
         </>
       ),
-      link: "https://itch.io",
       image: "",
       date: "2024",
       tags: ["VR", "Project Management", "Steam Release"],
@@ -236,7 +236,7 @@ const Projects = () => {
         </>
       ),
       link: "https://itch.io",
-      image: "",
+      image: "./images/Site Files/TankBuster.png",
       date: "2024",
       tags: ["VR", "Project Management", "Steam Release"],
     },
@@ -254,6 +254,7 @@ const Projects = () => {
         </>
       ),
       link: "https://itch.io",
+      externalLink: "https://group-twenty8.itch.io/midnight-taxi",
       image: "./images/Site Files/TechDesign.png",
       date: "2024",
       tags: ["Game Design", "Team Leadership", "Itch.io"],
@@ -392,6 +393,9 @@ const Projects = () => {
           ))}
         </ul>
       </div>
+      {/* <Link to="/projects" className="btn btn-primary">
+        View Projects
+      </Link> */}
     </section>
   );
 };
