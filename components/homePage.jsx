@@ -6,7 +6,10 @@ import Projects from '../components/projects';
 import Footer from '../components/footer';
 import DraggableCharacter from '../components/DraggableCharacter';
 import ContactSection from '../components/contactSection';
+import ProjectNavbar from '../components/projectComponents/ProjectNavbar';
 import Divider from '../components/divider';
+import ProjectHeroSection from './projectComponents/ProjectHeroSection'
+import ProjectVidAndText from './projectComponents/ProjectVid&Text'; // <-- Import the component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './homePage.css'; // Import homePage.css
 

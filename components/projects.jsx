@@ -269,7 +269,7 @@ const Projects = () => {
           and resolved <span className="blue-bold">bugs</span>.
         </>
       ),
-      link: "https://itch.io",
+      link: "/projects", // Change this to route to your ProjectDefiance page
       image: "./images/Site Files/AIApplianceDefianceRender.png",
       date: "2023",
       tags: ["Programming", "Bug Fixing", "Team Collaboration"],
