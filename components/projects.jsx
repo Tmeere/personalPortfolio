@@ -47,7 +47,7 @@ const Projects = () => {
         </>
       ),
       link: '/games-workshop',
-      image: './images/games-workshop.jpg',
+      image: './images/Site Files/GW Website.png', // Replace with the path to your saved image
       date: '2025',
       tags: ['HTML', 'Bootstrap', 'Responsive Design'],
     },
@@ -60,8 +60,8 @@ const Projects = () => {
       ),
       link: 'https://yourwebsite.com',
       github: 'https://github.com/yourusername/ecommerce-website',
-      externalLink: 'https://external-link.com',
-      image: './images/ecommerce.jpg',
+      externalLink: '',
+      image: './images/Site Files/Ecommerce Webstore.png',
       date: '2025',
       tags: ['React', 'JavaScript', 'API Integration'],
     },
@@ -102,9 +102,22 @@ const Projects = () => {
       date: '2025',
       tags: ['Unreal Engine', 'VR', 'AI Design'],
       inDevelopment: true,
+
     },
     {
       title: 'KAMK Summer Games Exchange Project',
+      description: (
+        <>
+          Collaborated with students from European universities to develop a <span className="blue-bold">VR high-octane shooter</span> for release on <span className="blue-bold">Steam</span>. Led the project as <span className="blue-bold">Project Lead</span>, overseeing the entire development cycle, providing strategic direction, and ensuring successful project completion.
+        </>
+      ),
+      link: 'https://itch.io',
+      image: '',
+      date: '2024',
+      tags: ['VR', 'Project Management', 'Steam Release'],
+    },
+    {
+      title: 'Tank Busters',
       description: (
         <>
           Collaborated with students from European universities to develop a <span className="blue-bold">VR high-octane shooter</span> for release on <span className="blue-bold">Steam</span>. Led the project as <span className="blue-bold">Project Lead</span>, overseeing the entire development cycle, providing strategic direction, and ensuring successful project completion.
@@ -176,6 +189,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <li key={index} className="project-item mb-4">
               <div className="project-card p-3 shadow-sm rounded">
+                <h3 className="project-title">{project.title}</h3>
                 {project.image && project.image.trim() !== '' && (
                   <img
                     src={project.image}
@@ -184,7 +198,6 @@ const Projects = () => {
                     onError={e => (e.target.style.display = 'none')}
                   />
                 )}
-                <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
                 <p className="project-date text-muted">Date: {project.date}</p>
                 <div className="project-tags">
