@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
 import './projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +5,8 @@ import { faCode, faMobileAlt, faGamepad, faVrCardboard, faBug, faCogs, faTools }
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Add this line
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Add this line
+import { NavLink } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
 
 
 const tagIcons = {
@@ -344,7 +345,15 @@ const Projects = () => {
                 </div>
 
                 <div className="project-links mt-3 d-flex justify-content-center">
-                  {project.link && (
+                  {project.link && project.link.startsWith('/') ? (
+                    <NavLink
+                      to={project.link}
+                      className="btn btn-gradient me-2"
+                    >
+                      <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
+                      View Project
+                    </NavLink>
+                  ) : project.link ? (
                     <a
                       href={project.link}
                       target="_blank"
@@ -354,7 +363,7 @@ const Projects = () => {
                       <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
                       View Project
                     </a>
-                  )}
+                  ) : null}
                   {project.github && (
                     <a
                       href={project.github}
