@@ -22,7 +22,7 @@ const ProjectImgTextImg = ({
           src={rightImgSrc}
           alt={rightImgAlt}
           className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "200px", borderRadius: "8px", ...imgStyle }}
+          style={{ maxWidth: "320px", borderRadius: "8px", ...imgStyle }}
         />
         {/* Text */}
         <div className="flex-fill text-white px-3 py-2">{children}</div>
@@ -31,7 +31,7 @@ const ProjectImgTextImg = ({
           src={leftImgSrc}
           alt={leftImgAlt}
           className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "200px", borderRadius: "8px", ...imgStyle }}
+          style={{ maxWidth: "480px", borderRadius: "8px", ...imgStyle }}
         />
       </>
     ) : (
@@ -41,7 +41,7 @@ const ProjectImgTextImg = ({
           src={leftImgSrc}
           alt={leftImgAlt}
           className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "200px", borderRadius: "8px", ...imgStyle }}
+          style={{ maxWidth: "380px", borderRadius: "8px", ...imgStyle }}
         />
         {/* Text */}
         <div className="flex-fill text-white px-3 py-2">{children}</div>
@@ -50,7 +50,7 @@ const ProjectImgTextImg = ({
           src={rightImgSrc}
           alt={rightImgAlt}
           className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "200px", borderRadius: "8px", ...imgStyle }}
+          style={{ maxWidth: "320px", borderRadius: "8px", ...imgStyle }}
         />
       </>
     )}

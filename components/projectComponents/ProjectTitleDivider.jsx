@@ -10,7 +10,7 @@ const ProjectTitleDivider = ({ title, divider = false }) => (
           : { minHeight: "50px", width: "100%" }
       }
     >
-      <h2 className="text-white m-0">{title}</h2>
+      <h2 className="text-white m-0" style={{ fontSize: "1.3rem" }}>{title}</h2>
     </div>
   </div>
 );

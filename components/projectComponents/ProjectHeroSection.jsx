@@ -1,6 +1,7 @@
 import React from "react";
 
 const ProjectHeroSection = ({
+  title = "Project Title",
   videoUrl = "https://www.youtube.com/embed/AyeXuVhHfwk?autoplay=1&mute=1&loop=1&playlist=AyeXuVhHfwk&controls=0&showinfo=0&modestbranding=1&rel=0",
   roleInfo = [
     "Role: Game Developer",
@@ -24,12 +25,63 @@ const ProjectHeroSection = ({
   rightTitle = "Key Contributions",
   background = "#181818",
   cardBackground = "#232323",
+  summary, // <-- Remove default value, make it required as a prop
+  heroImage = "/images/Site%20Files/MidnightTaxiHeroImg.jpg",
+  showLogo = false
 }) => (
   <section
-    className="d-flex align-items-center justify-content-center w-100 min-vh-60"
-    style={{ background }}
+    className="d-flex flex-column align-items-center justify-content-center w-100 min-vh-60"
+    style={{
+      background: background,
+      backgroundImage: `url('${heroImage}')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat"
+    }}
   >
-    <div className="container py-5">
+    {/* Title or Logo Row */}
+    <div className="d-flex justify-content-center pt-5">
+      <h1 className="text-white" style={{ fontWeight: 700, letterSpacing: 1 }}>
+        {title}
+      </h1>
+    </div>
+    {/* Centered Logo if enabled */}
+    {showLogo && (
+      <div style={{ display: "flex", justifyContent: "center", margin: "32px 0" }}>
+        <img
+          src="/images/Site Files/MidnightTaxiLogo.png"
+          alt="Centered Example"
+          style={{
+            maxWidth: "100%",
+            height: "auto",
+            borderRadius: "12px",
+          }}
+          className="midnight-taxi-logo"
+        />
+      </div>
+    )}
+    <div className="container">
+      {/* Summary Row */}
+      <div className="row justify-content-center mb-4">
+        <div className="col-12 col-lg-11">
+          <div
+            className="px-4 py-3"
+            style={{
+              background: "#232323",
+              color: "#fff",
+              borderRadius: "12px",
+              boxShadow: "0 2px 12px rgba(0,0,0,0.15)",
+              fontSize: "1rem", // Smaller font size
+              maxWidth: "900px",
+              margin: "0 auto",
+              textAlign: "center", // Center the text
+            }}
+          >
+            {summary}
+          </div>
+        </div>
+      </div>
+      {/* Main Card Row */}
       <div className="row justify-content-center">
         <div className="col-12 col-lg-11">
           <div
@@ -43,8 +95,8 @@ const ProjectHeroSection = ({
                   style={{
                     width: "100%",
                     maxWidth: "500px",
-                    minHeight: "300px", // You can adjust this value as needed
-                    aspectRatio: "16/9", // Optional: keeps the aspect ratio, remove if you want full flexibility
+                    minHeight: "300px",
+                    aspectRatio: "16/9",
                     background: "#222",
                     borderRadius: "12px",
                     overflow: "hidden",
@@ -63,7 +115,7 @@ const ProjectHeroSection = ({
                       border: 0,
                       width: "100%",
                       height: "100%",
-                      objectFit: "cover", // Ensures the video fills the box
+                      objectFit: "cover",
                       borderRadius: "12px",
                       background: "#222"
                     }}
@@ -73,7 +125,7 @@ const ProjectHeroSection = ({
               {/* Info Columns */}
               <div className="col-md-6 p-4">
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12 col-md-6">
                     <div className="text-white">
                       <h4>Role</h4>
                       <ul>
@@ -93,7 +145,7 @@ const ProjectHeroSection = ({
                       </ul>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-12 col-md-6">
                     <div className="text-white">
                       <h4>{rightTitle}</h4>
                       <ul>
@@ -111,6 +163,7 @@ const ProjectHeroSection = ({
         </div>
       </div>
     </div>
+    <br></br>
   </section>
 );
 
