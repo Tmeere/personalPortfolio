@@ -15,6 +15,7 @@ import ProjectVidVidComponent from "../components/projectComponents/ProjectVidVi
 import Footer from "../components/footer"; // <-- Add this import
 import ProjectImgImgContainer from "../components/projectComponents/ProjectImgImgContainer"; // Add this import
 import ProjectGifGrid from "../components/projectComponents/ProjectGifGrid";
+import ScrollToTop from "../src/ScrollToTop";
 import "./MidnightTaxi.css";
 
 const roleInfo = ["Lead Game Designer"];
@@ -59,7 +60,8 @@ const conclusionText = [
 ];
 
 const ProjectDefiance = () => (
-  <>
+  <>    
+    <ScrollToTop />
     <ProjectNavbar />
     <DefianceHeroSection
       title=""
