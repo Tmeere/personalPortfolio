@@ -257,19 +257,86 @@ const ProjectDefiance = () => (
       alt2="Taxi Interior View 2"
     />
 
-    
-    <ProjectImageCarousel images={carouselImages} />
-    <ProjectImageCarousel images={carouselImages} />
     <ProjectTitleDivider title="Gameplay GIFs" divider={true} />
-        <ProjectGifGrid
+    <ProjectGifGrid
       gifs={[
-        { src: "/images/Site Files/TaxiEvents.gif", alt: "Steering Wheel", caption: "Window Fog Event" },
-        { src: "/images/Site Files/TaxiEvents2.gif", alt: "Rain Effect", caption: "Fog Event" },
-        { src: "/images/Site Files/TaxiEvents3.gif", alt: "Radio Demo", caption: "Fallen Tree Event" },
-        { src: "/images/Site Files/TaxiEvents4.gif", alt: "Night Drive", caption: "Police Car Event" },
+        {
+          src: "/images/Site Files/TaxiEvents.gif",
+          alt: "Steering Wheel",
+          caption: "Window Fog Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents2.gif",
+          alt: "Rain Effect",
+          caption: "Fog Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents3.gif",
+          alt: "Radio Demo",
+          caption: "Fallen Tree Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents4.gif",
+          alt: "Night Drive",
+          caption: "Police Car Event",
+        },
       ]}
     />
     <ProjectTitleDivider title="Main Menu Interface" divider={true} />
+    <ProjectImageTextContainer
+      imgSrc="/images/Site Files/SatisfactionMeter.jpg"
+      imgAlt="Satisfaction Mechanic UI"
+      imgStyle={{ maxWidth: "500px" }}
+    >
+      <div>
+        One of my final responsibilities was to design the main menu for the
+        game, which included several key sections:
+        <ul>
+          <li>Options Menu</li>
+          <li>Asset Pack Level Viewer</li>
+          <li>Customizing Bobblehead Section</li>
+          <li>Concept Art Page</li>
+          <li>Credits Page</li>
+        </ul>
+        These elements were added towards the end of the project. The Asset Pack
+        Level Viewer and Concept Art Page were introduced to allow all artists
+        to view their work in the engine, regardless of whether it was directly
+        used in the game. To streamline this process, I developed a system using
+        data tables for easy content management. Artists could simply name their
+        piece, input their name, and upload an image of their artwork. This
+        approach aimed to make the Concept Art Page user-friendly and efficient.
+      </div>
+    </ProjectImageTextContainer>
+
+    <ProjectTextBody
+      body={
+        <>
+          After fleshing out the main menu level, I focused on enhancing its
+          visual flair to better reflect the game's Midnight Taxi theme. This
+          involved integrating a variety of assets and themed UI elements to
+          align with the overall style and atmosphere of the game. I
+          collaborated closely with the art team to obtain the necessary artwork
+          and incorporated these pieces into the main menu, further refining its
+          appearance.
+          <br />
+          <br />
+          These visual improvements significantly enhanced the game's initial
+          presentation, making it feel more immersive and polished right from
+          the startup.
+        </>
+      }
+    />
+
+        <ProjectVidVidComponent
+      videoSrc1="https://www.youtube.com/embed/-lvxUxqdWcQ?start=1"
+      videoSrc2="https://www.youtube.com/embed/62uo0us2jeI"
+    />
+
+
+<ProjectImageCarousel images={carouselImages} />
+<ProjectImageCarousel images={carouselImages} />
+
+
     <ProjectTitleDivider title="Event System Manager" divider={true} />
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/EventManager.png"
@@ -277,8 +344,10 @@ const ProjectDefiance = () => (
       imgStyle={{ maxWidth: "500px" }}
     >
       <div>
-        In addition to handling the driving mechanics for the game, I was responsible for developing the events manager system, which controls all external gameplay factors. This system encompasses a variety of environmental and interactive elements, including:
-
+        In addition to handling the driving mechanics for the game, I was
+        responsible for developing the events manager system, which controls all
+        external gameplay factors. This system encompasses a variety of
+        environmental and interactive elements, including:
         <ul>
           <li>Police Car Event</li>
           <li>Falling Tree Event</li>
@@ -289,10 +358,13 @@ const ProjectDefiance = () => (
           <li>NPC Pedestrian Event</li>
           <li>NPC Shooter Event</li>
         </ul>
-
-        Initially, I implemented each event as a separate actor or component. However, based on feedback from the design team, it became clear that they needed a more unified approach. Designers required better control over all components collectively, rather than managing numerous individual pieces.
-
-        To address this, I developed a shared event manager system designed to be more designer-friendly and streamline event management.
+        Initially, I implemented each event as a separate actor or component.
+        However, based on feedback from the design team, it became clear that
+        they needed a more unified approach. Designers required better control
+        over all components collectively, rather than managing numerous
+        individual pieces. To address this, I developed a shared event manager
+        system designed to be more designer-friendly and streamline event
+        management.
       </div>
     </ProjectImageTextContainer>
 
@@ -319,6 +391,7 @@ const ProjectDefiance = () => (
         <p key={idx}>{paragraph}</p>
       ))}
     />
+    <br></br>
     <Footer />
   </>
 );

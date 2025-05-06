@@ -1,8 +1,8 @@
 import React from "react";
 
 const ProjectTextBody = ({ body }) => (
-  <div className="container my-4">
-    <div className="bg-dark text-white p-4 rounded">
+  <div className="container px-1">
+    <div className="bg-dark text-white px-3 py-1" style={{ borderRadius: "1rem" }}>
       <p>
         {body}
       </p>
