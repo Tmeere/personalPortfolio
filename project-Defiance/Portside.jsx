@@ -16,6 +16,7 @@ import Footer from "../components/footer"; // <-- Add this import
 import ProjectImgImgContainer from "../components/projectComponents/ProjectImgImgContainer"; // Add this import
 import ProjectGifGrid from "../components/projectComponents/ProjectGifGrid";
 import ScrollToTop from "../src/ScrollToTop";
+import ProjectImgImgText from "../components/projectComponents/ProjectImgImgText"; // Add this import
 import "./MidnightTaxi.css";
 
 const roleInfo = ["Level Designer"];
@@ -103,6 +104,30 @@ const Blockout = [
   
 ]
 
+const MapBlockout = [
+  {
+    src: "/images/Site Files/Development 1_edited.jpg",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Rough Initial Blockout",
+  },
+  {
+    src: "/images/Site Files/Development 2.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Further Map Blockouts",
+  },
+  {
+    src: "/images/Site Files/Development 3.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Further Tweaks and refining",
+  },
+  {
+    src: "/images/Site Files/Development 4.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Adding Exterior Warehouse",
+  },
+  
+]
+
 const responsibility = [
   "Developed a balanced and engaging King of the Hill map for TF2 (Team Fortress 2)",
   "Conducted online Q&A sessions with players to ensure a fair and balanced experience for all classes",
@@ -151,6 +176,33 @@ const ProjectDefiance = () => (
     />
     <ProjectTagsBar tags={tags} />
 
+    <ProjectVidAndText
+      videoUrl="https://www.youtube.com/embed/9U1u3Cp41hk?autoplay=1&loop=1&playlist=9U1u3Cp41hk&mute=1"
+      title="Overview"
+      minHeight="250px"
+      description={
+        <>
+          I created a King of the Hill map for TF2, now available on the Steam
+          Workshop. The development process took 8 weeks, during which I learned
+          to use the Hammer Editor from scratch. ​<br></br>
+          <br></br>Designed for 15v15 gameplay, the map underwent continuous
+          refinement based on user feedback and testing.
+          <br></br>
+          <br></br>During testing, I observed matches as an independent
+          observer, allowing me to identify player frustrations and refine the
+          map design accordingly.
+          <br></br>
+          <br></br>This project taught me the core fundamentals of level design
+          and provided valuable insights into creating an enjoyable TF2 map
+          aswell as a wider understanding of multiplayer level design concepts.
+          <br></br>
+          <br></br>You can find my map on the Steam Workshop here. ​<br></br>
+          <br></br>Extra Assets will need to be added to TF2 files to see
+          additional textures and models in game. Download can be found here
+        </>
+      }
+    />
+
     <ProjectImageCarousel images={Maps} />
 
     <ProjectTitleDivider title="Overview" />
@@ -185,51 +237,51 @@ const ProjectDefiance = () => (
       }
     />
 
-<ProjectImageCarousel images={Blockout} />
+    <ProjectImageCarousel images={Blockout} />
+
+    <ProjectVidAndText
+      videoUrl="https://www.youtube.com/embed/9U1u3Cp41hk?autoplay=1&loop=1&playlist=9U1u3Cp41hk&mute=1"
+      title="Initial Development"
+      minHeight="250px"
+      description={
+        <>
+          Following initial game research and planning I started some initial
+          steps into learning the hammer editor and starting some of the initial
+          blockout. I found one of the initial challenges I had with this
+          project was grasping scale of maps vs the mockups I made, this had me
+          readjusting the scaling of the map to more accommodate the the typical
+          design of TF map. During this stage it was important to breakdown work
+          quickly, get feedback and iterate and test with other play testers
+        </>
+      }
+    />
+
+    <ProjectImgImgText
+      src1="/images/Site Files/MapCutout.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/MapCutout.png"
+      alt2="Placeholder 2"
+      title="Test Render"
+    >
+      If you see this, the component is working!
+    </ProjectImgImgText>
 
     <ProjectImageTextContainer
-      imgSrc="/images/Site Files/TankBounce.gif"
+      imgSrc="/images/Site Files/MapCutout.png"
       imgAlt="Satisfaction Mechanic UI"
-      imgStyle={{ maxWidth: "400px" }}
+      imgStyle={{ maxWidth: "700px" }}
+      title="Map Itterations"
     >
       <div>
-        In the game, players start with a default weapon that fires five
-        projectiles in quick succession before requiring a reload during a
-        cooldown period. <br></br>
-        <br></br>The projectiles bounce off surfaces, adding an exciting layer
-        of strategy and encouraging more dynamic gameplay.
+        Down the line in the project I found myself many small and impactful
+        changes from the map shaped from player testing. When doing this testing
+        It was important to conduct testing from an position of an observer and
+        not as a player, as the way the level designer would play versus and
+        actual player would be drastically different and thus bias, after every
+        test with new players each time I conduct google feedback forms
+        discussing points of feedback and areas that needed imrproving
       </div>
     </ProjectImageTextContainer>
-    <ProjectImageTextContainer
-      imgSrc="/images/Site Files/TankMove.gif"
-      imgAlt="Satisfaction Mechanic UI"
-      imgStyle={{ maxWidth: "400px" }}
-    >
-      <div>
-        Tanks utilize classic WASD controls for movement, with W and S for
-        forward and backward movement, and A and D for rotation.<br></br>
-        <br></br> This design frees up more keyboard space for two players,
-        promoting cooperation while encouraging players to carefully consider
-        their movement and positioning in the game.
-      </div>
-    </ProjectImageTextContainer>
-    <ProjectImageTextContainer
-      imgSrc="/images/Site Files/TankPickup.gif"
-      imgAlt="Satisfaction Mechanic UI"
-      imgStyle={{ maxWidth: "400px" }}
-    >
-      <div>
-        Tanks can collect various power-ups to gain an edge over their opponent.
-        These include:<br></br>
-        <br></br> <li>Shield - Temporary Invulnerability</li>{" "}
-        <li>Slow Mo - slows enemy</li>
-        <li>tank Mine - An On contact tank killer</li> <br></br>These power-ups
-        add variety to each match, ensuring that every encounter feels unique
-        and strategic.
-      </div>
-    </ProjectImageTextContainer>
-
-    <ProjectImageCarousel images={Projectiles} />
 
     <ProjectTextBody
       header={""}
@@ -242,38 +294,6 @@ const ProjectDefiance = () => (
           gameplay.
         </>
       }
-    />
-    <ProjectImageTextContainer
-      imgSrc="/images/Site Files/SaveData.png"
-      imgAlt="C++ Save Actor Constructor Code"
-      imgStyle={{ maxWidth: "400px" }}
-    >
-      <div>
-        For the game, I implemented a custom save data system to track scores
-        between rounds. While this could have been managed through the Game
-        Instance, I aimed to create a dedicated C++ save manager as part of my
-        personal deliverables.
-      </div>
-    </ProjectImageTextContainer>
-
-    <ProjectImgImgContainer
-      src1="/images/Site Files/ScoreBoard.png"
-      text="UI Scoreboards - First To Five Wins"
-      alt1="Taxi Interior View 1"
-      src2="/images/Site Files/TankCombat.gif"
-      alt2="Taxi Interior View 2"
-      img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
-      img2Style={{ maxHeight: "350px", width: "100%" }} // Bigger right image
-    />
-    <br></br>
-    <ProjectImgImgContainer
-      src1="/images/Site Files/SpawningTank.gif"
-      text="A spawn manager was implemented to alternate between weapon pickups and power-ups, with their timing and locations determined randomly. This approach helps keep gameplay varied and constantly changing."
-      alt1="Taxi Interior View 1"
-      src2="/images/Site Files/SpawnCode.png"
-      alt2="Taxi Interior View 2"
-      img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
-      img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
 
     <br></br>
@@ -305,22 +325,23 @@ const ProjectDefiance = () => (
       }
     />
     <br></br>
-    <ProjectTextBody
-      header={"Project Conclusions"}
-      body={
+    <ProjectVidAndText
+      videoUrl="https://www.youtube.com/embed/C_CVLGR7aIU?autoplay=1&loop=1&playlist=C_CVLGR7aIU&mute=1"
+      title="Conclusions"
+      minHeight="350px"
+      description={
         <>
-          With the goal of creating a vertical slice of a tank shooter, I’m
-          pleased with the learning outcomes of this project. My aim was to
-          effectively integrate C++ and Blueprints, and I gained valuable
-          insights into when to use each—essentially clarifying the "fuzzy line"
-          between the two.A significant takeaway has been the development of
-          Blueprint Function Libraries. Creating custom nodes in C++ for
-          functionalities not available in Blueprints has proven extremely
-          beneficial. I plan to expand on this approach in future projects by
-          building a more extensive library.This experience has not only
-          enhanced my C++ skills but also deepened my understanding of Unreal
-          Engine. Overall, the project has served as a clear guide for
-          determining when to leverage C++ in my work.
+          Overall, I am very pleased with the outcome of this project, achieving
+          the goals I set out to learn the Hammer Editor, publish a map to the
+          Steam Workshop, and understand multiplayer level design.
+          <br></br>
+          <br></br>Reflecting on the experience, I realize that iteration and
+          extensive player testing are essential for developing a successful
+          level. Initially, I underestimated the impact of player feedback, but
+          it proved crucial in shaping the final result. ​<br></br>
+          <br></br>As I look ahead, I’m excited to be featured in the university
+          highlights for this project. This recognition inspires me to continue
+          refining my skills and exploring new opportunities in level design.
         </>
       }
     />

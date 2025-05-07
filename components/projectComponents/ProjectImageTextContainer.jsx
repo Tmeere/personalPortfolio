@@ -13,6 +13,7 @@ const ProjectImageTextContainer = ({
   fontSize = "1.1rem",
   boxShadow = "0 4px 24px rgba(0,0,0,0.18)",
   maxWidth = "400px",
+  title = "", // <-- Added title prop
 }) => (
   <div
     className={`container my-4 ${containerClass}`}
@@ -36,6 +37,11 @@ const ProjectImageTextContainer = ({
       </div>
       {/* Text Right */}
       <div className="col-12 col-md-6">
+        {title && (
+          <h3 style={{ color: "#4fc3f7", marginBottom: "1rem", fontWeight: "bold", letterSpacing: "0.5px" }}>
+            {title}
+          </h3>
+        )}
         <div style={{ color: textColor, fontSize }}>
           {children}
         </div>
