@@ -236,7 +236,7 @@ const Projects = () => {
           successful project completion.
         </>
       ),
-      link: "https://itch.io",
+      link: "/tank", 
       image: "./images/Site Files/TankBuster.png",
       date: "2024",
       tags: ["VR", "Project Management", "Steam Release"],
@@ -306,7 +306,7 @@ const Projects = () => {
           multiplayer experience.
         </>
       ),
-      link: "",
+      link: "/port",
       image: "./images/Site Files/Portside.png",
       date: "2021",
       tags: ["TF2", "Level Design", "Multiplayer"],

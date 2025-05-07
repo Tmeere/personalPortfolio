@@ -44,7 +44,7 @@ const ProjectDefiance = () => (
       leftTitle="Key Responsibilities"
       background="#181818"
       cardBackground="#232323"
-      heroImage="/images/Site Files/MidnightTaxiHeroImg.jpg"
+      heroImage="/images/Site Files/AIApplianceDefianceRender.png"
       summary="You wake up from Cyro during your long space travel. You wake up with the ship breaking down and the appliances have come to life! Bring order to the ship and defeat the appliances!"
       downloadLinks={[
         {
@@ -195,7 +195,7 @@ const ProjectDefiance = () => (
       header={"Conclusion"}
       body={
         <>
-          ​Completing this project stands out as one of my most significant
+          Completing this project stands out as one of my most significant
           achievements in game development to date. As my first team-based
           endeavor, it introduced a new dimension of collaboration, requiring me
           to integrate my work with contributions from various departments to

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
 
     // Close the navbar after clicking a link
     const navbarCollapse = document.getElementById("navbarNav");
-    if (navbarCollapse.classList.contains("show")) {
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
       const bootstrapCollapse = new window.bootstrap.Collapse(navbarCollapse);
       bootstrapCollapse.hide();
     }
@@ -26,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand navbar-dark bg-dark sticky-top">
       <div className="container-fluid">
-        <a className="navbar-brand d-flex align-items-center" href="#home">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <img 
             src="/Me.svg" 
             alt="Logo" 
@@ -39,9 +40,9 @@ const Navbar = () => {
             }} 
           />
           <span className="d-none d-sm-inline">Thomas Meere</span>
-        </a>
+        </Link>
         <div className="navbar-nav ms-auto flex-row">
-          <a className="nav-link" href="#home" onClick={() => scrollToSection('home')}>Home</a>
+          <Link className="nav-link" to="/">Home</Link>
           <a 
             className="nav-link" 
             href="/resume/Thomas Meere - Game Designer _ Technical Designer.pdf" 
