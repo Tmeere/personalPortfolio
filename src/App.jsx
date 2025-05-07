@@ -6,6 +6,7 @@ import ProjectTaxi from '../project-Defiance/MidnightTaxi';
 import ProjectTank from '../project-Defiance/TankBuster';
 import ProjectPort from '../project-Defiance/Portside';
 import ProjectEmo from '../project-Defiance/EmoEdge';
+import ProjectBD from '../project-Defiance/BloodDrunk'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -19,7 +20,8 @@ function App() {
         <Route path="/taxi" element={<ProjectTaxi />} />
         <Route path="/tank" element={<ProjectTank />} />
         <Route path="/port" element={<ProjectPort />} />
-        <Route path="/emo" element={<ProjectEmo />} />
+        <Route path="/emo" element={<ProjectEmo />} />\
+        <Route path="/blood" element={<ProjectBD />} />
       </Routes>
     </>
   );

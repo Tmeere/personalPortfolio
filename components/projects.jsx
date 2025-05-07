@@ -7,7 +7,9 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Add this line
 import { NavLink } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const tagIcons = {
   HTML: faCode,
@@ -41,6 +43,7 @@ const tagIcons = {
 
 const Projects = () => {
   const projects = [
+    // 1. Modern web dev & API
     {
       title: "Games Workshop Website",
       description: (
@@ -72,7 +75,7 @@ const Projects = () => {
         </>
       ),
       link: "https://tmeere-fakestore.netlify.app/",
-      github: "https://github.com/yourusername/ecommerce-website",
+      github: "https://github.com/Tmeere/fakestoreAppV1",
       externalLink: "",
       image: "./images/Site Files/Ecommerce Webstore.png",
       date: "2025",
@@ -95,6 +98,60 @@ const Projects = () => {
       date: "2025",
       tags: ["React", "JavaScript", "API Integration"],
     },
+
+    // 2. Game dev leadership & VR
+    {
+      title: "BloodDrunk",
+      description: (
+        <>
+          Leading development as <span className="blue-bold">project lead</span>{" "}
+          and programmer, designing immersive levels and scalable gameplay
+          systems. Implementing complex{" "}
+          <span className="blue-bold">AI entities</span> for dynamic combat and
+          creating engaging <span className="blue-bold">VR mechanics</span>.
+        </>
+      ),
+      link: "/blood", // Updated to route to BloodDrunk page
+      image: "./images/Site Files/Blood_Drunk.png",
+      date: "2025",
+      tags: ["Unreal Engine", "VR", "AI Design"],
+      inDevelopment: true,
+    },
+    {
+      title: "Tank Busters",
+      description: (
+        <>
+          Collaborated with students from European universities to develop a{" "}
+          <span className="blue-bold">VR high-octane shooter</span> for release
+          on <span className="blue-bold">Steam</span>. Led the project as{" "}
+          <span className="blue-bold">Project Lead</span>, overseeing the entire
+          development cycle, providing strategic direction, and ensuring
+          successful project completion.
+        </>
+      ),
+      link: "/tank", 
+      image: "./images/Site Files/TankBuster.png",
+      date: "2024",
+      tags: ["VR", "Project Management", "Steam Release"],
+    },
+    {
+      title: "KAMK Summer Games Exchange Project",
+      description: (
+        <>
+          Collaborated with students from European universities to develop a{" "}
+          <span className="blue-bold">VR high-octane shooter</span> for release
+          on <span className="blue-bold">Steam</span>. Led the project as{" "}
+          <span className="blue-bold">Project Lead</span>, overseeing the entire
+          development cycle, providing strategic direction, and ensuring
+          successful project completion.
+        </>
+      ),
+      image: "",
+      date: "2024",
+      tags: ["VR", "Project Management", "Steam Release"],
+    },
+
+    // 3. Game dev (in development, Unity/Unreal)
     {
       title: "Endless Roguelike Card Game",
       description: (
@@ -133,6 +190,109 @@ const Projects = () => {
       inDevelopment: true,
     },
     {
+      title: "Midnight Taxi",
+      description: (
+        <>
+          <span className="blue-bold">Design Lead</span> responsible for the
+          conceptualization and development of{" "}
+          <span className="blue-bold">game mechanics</span> within a 23-person
+          team. Guided the overall{" "}
+          <span className="blue-bold">design direction</span> of the game and
+          oversaw and assisted{" "}
+          <span className="blue-bold">Junior Designers</span>.
+        </>
+      ),
+      link: "/taxi",
+      externalLink: "https://group-twenty8.itch.io/midnight-taxi",
+      image: "./images/Site Files/TechDesign.png",
+      date: "2024",
+      tags: ["Game Design", "Team Leadership", "Itch.io"],
+    },
+    {
+      title: "Emo-Edge",
+      description: (
+        <>
+          Developed a{" "}
+          <span className="blue-bold">high-octane parkour runner</span> in{" "}
+          <span className="blue-bold">Unreal Engine</span>, featuring advanced{" "}
+          <span className="blue-bold">player movement mechanics</span> and
+          dynamic <span className="blue-bold">enemy AI</span> driven by state
+          machines.
+        </>
+      ),
+      link: "/emo",
+      image: "./images/Site Files/EmoSplash.png",
+      date: "2022",
+      tags: ["Unreal Engine", "Parkour", "AI Design"],
+    },
+
+    // 4. Classic web dev
+    {
+      title: "Event Center Website",
+      description: (
+        <>
+          Built a{" "}
+          <span className="blue-bold">responsive multi-page website</span> for a
+          fictional event center using <span className="blue-bold">HTML</span>,{" "}
+          <span className="blue-bold">CSS</span>, and{" "}
+          <span className="blue-bold">Bootstrap</span>. Features include{" "}
+          <span className="blue-bold">event schedules</span>,{" "}
+          <span className="blue-bold">venue information</span>, and{" "}
+          <span className="blue-bold">contact forms</span>. Designed to practice
+          front-end development, layout structuring, and user interface design.
+        </>
+      ),
+      link: "", // Add a live link if deployed
+      github: "https://github.com/Tmeere/Bootstrap-Basics",
+      image: "./images/Site Files/Events Page.png",
+      date: "2025",
+      tags: ["HTML", "CSS", "Bootstrap", "Frontend"],
+    },
+
+    // 5. Team/Collaboration/Internship
+    {
+      title: "AI-Appliance",
+      description: (
+        <>
+          <span className="blue-bold">Junior Programmer</span> within a
+          23-member team. Created{" "}
+          <span className="blue-bold">core player mechanics</span> and tested
+          and resolved <span className="blue-bold">bugs</span>.
+        </>
+      ),
+      link: "/defiance", 
+      image: "./images/Site Files/AIApplianceDefianceRender.png",
+      date: "2023",
+      tags: ["Programming", "Bug Fixing", "Team Collaboration"],
+    },
+
+    // 6. Level design & older projects
+    {
+      title: "Team Fortress 2 Community Map",
+      description: (
+        <>
+          Designed and developed a custom{" "}
+          <span className="blue-bold">12v12 King of the Hill map</span>,
+          applying{" "}
+          <span className="blue-bold">multiplayer level design principles</span>{" "}
+          and <span className="blue-bold">TF2 gameplay mechanics</span>.
+          Conducted <span className="blue-bold">user testing</span> to refine
+          balance, player flow, and performance, ensuring a smooth, engaging
+          multiplayer experience.
+        </>
+      ),
+      link: "/port",
+      image: "./images/Site Files/Portside.png",
+      date: "2021",
+      tags: ["TF2", "Level Design", "Multiplayer"],
+    },
+
+    // 7. Python/terminal projects (at the bottom)
+  ]; // <-- Move Python projects below
+
+  // Add Python projects at the end
+  projects.push(
+    {
       title: "Todo App (Python Terminal)",
       description: (
         <>
@@ -147,7 +307,7 @@ const Projects = () => {
         </>
       ),
       link: "", // Add link if hosted
-      github: "https://github.com/Tmeere/ToDo-Application/tree/main",
+      github: "https://github.com/Tmeere/ToDo-Application",
       image: "./images/Site Files/TaskManager.png",
       date: "2025",
       tags: ["Python"],
@@ -169,149 +329,8 @@ const Projects = () => {
       image: "./images/Site Files/Evil Wizard.png",
       date: "2025",
       tags: ["Python", "RPG", "Turn-Based", "ASCII"],
-    },
-    {
-      title: "Event Center Website",
-      description: (
-        <>
-          Built a{" "}
-          <span className="blue-bold">responsive multi-page website</span> for a
-          fictional event center using <span className="blue-bold">HTML</span>,{" "}
-          <span className="blue-bold">CSS</span>, and{" "}
-          <span className="blue-bold">Bootstrap</span>. Features include{" "}
-          <span className="blue-bold">event schedules</span>,{" "}
-          <span className="blue-bold">venue information</span>, and{" "}
-          <span className="blue-bold">contact forms</span>. Designed to practice
-          front-end development, layout structuring, and user interface design.
-        </>
-      ),
-      link: "", // Add a live link if deployed
-      github: "https://github.com/Tmeere/Event-Center-Website",
-      image: "./images/Site Files/Events Page.png",
-      date: "2025",
-      tags: ["HTML", "CSS", "Bootstrap", "Frontend"],
-    },
-    {
-      title: "BloodDrunk",
-      description: (
-        <>
-          Leading development as <span className="blue-bold">project lead</span>{" "}
-          and programmer, designing immersive levels and scalable gameplay
-          systems. Implementing complex{" "}
-          <span className="blue-bold">AI entities</span> for dynamic combat and
-          creating engaging <span className="blue-bold">VR mechanics</span>.
-        </>
-      ),
-      link: "asasdasd",
-      image: "./images/Site Files/Blood_Drunk.png",
-      date: "2025",
-      tags: ["Unreal Engine", "VR", "AI Design"],
-      inDevelopment: true,
-    },
-    {
-      title: "KAMK Summer Games Exchange Project",
-      description: (
-        <>
-          Collaborated with students from European universities to develop a{" "}
-          <span className="blue-bold">VR high-octane shooter</span> for release
-          on <span className="blue-bold">Steam</span>. Led the project as{" "}
-          <span className="blue-bold">Project Lead</span>, overseeing the entire
-          development cycle, providing strategic direction, and ensuring
-          successful project completion.
-        </>
-      ),
-      image: "",
-      date: "2024",
-      tags: ["VR", "Project Management", "Steam Release"],
-    },
-    {
-      title: "Tank Busters",
-      description: (
-        <>
-          Collaborated with students from European universities to develop a{" "}
-          <span className="blue-bold">VR high-octane shooter</span> for release
-          on <span className="blue-bold">Steam</span>. Led the project as{" "}
-          <span className="blue-bold">Project Lead</span>, overseeing the entire
-          development cycle, providing strategic direction, and ensuring
-          successful project completion.
-        </>
-      ),
-      link: "/tank", 
-      image: "./images/Site Files/TankBuster.png",
-      date: "2024",
-      tags: ["VR", "Project Management", "Steam Release"],
-    },
-    {
-      title: "Midnight Taxi",
-      description: (
-        <>
-          <span className="blue-bold">Design Lead</span> responsible for the
-          conceptualization and development of{" "}
-          <span className="blue-bold">game mechanics</span> within a 23-person
-          team. Guided the overall{" "}
-          <span className="blue-bold">design direction</span> of the game and
-          oversaw and assisted{" "}
-          <span className="blue-bold">Junior Designers</span>.
-        </>
-      ),
-      link: "/taxi",
-      externalLink: "https://group-twenty8.itch.io/midnight-taxi",
-      image: "./images/Site Files/TechDesign.png",
-      date: "2024",
-      tags: ["Game Design", "Team Leadership", "Itch.io"],
-    },
-    {
-      title: "AI-Appliance",
-      description: (
-        <>
-          <span className="blue-bold">Junior Programmer</span> within a
-          23-member team. Created{" "}
-          <span className="blue-bold">core player mechanics</span> and tested
-          and resolved <span className="blue-bold">bugs</span>.
-        </>
-      ),
-      link: "/defiance", 
-      image: "./images/Site Files/AIApplianceDefianceRender.png",
-      date: "2023",
-      tags: ["Programming", "Bug Fixing", "Team Collaboration"],
-    },
-    {
-      title: "Emo-Edge",
-      description: (
-        <>
-          Developed a{" "}
-          <span className="blue-bold">high-octane parkour runner</span> in{" "}
-          <span className="blue-bold">Unreal Engine</span>, featuring advanced{" "}
-          <span className="blue-bold">player movement mechanics</span> and
-          dynamic <span className="blue-bold">enemy AI</span> driven by state
-          machines.
-        </>
-      ),
-      link: "/emo",
-      image: "./images/Site Files/IntroScreen.png",
-      date: "2022",
-      tags: ["Unreal Engine", "Parkour", "AI Design"],
-    },
-    {
-      title: "Team Fortress 2 Community Map",
-      description: (
-        <>
-          Designed and developed a custom{" "}
-          <span className="blue-bold">12v12 King of the Hill map</span>,
-          applying{" "}
-          <span className="blue-bold">multiplayer level design principles</span>{" "}
-          and <span className="blue-bold">TF2 gameplay mechanics</span>.
-          Conducted <span className="blue-bold">user testing</span> to refine
-          balance, player flow, and performance, ensuring a smooth, engaging
-          multiplayer experience.
-        </>
-      ),
-      link: "/port",
-      image: "./images/Site Files/Portside.png",
-      date: "2021",
-      tags: ["TF2", "Level Design", "Multiplayer"],
-    },
-  ];
+    }
+  );
 
   return (
     <section id="projects" className="projects container-fluid py-5">

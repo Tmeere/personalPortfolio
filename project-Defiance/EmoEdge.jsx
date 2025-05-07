@@ -96,7 +96,7 @@ const ProjectDefiance = () => (
     <ScrollToTop />
     <ProjectNavbar />
     <DefianceHeroSection
-      title="Portside"
+      title="Emo Edge"
       showLogo={false}
       videoUrl="https://www.youtube.com/embed/idcMbMSL6Rk?autoplay=1&loop=1&playlist=idcMbMSL6Rk&mute=1"
       roleInfo={roleInfo}
@@ -104,12 +104,10 @@ const ProjectDefiance = () => (
       leftTitle="Key Responsibilities"
       background="#181818"
       cardBackground="#232323"
-      heroImage="/images/Site Files/PortsideSplash.jpg"
+      heroImage="/images/Site Files/EmoSplash.png"
       summary={
         <>
-          Fight on this KOTH map for control of the Port. Two ships enter one
-          will leave... <br />
-          -Hammer Editor
+          Stay fast, go room to room killing enemies in this high octane shooter, speed is key. Complete the level before the timer runs out. Match the enemy aspect should you intend to cause harm!
         </>
       }
       downloadLinks={[
