@@ -217,22 +217,45 @@ const ProjectDefiance = () => (
     />
     <br></br>
 
-    <ProjectVidAndText
-      videoUrl="https://www.youtube.com/embed/ONI7gKVKr3A"
-      title="AI Target Practice Demo"
-      text="Using inheritance, we developed seven unique weapon classes, including both live projectile weapons and standard line trace weapons. A critical consideration in designing these weapons was their overall feel, especially since they were for VR. I focused on haptics and feedback to enhance the dynamics of the weapons. Key elements included:
+        <ProjectVidAndText
+          videoUrl="https://www.youtube.com/embed/ONI7gKVKr3A?autoplay=1&loop=1&playlist=ONI7gKVKr3A&mute=1"
+          title=""
+          minHeight="400px"
+          description={
+            <>
+              <p>
+                Using inheritance, we developed seven unique weapon classes, including both live projectile weapons and standard line trace weapons. A critical consideration in designing these weapons was their overall feel, especially since they were for VR. I focused on haptics and feedback to enhance the dynamics of the weapons. Key elements included:
+              </p>
+              <ul>
+                <li>
+                  <b>Weapon Haptics:</b> Providing tactile feedback when shooting, catching, and dropping weapons.
+                </li>
+                <li>
+                  <b>Weapon Visuals:</b> Incorporating realistic gunfire effects and ejected casings.
+                </li>
+                <li>
+                  <b>VFX Laser Pointers:</b> Adding visual helpers for long-range shooting.
+                </li>
+              </ul>
+              <p>
+                These elements collectively contributed to a more immersive experience in the VR shooter.
+              </p>
+            </>
+          }
+        />
 
-​
-
-Weapon Haptics Providing tactile feedback when shooting, catching, and dropping weapons.
-
-Weapon Visuals Incorporating realistic gunfire effects and ejected casings.
-
-VFX Laser Pointers Adding visual helper for long-range shooting.
-
-​
-
-These elements collectively contributed to a more immersive experience in the VR shooter."
+<ProjectImgImgContainer
+      src1="/images/Site Files/Train1.png"
+      alt1="BloodDrunk Overview"
+      src2="/images/Site Files/Train.png"
+      alt2="BloodDrunk Team Lead"
+      img1Style={{ maxWidth: "400px", width: "100%" }}
+      img2Style={{ maxWidth: "700px", width: "100%" }}
+      text={
+        <>
+          
+        </>
+      }
     />
 
     <ProjectTextBody
