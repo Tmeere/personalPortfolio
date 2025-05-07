@@ -20,27 +20,54 @@ import "./MidnightTaxi.css";
 
 const roleInfo = ["Lead Game Designer"];
 
-const contributions = [
-  "Developed core gameplay mechanics",
-  "Implemented multiplayer features",
-  "Designed immersive environments",
-  "Optimized performance for smooth gameplay",
-];
 
-const tags = ["Unity", "Multiplayer", "Game Design", "C#", "Level Design"];
 
-const carouselImages = [
+const tags = ["Unreal", "Blueprint", "Leadership", "Jira", "QA", "Github", "Optimization"];
+
+
+const UIImages = [
   {
-    src: "/images/midnight-taxi-demo.png",
+    src: "/images/Site Files/UI1.png",
     alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Gameplay: Picking up a passenger",
+    caption: "Concept: Inital Interior Taxi Designs",
   },
   {
-    src: "/images/midnight-taxi-demo-2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 2",
-    caption: "Gameplay: Navigating through the city",
+    src: "/images/Site Files/UI2.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "UI: Chapter Selector Based On Nights",
   },
-  // Add more images as needed
+  {
+    src: "/images/Site Files/UI3.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Intro Cutscene: Title card that appears on launch",
+  },
+  {
+    src: "/images/Site Files/UI4.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Layout: Controls Layout Presented To Player",
+  },
+];
+const EnvirShot = [
+  {
+    src: "/images/Site Files/Envir.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Lvl Design: Map Shots",
+  },
+  {
+    src: "/images/Site Files/Envir2.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Lvl Design: Map Shots",
+  },
+  {
+    src: "/images/Site Files/Envir3.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Lvl Design: Map Shots",
+  },
+  {
+    src: "/images/Site Files/Envir4.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Lvl Design: Map Shots",
+  },
 ];
 
 const conclusionText = [
@@ -59,8 +86,19 @@ const conclusionText = [
   `Looking ahead, one area I want to improve is planning. As the saying goes, “Minutes of planning save hours of programming.” Spending more time understanding design intentions upfront would reduce rework and ensure smoother integration. Additionally, I aim to keep refining my code to ensure it's readable and easy for both Designers and other Developers to understand and build upon.`,
 ];
 
+const responsibility = [
+  "Managing the programming department to meet milestones and deadlines​",
+  "Assisting Junior Developers with tasks, teaching new concepts",
+  "Bug Testing and Fixing",
+  "Developing Main Menu Interfaces",
+  "Taxi Driving Mechanics",
+  "Satiscation Mechanic",
+  "Events Manager System",
+  "Optimizing Game Performance",
+];
+
 const ProjectDefiance = () => (
-  <>    
+  <>
     <ScrollToTop />
     <ProjectNavbar />
     <DefianceHeroSection
@@ -68,13 +106,24 @@ const ProjectDefiance = () => (
       showLogo={true}
       videoUrl="https://www.youtube.com/embed/AyeXuVhHfwk?autoplay=1&mute=1&loop=1&playlist=AyeXuVhHfwk&controls=0&showinfo=0&modestbranding=1&rel=0"
       roleInfo={roleInfo}
-      rightInfo={contributions}
-      leftTitle="Project Details"
-      rightTitle="Key Contributions"
+      leftInfo={responsibility}
+      leftTitle="Key Responsibilities"
       background="#181818"
       cardBackground="#232323"
       heroImage="/images/Site Files/MidnightTaxiHeroImg.jpg"
       summary="Step into the world of a newly recruited taxi driver navigating the winding roads of a small town. But be warned, beneath the seemingly peaceful facade lies a dark secret—a killer is on the loose, and you're caught right in the middle of it!"
+      downloadLinks={[
+        {
+          url: "/MidnightTaxiDesignDoc.pdf",
+          label: "Design Doc",
+          description: "Design Decisions",
+        },
+        {
+          url: "https://group-twenty8.itch.io/midnight-taxi",
+          label: "Download Game",
+          description: "Linked On Itch.IO",
+        },
+      ]}
     />
     <ProjectTagsBar tags={tags} />
     <ProjectVidAndText
@@ -110,6 +159,7 @@ const ProjectDefiance = () => (
       }
     />
     <ProjectTitleDivider title="Contributions" />
+    <ProjectTitleDivider title="Initial Car Mechanics" divider={true} />
     <ProjectVidAndText
       videoUrl="https://www.youtube.com/embed/xHGUWTkJpNY"
       title=""
@@ -188,7 +238,17 @@ const ProjectDefiance = () => (
         </>
       }
     />
+    <ProjectImgImgContainer
+      src1="/images/Site Files/CameraMovement.png"
+      text="Clamping Camera Movement based on Min and Max Yaw/Pitch Values"
+      alt1="Taxi Interior View 1"
+      src2="/images/Site Files/SteeringClamp.png"
+      alt2="Taxi Interior View 2"
+      img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
+      img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
+    />
     <ProjectTitleDivider title="Clean Workflows" divider={true} />
+
     <ProjectImgTextImg
       leftImgSrc="/images/Site Files/SeperateEvents.png"
       leftImgAlt="Midnight Taxi Gameplay Screenshot Left"
@@ -259,85 +319,54 @@ const ProjectDefiance = () => (
       alt2="Taxi Interior View 2"
     />
 
-    <ProjectTitleDivider title="Gameplay GIFs" divider={true} />
-    <ProjectGifGrid
-      gifs={[
-        {
-          src: "/images/Site Files/TaxiEvents.gif",
-          alt: "Steering Wheel",
-          caption: "Window Fog Event",
-        },
-        {
-          src: "/images/Site Files/TaxiEvents2.gif",
-          alt: "Rain Effect",
-          caption: "Fog Event",
-        },
-        {
-          src: "/images/Site Files/TaxiEvents3.gif",
-          alt: "Radio Demo",
-          caption: "Fallen Tree Event",
-        },
-        {
-          src: "/images/Site Files/TaxiEvents4.gif",
-          alt: "Night Drive",
-          caption: "Police Car Event",
-        },
-      ]}
-    />
-    <ProjectTitleDivider title="Main Menu Interface" divider={true} />
+    <ProjectTitleDivider title="Passenger Mirror" divider={true} />
     <ProjectImageTextContainer
-      imgSrc="/images/Site Files/SatisfactionMeter.jpg"
+      imgSrc="/images/Site Files/Faces.png"
       imgAlt="Satisfaction Mechanic UI"
       imgStyle={{ maxWidth: "500px" }}
     >
       <div>
-        One of my final responsibilities was to design the main menu for the
-        game, which included several key sections:
-        <ul>
-          <li>Options Menu</li>
-          <li>Asset Pack Level Viewer</li>
-          <li>Customizing Bobblehead Section</li>
-          <li>Concept Art Page</li>
-          <li>Credits Page</li>
-        </ul>
-        These elements were added towards the end of the project. The Asset Pack
-        Level Viewer and Concept Art Page were introduced to allow all artists
-        to view their work in the engine, regardless of whether it was directly
-        used in the game. To streamline this process, I developed a system using
-        data tables for easy content management. Artists could simply name their
-        piece, input their name, and upload an image of their artwork. This
-        approach aimed to make the Concept Art Page user-friendly and efficient.
+        Initially during the project we wanted to reflect seeing the passenger
+        and there reactions to your actions in the game via an mirror, we
+        initially did some 3d facial scans that were optimized down to
+        respectable tri counts and would implement live passengers in the back
+        using an rendered camera projecting on an plane. While this worked we
+        quickly learned it was demanding and taking up far too many frames.<br></br><br></br> For
+        this reason I did some research and some communication with the concept
+        art team and looked at changing the system from an 3D render based
+        mirror to a Sprite UI animation based mirror that would be made as an
+        spatial widget. <br></br><br></br>Each Passenger would have 3 facial expressions happy,
+        neutral and angry and based of current satisfaction levels the
+        expression would be chosen. Alongside this facial expressions
       </div>
     </ProjectImageTextContainer>
 
-    <ProjectTextBody
-      body={
-        <>
-          After fleshing out the main menu level, I focused on enhancing its
-          visual flair to better reflect the game's Midnight Taxi theme. This
-          involved integrating a variety of assets and themed UI elements to
-          align with the overall style and atmosphere of the game. I
-          collaborated closely with the art team to obtain the necessary artwork
-          and incorporated these pieces into the main menu, further refining its
-          appearance.
-          <br />
-          <br />
-          These visual improvements significantly enhanced the game's initial
-          presentation, making it feel more immersive and polished right from
-          the startup.
-        </>
-      }
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Mirror.png"
+      text="Play Events based on True Bools. Condition checks to make sure designer has setup the manager properly"
+      alt1="Taxi Interior View 1"
+      src2="/images/Site Files/Murderer.png"
+      alt2="Taxi Interior View 2"
+      img1Style={{ maxHeight: "400px", width: "100%" }} 
+      img2Style={{ maxHeight: "500px", width: "100%" }} 
     />
-
-        <ProjectVidVidComponent
-      videoSrc1="https://www.youtube.com/embed/-lvxUxqdWcQ?start=1"
-      videoSrc2="https://www.youtube.com/embed/62uo0us2jeI"
+    <ProjectVideoAndImg
+      videoUrl="https://www.youtube.com/embed/Z_lQwUEksc8"
+      imgSrc="/images/Site Files/UISetup.png"
+      imgAlt="Midnight Taxi Event System"
+      text="To enhance the dynamic feel of the mirror and create a more immersive experience, I designed it with three components: a foreground, a background, and animated passenger images. The passenger and front seat animations were specifically included to make the mirror feel less static and more engaging."
+      videoTitle="Midnight Taxi Demo Video"
     />
-
-
-<ProjectImageCarousel images={carouselImages} />
-<ProjectImageCarousel images={carouselImages} />
-
+    <ProjectImgImgContainer
+      src1="/images/Site Files/PassAnim.png"
+      text="Implementing this approach significantly improved the project’s performance, boosting the frame rate by approximately 15 frames. This upgrade contributed greatly to the overall game experience."
+      alt1="Taxi Interior View 1"
+      src2="/images/Site Files/UISprite.png"
+      alt2="Taxi Interior View 2"
+      img1Style={{ maxHeight: "500px", width: "100%" }} 
+      img2Style={{ maxHeight: "550px", width: "100%" }} 
+    />
+    
 
     <ProjectTitleDivider title="Event System Manager" divider={true} />
     <ProjectImageTextContainer
@@ -380,13 +409,93 @@ const ProjectDefiance = () => (
     />
     <br></br>
     <ProjectImgImgContainer
-      src1="/images/Site Files/EditorTool.png"
-      text="Manager system is a 2 piece component of a trigger and manager, the manager contains construction script code to tell the designer if the system will work or not via red and green sprite images, this helped with streamlining the system and making it easier to understand"
+      src1="/images/Site Files/EventManagerTree.png"
+      text="Play Events based on True Bools. Condition checks to make sure designer has setup the manager properly"
       alt1="Taxi Interior View 1"
-      src2="/images/Site Files/EditorGif.gif"
+      src2="/images/Site Files/ContstructionScript.png"
       alt2="Taxi Interior View 2"
-      imgClassName="w-100"
+      img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
+      img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
+    <ProjectTitleDivider title="Game Events" divider={true} />
+    <ProjectGifGrid
+      gifs={[
+        {
+          src: "/images/Site Files/TaxiEvents.gif",
+          alt: "Steering Wheel",
+          caption: "Window Fog Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents2.gif",
+          alt: "Rain Effect",
+          caption: "Fog Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents3.gif",
+          alt: "Radio Demo",
+          caption: "Fallen Tree Event",
+        },
+        {
+          src: "/images/Site Files/TaxiEvents4.gif",
+          alt: "Night Drive",
+          caption: "Police Car Event",
+        },
+      ]}
+    />
+
+    <ProjectTitleDivider title="Main Menu Interface" divider={true} />
+    <ProjectImageTextContainer
+      imgSrc="/images/Site Files/TaxiShot.png"
+      imgAlt="Satisfaction Mechanic UI"
+      imgStyle={{ maxWidth: "700px" }}
+    >
+      <div>
+        One of my final responsibilities was to design the main menu for the
+        game, which included several key sections:
+        <ul>
+          <li>Options Menu</li>
+          <li>Asset Pack Level Viewer</li>
+          <li>Customizing Bobblehead Section</li>
+          <li>Concept Art Page</li>
+          <li>Credits Page</li>
+        </ul>
+        These elements were added towards the end of the project. The Asset Pack
+        Level Viewer and Concept Art Page were introduced to allow all artists
+        to view their work in the engine, regardless of whether it was directly
+        used in the game. To streamline this process, I developed a system using
+        data tables for easy content management. Artists could simply name their
+        piece, input their name, and upload an image of their artwork. This
+        approach aimed to make the Concept Art Page user-friendly and efficient.
+      </div>
+    </ProjectImageTextContainer>
+
+    <ProjectTextBody
+      body={
+        <>
+          After fleshing out the main menu level, I focused on enhancing its
+          visual flair to better reflect the game's Midnight Taxi theme. This
+          involved integrating a variety of assets and themed UI elements to
+          align with the overall style and atmosphere of the game. I
+          collaborated closely with the art team to obtain the necessary artwork
+          and incorporated these pieces into the main menu, further refining its
+          appearance.
+          <br />
+          <br />
+          These visual improvements significantly enhanced the game's initial
+          presentation, making it feel more immersive and polished right from
+          the startup.
+        </>
+      }
+    />
+
+    <ProjectVidVidComponent
+      videoSrc1="https://www.youtube.com/embed/-lvxUxqdWcQ?start=1"
+      videoSrc2="https://www.youtube.com/embed/62uo0us2jeI"
+    />
+
+    <ProjectImageCarousel images={UIImages} />
+    <ProjectImageCarousel images={EnvirShot} />
+
     <ProjectTitleDivider title="Conclusion" divider={true} />
     <ProjectTextBody
       body={conclusionText.map((paragraph, idx) => (

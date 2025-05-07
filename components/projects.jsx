@@ -254,7 +254,7 @@ const Projects = () => {
           <span className="blue-bold">Junior Designers</span>.
         </>
       ),
-      link: "https://itch.io",
+      link: "/taxi",
       externalLink: "https://group-twenty8.itch.io/midnight-taxi",
       image: "./images/Site Files/TechDesign.png",
       date: "2024",
@@ -270,7 +270,7 @@ const Projects = () => {
           and resolved <span className="blue-bold">bugs</span>.
         </>
       ),
-      link: "/projects", // Change this to route to your ProjectDefiance page
+      link: "/defiance", 
       image: "./images/Site Files/AIApplianceDefianceRender.png",
       date: "2023",
       tags: ["Programming", "Bug Fixing", "Team Collaboration"],

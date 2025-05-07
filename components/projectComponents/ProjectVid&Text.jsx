@@ -8,13 +8,22 @@ const ProjectVidAndText = ({
   children,
   flip = false
 }) => (
-  <div className="container my-2" style={{ backgroundColor: "#23272b", borderRadius: "12px" }}>
+  <div className="container my-2 bg-dark rounded" style={{ borderRadius: "12px" }}>
     <div className="row align-items-stretch py-4 flex-md-row flex-column">
       {flip ? (
         <>
           {/* Text - 8 columns */}
           <div className="col-md-8 text-white d-flex flex-column justify-content-center">
-            <h2>{title}</h2>
+            <h2 style={{
+              fontSize: "2.1rem",
+              color: "#2196f3",
+              fontWeight: 600,
+              fontFamily: "Segoe UI, Arial, sans-serif",
+              letterSpacing: "1px",
+              marginBottom: "0.4em"
+            }}>
+              {title}
+            </h2>
             <p>
               {description}
             </p>
@@ -79,7 +88,16 @@ const ProjectVidAndText = ({
           </div>
           {/* Text - 8 columns */}
           <div className="col-md-8 text-white d-flex flex-column justify-content-center">
-            <h2>{title}</h2>
+            <h2 style={{
+              fontSize: "2.1rem",
+              color: "#2196f3",
+              fontWeight: 600,
+              fontFamily: "Segoe UI, Arial, sans-serif",
+              letterSpacing: "1px",
+              marginBottom: "0.4em"
+            }}>
+              {title}
+            </h2>
             <p>
               {description}
             </p>

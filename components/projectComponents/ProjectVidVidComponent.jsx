@@ -11,8 +11,8 @@ const VideoOrEmbed = ({ src }) =>
         minWidth: 320,
         maxWidth: "600px",
         flex: 1,
-        borderRadius: "1rem", // Add border radius to container
-        overflow: "hidden",   // Ensure radius applies to iframe
+        borderRadius: "1rem",
+        overflow: "hidden",
       }}
     >
       <iframe
@@ -41,8 +41,11 @@ const ProjectVidVidComponent = ({ videoSrc1, videoSrc2 }) => (
   <div className="container my-4">
     <div className="row justify-content-center">
       <div
-        className="col-12 col-lg-12 bg-dark rounded-4 shadow p-4 d-flex flex-column flex-md-row gap-4 align-items-center justify-content-center"
-        style={{ borderRadius: "1rem" }} // Add custom radius to container
+        className="col-12 col-lg-12 rounded-4 shadow p-4 d-flex flex-column flex-md-row gap-4 align-items-center justify-content-center bg-dark"
+        style={{
+          borderRadius: "1rem",
+          background: "#23272b"
+        }}
       >
         <VideoOrEmbed src={videoSrc1} />
         <VideoOrEmbed src={videoSrc2} />

@@ -8,11 +8,13 @@ const ProjectImgImgContainer = ({
   imgClassName = "",
   containerClassName = "",
   text = "",
-  textClassName = ""
+  textClassName = "",
+  img1Style = {},
+  img2Style = {}
 }) => (
   <div
     className={`container bg-dark text-light py-4 ${containerClassName}`}
-    style={{ borderRadius: "20px" }} // More moderate radius for rounded corners
+    style={{ borderRadius: "20px" }}
   >
     <div className="row g-3">
       <div className="col-12 col-md-6">
@@ -21,7 +23,7 @@ const ProjectImgImgContainer = ({
             src={src1}
             alt={alt1}
             className={`img-fluid rounded ${imgClassName}`}
-            style={{ borderRadius: "16px" }}
+            style={{ borderRadius: "16px", ...img1Style }}
           />
         </div>
       </div>
@@ -31,7 +33,7 @@ const ProjectImgImgContainer = ({
             src={src2}
             alt={alt2}
             className={`img-fluid rounded ${imgClassName}`}
-            style={{ borderRadius: "16px" }}
+            style={{ borderRadius: "16px", ...img2Style }}
           />
         </div>
       </div>

@@ -43,7 +43,7 @@ const ProjectImageCarousel = ({ images = [], className = "", style = {} }) => {
           src={images[current].src}
           alt={images[current].alt || ""}
           className={`img-fluid rounded transition-fade ${fade ? "fade-in" : "fade-out"}`}
-          style={{ maxWidth: "350px", maxHeight: "200px", objectFit: "cover", transition: "opacity 0.3s" }}
+          style={{ maxWidth: "900px", maxHeight: "500px", objectFit: "cover", transition: "opacity 0.3s" }}
         />
         <button
           className="btn btn-light position-absolute end-0"
