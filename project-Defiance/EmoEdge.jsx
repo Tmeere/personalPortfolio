@@ -232,6 +232,22 @@ const ProjectDefiance = () => (
     <br></br>
     <ProjectImageCarousel images={PlayerDiagrams} />
 
+    <ProjectTextBody
+      header={"Development Of Movement Mechanics"}
+      body={
+        <>
+          Alongside the shooting mechanics for the game, developments in the movement aspect included a range of mechanics, those being:
+          <ul>
+            <li>Sliding</li>
+            <li>Wall Running</li>
+            <li>Grapple Points</li>
+            <li>Dodging</li>
+          </ul>
+          When making these systems, while it was important to create each mechanic, it was even more important from a design point of view that each of the mechanics worked together well in tandem.
+        </>
+      }
+    />
+
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/WallRun.png"
       imgAlt="Player Ability Example"
@@ -430,6 +446,7 @@ const ProjectDefiance = () => (
       }
     />
 
+    <br></br>
     <ProjectTextBody
       header={"AI Development"}
       body={
@@ -442,6 +459,232 @@ const ProjectDefiance = () => (
         </>
       }
     />
+    <ProjectVideoAndImg
+      videoUrl="https://www.youtube.com/embed/irWZA0EgGqU?autoplay=1&mute=1&loop=1&playlist=irWZA0EgGqU&start=81"
+      imgSrc="/images/Site Files/AI.png"
+      imgAlt="Dash Mechanic Example 1"
+      title="Dash Mechanic Visuals"
+      imgStyle={{ height: "300px", objectFit: "contain" }}
+    ></ProjectVideoAndImg>
+
+    <ProjectImageTextContainer
+      imgSrc="/images/Site Files/AIState.png"
+      imgAlt="AI State Machine Diagram"
+      title="AI System: State Machine Approach"
+      imgStyle={{ maxWidth: "900px", width: "100%" }}
+    >
+      With the option of two approaches, those being:
+      <ul>
+        <li>Finite State Machines</li>
+        <li>Behavior Trees</li>
+      </ul>
+      With the two options having both pros and cons, I decided to go forward
+      with the finite state machines. This came down to needing to cover a range
+      of new topics for this project under a constrained timeline, as well as
+      wanting to cover a range of AI states quickly under one class. After
+      various levels of trial and error, I made 4 different AI States for the 4
+      enemy archetypes in the game.
+      <br />
+      <br />
+      The state selector is dictated by an Enum variable for what behavior is
+      going to play.
+    </ProjectImageTextContainer>
+    <ProjectImageCarousel
+      images={[
+        {
+          src: "/images/Site Files/AIMeth1.png",
+          alt: "AI Method Example 1",
+          caption: "Taking many commands, executing many responses",
+        },
+        {
+          src: "/images/Site Files/AIMeth2.png",
+          alt: "AI Method Example 2",
+          caption: "Taking many commands, filtering, and executing one",
+        },
+      ]}
+    />
+    <ProjectTextBody
+      header={"AI Improvement"}
+      body={
+        <>
+          When I first developed the AI, I encountered issues stemming from
+          nested timers conflicting with each other within the blueprint. This
+          resulted in incorrect states being triggered at the wrong times. To
+          resolve this, I revamped the structure by converting nearly all events
+          into tasks. Now, each task must be completed before the next function
+          can fire or be triggered again. This is mostly controlled by bools and
+          gates.
+        </>
+      }
+    />
+
+    <ProjectImageCarousel
+      images={[
+        {
+          src: "/images/Site Files/AIBev1.png",
+          alt: "AI Method Example 1",
+          caption: "AI Behaviour",
+        },
+        {
+          src: "/images/Site Files/AIBev2.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour",
+        },
+        {
+          src: "/images/Site Files/AIBev3.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour",
+        },
+        {
+          src: "/images/Site Files/AIBev4.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour",
+        },
+      ]}
+    />
+
+    <ProjectImageCarousel
+      images={[
+        {
+          src: "/images/Site Files/BP1.png",
+          alt: "AI Method Example 1",
+          caption: "AI Behaviour BP",
+        },
+        {
+          src: "/images/Site Files/BP2.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour BP",
+        },
+        {
+          src: "/images/Site Files/BP3.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour BP",
+        },
+        {
+          src: "/images/Site Files/BP4.png",
+          alt: "AI Method Example 2",
+          caption: "AI Behaviour BP",
+        },
+      ]}
+    />
+
+    <ProjectTitleDivider title="Animation System Development" />
+
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Anim1.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Anim2.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      text={
+        <>
+          As the project scaled up in scope and new challenges arose, I wanted
+          to tackle understanding how to use animation state machines across all
+          the game's entities. With this in mind, I made a total of 3 different
+          animation behaviors in the game:
+          <br></br>
+          <br></br>
+          <ul>
+            <li>Enemy AI</li>
+            <li>First Person Animation</li>
+            <li>Lower Body Legs</li>
+          </ul>
+          <br />
+          One of the interesting challenges arrived from attempting both leg
+          animations and first person arm animations for the player. This had me
+          breaking them into two different components and animating their
+          behaviors separately rather than under one shared tree. For the legs,
+          the upper torso is hidden, only allowing for the player to be seen
+          from the waist down.
+        </>
+      }
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <ProjectTitleDivider title="Level Design" />
+
+    <ProjectTextBody
+      header={"Level Itteration"}
+      body={
+        <>
+          While it wasn't a primary goal, level design was paramount towards
+          showcasing off a high octane shooter. Different maps were made over
+          the projects cycle
+          <br></br>
+          <br></br>Initially these started as testing ground for the player
+          mechanics. From here full levels were made. These were user tested and
+          iterated on, in the final state 2 levels were made to showcase all the
+          gameplay mechanics
+        </>
+      }
+    />
+    <br></br>
+
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Lvl1.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Lvl2.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      text={
+        <>
+          Initial Room prototypes for the game this included an testing room and
+          pratice map
+        </>
+      }
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <br></br>
+
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Lvl3.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Lvl4.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      text={
+        <>
+          Initial Room prototypes for the game this included an testing room and
+          pratice map
+        </>
+      }
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <br></br>
+
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Room1A.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Room1B.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <br></br>
+
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Room2A.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Room2B.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <br></br>
+    <ProjectImgImgContainer
+      src1="/images/Site Files/Room3A.png"
+      alt1="First Image Alt Text"
+      src2="/images/Site Files/Room3B.png"
+      alt2="Second Image Alt Text"
+      title="AI Visual Examples"
+      img1Style={{ height: "300px", objectFit: "contain" }}
+      img2Style={{ height: "300px", objectFit: "contain" }}
+    />
+    <br></br>
 
     <ProjectTextBody
       header={"Conclusion"}
