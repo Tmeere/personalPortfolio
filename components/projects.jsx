@@ -276,7 +276,7 @@ const Projects = () => {
       tags: ["Programming", "Bug Fixing", "Team Collaboration"],
     },
     {
-      title: "High Octane Runner",
+      title: "Emo-Edge",
       description: (
         <>
           Developed a{" "}
@@ -287,7 +287,7 @@ const Projects = () => {
           machines.
         </>
       ),
-      link: "",
+      link: "/emo",
       image: "./images/Site Files/IntroScreen.png",
       date: "2022",
       tags: ["Unreal Engine", "Parkour", "AI Design"],
