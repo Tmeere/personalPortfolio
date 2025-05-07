@@ -29,7 +29,7 @@ const ProjectImgImgText = ({
           alt={alt1}
           style={{
             width: "100%",
-            maxWidth: "350px",
+            maxWidth: "500px", // Increased from 350px to 500px
             borderRadius: "12px",
             objectFit: "cover",
             ...img1Style,
@@ -43,7 +43,7 @@ const ProjectImgImgText = ({
           alt={alt2}
           style={{
             width: "100%",
-            maxWidth: "350px",
+            maxWidth: "500px", // Increased from 350px to 500px
             borderRadius: "12px",
             objectFit: "cover",
             ...img2Style,

@@ -23,23 +23,7 @@ const roleInfo = ["Level Designer"];
 
 const tags = ["TF2", "Level Design", "Multiplayer", "Hammer Editor", "Balancing"];
 
-const Projectiles = [
-  {
-    src: "/images/Site Files/Mini.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Mini Projectile",
-  },
-  {
-    src: "/images/Site Files/Rocket.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Rocket Projectile",
-  },
-  {
-    src: "/images/Site Files/Projectile.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Basic Projectile",
-  },
-];
+
 const Maps = [
   {
     src: "/images/Site Files/P4.jpg",
@@ -102,6 +86,36 @@ const Blockout = [
     caption: "Final Map Design to Ingame Scale",
   },
   
+  {
+    src: "/images/Site Files/Map1.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Height Map Inner Section",
+  },
+  {
+    src: "/images/Site Files/Map22.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Height Map Upper Sections",
+  },
+  {
+    src: "/images/Site Files/Map33.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Map Buffer Zones",
+  },
+  {
+    src: "/images/Site Files/Info1.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Health Information",
+  },
+  {
+    src: "/images/Site Files/Info2.png",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "KOTH Capture Rates",
+  },
+  {
+    src: "/images/Site Files/Info3.jpg",
+    alt: "Midnight Taxi Gameplay Screenshot 1",
+    caption: "Core Character Information",
+  },
 ]
 
 const MapBlockout = [
@@ -158,33 +172,38 @@ const ProjectDefiance = () => (
       }
       downloadLinks={[
         {
-          url: "/MidnightTaxiDesignDoc.pdf",
+          url: "/images/Site Files/DesignDocPort.pdf",
           label: "Level Design Doc",
           description: "Map Decisions",
         },
         {
-          url: "https://group-twenty8.itch.io/midnight-taxi",
+          url: "/images/Site Files/DevLogPort.pdf",
           label: "Development Log",
           description: "Improvement / Itterations",
         },
         {
-          url: "https://group-twenty8.itch.io/midnight-taxi",
+          url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3062704992&searchtext=Portsidei",
           label: "Download Link",
           description: "Linked On Steam",
+        },
+        {
+          url: "/images/Site Files/ExtraAssets.zip",
+          label: "Extra Assets/Textures",
+          description: "Map Extra Assets & Textures",
         },
       ]}
     />
     <ProjectTagsBar tags={tags} />
 
     <ProjectVidAndText
-      videoUrl="https://www.youtube.com/embed/9U1u3Cp41hk?autoplay=1&loop=1&playlist=9U1u3Cp41hk&mute=1"
+      videoUrl="https://www.youtube.com/embed/B2UbhAX0L9Y?autoplay=1&loop=1&playlist=B2UbhAX0L9Y&mute=1"
       title="Overview"
-      minHeight="250px"
+      minHeight="550px"
       description={
         <>
           I created a King of the Hill map for TF2, now available on the Steam
           Workshop. The development process took 8 weeks, during which I learned
-          to use the Hammer Editor from scratch. ​<br></br>
+          to use the Hammer Editor from scratch.<br></br>
           <br></br>Designed for 15v15 gameplay, the map underwent continuous
           refinement based on user feedback and testing.
           <br></br>
@@ -196,14 +215,15 @@ const ProjectDefiance = () => (
           and provided valuable insights into creating an enjoyable TF2 map
           aswell as a wider understanding of multiplayer level design concepts.
           <br></br>
-          <br></br>You can find my map on the Steam Workshop here. ​<br></br>
           <br></br>Extra Assets will need to be added to TF2 files to see
-          additional textures and models in game. Download can be found here
+          additional textures and models in game. Download can be found above
         </>
       }
     />
 
     <ProjectImageCarousel images={Maps} />
+    <ProjectImageCarousel images={MapBlockout} />
+
 
     <ProjectTitleDivider title="Overview" />
 
@@ -256,16 +276,6 @@ const ProjectDefiance = () => (
       }
     />
 
-    <ProjectImgImgText
-      src1="/images/Site Files/MapCutout.png"
-      alt1="Placeholder 1"
-      src2="/images/Site Files/MapCutout.png"
-      alt2="Placeholder 2"
-      title="Test Render"
-    >
-      If you see this, the component is working!
-    </ProjectImgImgText>
-
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/MapCutout.png"
       imgAlt="Satisfaction Mechanic UI"
@@ -283,48 +293,84 @@ const ProjectDefiance = () => (
       </div>
     </ProjectImageTextContainer>
 
-    <ProjectTextBody
-      header={""}
-      body={
-        <>
-          The game includes various projectile classes with differing speeds,
-          radii, bounce counts, and ammo. A parent class was created to
-          streamline the implementation and balancing of these projectiles,
-          ensuring consistent behavior and easy adjustments for enhanced
-          gameplay.
-        </>
-      }
-    />
+    <ProjectTitleDivider title="Map Example Changes" />
 
-    <br></br>
+    <ProjectImgImgText
+      src1="/images/Site Files/Itter1A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Itter1B.png"
+      alt2="Placeholder 2"
+      title="Improving Courtyard"
+    >
+      The long exposed sightline made it hard for medium to short-range
+      characters to use this area without being shot from afar by long-range
+      characters. Adding a pillar provides cover, enabling safer approaches and
+      requiring snipers to play more aggressively if they want to use the long
+      channel, as it increases their risk.
+    </ProjectImgImgText>
+    <ProjectImgImgText
+      src1="/images/Site Files/Itter2A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Itter2B.png"
+      alt2="Placeholder 2"
+      title="Tower Backboards"
+    >
+      Backboards were added to the tower positions, enabling characters like
+      Demoman and Soldier to inflict damage on enemies in these spots. This
+      adjustment enhances game fairness without compromising the cover typically
+      used by players such as Engineer and Sniper.
+    </ProjectImgImgText>
+    <ProjectImgImgText
+      src1="/images/Site Files/Itter3A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Itter3B.png"
+      alt2="Placeholder 2"
+      title="Adding Height"
+    >
+      To encourage more diverse combat in the lower sections of the map,
+      additional catwalks were added. This change increased the map's
+      verticality, enabling players to execute more dynamic plays and providing
+      characters like Medic and Engineer with more options for movement and
+      setup.
+    </ProjectImgImgText>
+    <ProjectImgImgText
+      src1="/images/Site Files/Itter4A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Itter4B.png"
+      alt2="Placeholder 2"
+      title="Enhanced Protection"
+    >
+      Additionally, throughout development, it became clear that sniper
+      characters dominated the long, open sightlines extending from the spawn
+      areas, making it difficult for players to leave safely. To address this,
+      we added extra protection and cover, preventing external lanes of play
+      from interacting with that channel and improving overall balance.
+    </ProjectImgImgText>
 
-    <ProjectTextBody
-      header={"Levels"}
-      body={
-        <>
-          Although not the primary focus of this project, I designed three
-          distinct levels to enhance gameplay. Key considerations included:
-          <ul>
-            <li>
-              <strong>Power-Up Spawn Locations:</strong> Strategically placing
-              power-ups to encourage exploration and dynamic gameplay.
-            </li>
-            <li>
-              <strong>Player Spawn Points:</strong> Ensuring fair starting
-              positions that promote balanced competition.
-            </li>
-            <li>
-              <strong>Map Geometry:</strong> Designing the environment to
-              facilitate interesting rebounding shots and create tactical
-              opportunities.
-            </li>
-          </ul>
-          These elements contribute to varied and engaging gameplay, keeping
-          each match fresh and exciting.
-        </>
-      }
-    />
-    <br></br>
+    <ProjectTitleDivider title="Map Readibility" />
+
+    <ProjectImgImgText
+      src1="/images/Site Files/Read1A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Read1B.png"
+      alt2="Placeholder 2"
+      title="Improving Map Readibility"
+    >
+      During development, I noticed that players were confused by certain
+      elements of the map, such as water hazards and the locations of exits and
+      resupply points near spawn areas. This feedback prompted me to add signage
+      throughout the map to improve clarity and guide players more effectively.
+    </ProjectImgImgText>
+    <ProjectImgImgText
+      src1="/images/Site Files/Read2A.png"
+      alt1="Placeholder 1"
+      src2="/images/Site Files/Read2B.png"
+      alt2="Placeholder 2"
+      title="Dividing The Map"
+    >
+      As my project moved out of the blockout phase, I focused on adding textures and models to enhance the design and overall feel of the map. This not only made the map more visually defined but also improved player navigation by clearly indicating each teams side, and where the flow of enemies comes from.
+    </ProjectImgImgText>
+
     <ProjectVidAndText
       videoUrl="https://www.youtube.com/embed/C_CVLGR7aIU?autoplay=1&loop=1&playlist=C_CVLGR7aIU&mute=1"
       title="Conclusions"
@@ -338,7 +384,7 @@ const ProjectDefiance = () => (
           <br></br>Reflecting on the experience, I realize that iteration and
           extensive player testing are essential for developing a successful
           level. Initially, I underestimated the impact of player feedback, but
-          it proved crucial in shaping the final result. ​<br></br>
+          it proved crucial in shaping the final result.<br></br>
           <br></br>As I look ahead, I’m excited to be featured in the university
           highlights for this project. This recognition inspires me to continue
           refining my skills and exploring new opportunities in level design.
