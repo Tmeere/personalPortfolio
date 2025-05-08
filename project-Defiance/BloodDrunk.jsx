@@ -105,7 +105,7 @@ const ProjectDefiance = () => (
       leftTitle="Key Responsibilities"
       background="#181818"
       cardBackground="#232323"
-      heroImage="/images/Site Files/PortsideSplash.jpg"
+      heroImage="/images/Site Files/BloodSplash.png"
       summary={
         <>
           Go absolutely haywire in this VR arcade splatterfest! BloodDrunk is a
@@ -257,6 +257,8 @@ const ProjectDefiance = () => (
         </>
       }
     />
+
+    <br></br>
 
     <ProjectTextBody
       header={"Conclusion"}
