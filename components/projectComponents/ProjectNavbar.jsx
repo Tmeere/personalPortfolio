@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link className="nav-link" to="/">Home</Link>
           <a 
             className="nav-link" 
-            href="/resume/Thomas Meere - Game Designer _ Technical Designer.pdf" 
+            href="\resume\Thomas Meere - Fullstack Dev 2025 V3.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             onClick={() => {

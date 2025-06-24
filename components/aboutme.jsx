@@ -77,7 +77,10 @@ const AboutMe = () => {
     <section id="" className="about-me container-fluid py-5">
       <div className="row">
         {/* About Me Section */}
-        <div className="col-md-6 d-flex flex-column align-items-center align-items-md-start" ref={aboutMeRef}>
+        <div
+          className="col-md-6 d-flex flex-column align-items-center align-items-md-start"
+          ref={aboutMeRef}
+        >
           <img
             src="/images/Me.jpg"
             alt="About Me"
@@ -86,11 +89,20 @@ const AboutMe = () => {
           <div>
             <h1 className="mb-4 text-center text-md-start">About Me</h1>
             <p className="about-me-text text-center text-md-start">
-              I am a passionate Game Developer currently working at Bitmask Games, where I specialize in Unity-based
-              projects and retro gaming solutions. When I'm not crafting gaming experiences, I focus on full-stack
-              development, constantly exploring new technologies and expanding my skill set. I thrive on tackling new
-              challenges and bringing innovative ideas to life. I’m deeply committed to contributing to the tech
-              community and pushing the boundaries of what’s possible in the ever-evolving world of technology.
+              I'm a Game Programmer and Software Engineer with a strong
+              foundation in gameplay systems, VR development, and full-stack web
+              applications. I specialize in building immersive experiences using
+              Unity and Unreal Engine, with projects ranging from mobile dungeon
+              crawlers to high-octane VR shooters. My background includes both
+              indie development and studio work, including recent roles at
+              RedMist and Bitmask Games, as well as QA experience at DAQA.<br/> In
+              addition to game development, I’ve built RESTful APIs and scalable
+              web apps using technologies like Flask, MySQL, React, and
+              JavaScript. I’m passionate about designing interactive systems,
+              collaborating with cross-functional teams, and constantly pushing
+              my technical boundaries. Originally from the UK and now based in
+              Rhode Island, I’m committed to contributing to the evolving
+              landscape of interactive media and emerging tech.
             </p>
           </div>
         </div>
@@ -124,35 +136,35 @@ const AboutMe = () => {
           <h2 className="mb-4 text-center">Areas of Expertise</h2>
           <ul className="expertise-list text-start">
             <li className="mb-2">
-              <strong>Game Development:</strong> Proficient in Unity and Unreal Engine, with experience in creating
-              immersive gameplay and retro gaming solutions.
+              <strong>Game Development:</strong> Proficient in Unity and Unreal
+              Engine, with experience in creating immersive gameplay and retro
+              gaming solutions.
             </li>
             <li className="mb-2">
-              <strong>Full-Stack Development:</strong> Skilled in building scalable web applications using React,
-              Node.js, and Flask.
+              <strong>Full-Stack Development:</strong> Skilled in building
+              scalable web applications using React, Node.js, and Flask.
             </li>
             <li className="mb-2">
-              <strong>3D Modeling & Animation:</strong> Expertise in Blender and 3ds Max for creating high-quality
-              assets and animations.
+              <strong>3D Modeling & Animation:</strong> Expertise in Blender and
+              3ds Max for creating high-quality assets and animations.
             </li>
             <li className="mb-2">
-              <strong>VR/AR Development:</strong> Experienced in designing and developing virtual and augmented reality
-              experiences.
+              <strong>VR/AR Development:</strong> Experienced in designing and
+              developing virtual and augmented reality experiences.
             </li>
             <li className="mb-2">
-              <strong>Quality Assurance:</strong> Proficient in automated testing, manual testing, and test-driven
-              development to ensure software reliability.
+              <strong>Quality Assurance:</strong> Proficient in automated
+              testing, manual testing, and test-driven development to ensure
+              software reliability.
             </li>
           </ul>
         </div>
       </div>
 
-
-
       <div className="row">
         <div className="col-12">
-        <h2 className="mb-4 mt-2 text-center">Work Experience</h2>
-        <ul className="work-experience-list">
+          <h2 className="mb-4 mt-2 text-center">Work Experience</h2>
+          <ul className="work-experience-list">
             <li className="work-experience-item">
               <img
                 src="/images/CT_LOGO_NEW.jpg"
@@ -161,19 +173,23 @@ const AboutMe = () => {
               />
               <div className="work-experience-content">
                 <strong>Coding Temple Apprentice</strong>
-                <em>Coding Temple | Remote | (Present)</em>
+                <em>Coding Temple | Remote | (Feb 2025 - June 2025)</em>
                 <ul>
                   <li>
-                    &#8226; Completed 9+ hands-on, project-based assignments covering full-stack web development using modern
-                    technologies including Flask, React.js, SQL, and RESTful APIs.
+                    &#8226; Completed 9+ hands-on, project-based assignments
+                    covering full-stack web development using modern
+                    technologies including Flask, React.js, SQL, and RESTful
+                    APIs.
                   </li>
                   <li>
-                    &#8226; Actively participated in live workshops, enhancing collaboration and technical problem-solving
-                    skills.
+                    &#8226; Actively participated in live workshops, enhancing
+                    collaboration and technical problem-solving skills.
                   </li>
                   <li>
-                    &#8226; Consistently exceeded assignment expectations by implementing advanced features, optimizing
-                    functionality, and expanding project scope—while meeting assigned deadlines.
+                    &#8226; Consistently exceeded assignment expectations by
+                    implementing advanced features, optimizing functionality,
+                    and expanding project scope—while meeting assigned
+                    deadlines.
                   </li>
                 </ul>
               </div>
@@ -186,19 +202,21 @@ const AboutMe = () => {
               />
               <div className="work-experience-content">
                 <strong>Game Developer</strong>
-                <em>Bitmask Games | Rhode Island (Jan 2024 – Present)</em>
+                <em>Bitmask Games | Rhode Island (Nov 2024 – May 2025)</em>
                 <ul>
                   <li>
-                    &#8226; Developed gameplay mechanics and retro game systems using Unity & NES Maker, contributing to
-                    successful contract-based project delivery.
+                    &#8226; Developed gameplay mechanics and retro game systems
+                    using Unity & NES Maker, contributing to successful
+                    contract-based project delivery.
                   </li>
                   <li>
-                    &#8226; Collaborated with cross-functional programming and art teams to refine design features and enhance
-                    player engagement.
+                    &#8226; Collaborated with cross-functional programming and
+                    art teams to refine design features and enhance player
+                    engagement.
                   </li>
                   <li>
-                    &#8226; Conducted QA testing and optimized code performance, improving stability and reducing in-game bugs
-                    by 30%.
+                    &#8226; Conducted QA testing and optimized code performance,
+                    improving stability and reducing in-game bugs by 30%.
                   </li>
                 </ul>
               </div>
@@ -211,18 +229,20 @@ const AboutMe = () => {
               />
               <div className="work-experience-content">
                 <strong>Game QA Tester (Contract)</strong>
-                <em>DAQA | Remote (Jan 2024 – Present)</em>
+                <em>DAQA | Remote (Nov 2024 – Present)</em>
                 <ul>
                   <li>
-                    &#8226; Provided QA testing services for AAA and indie titles, identifying and reporting over 200 bugs
-                    across multiple platforms.
+                    &#8226; Provided QA testing services for AAA and indie
+                    titles, identifying and reporting over 200 bugs across
+                    multiple platforms.
                   </li>
                   <li>
-                    &#8226; Used tools like Jira to streamline communication and improve issue resolution time.
+                    &#8226; Used tools like Jira to streamline communication and
+                    improve issue resolution time.
                   </li>
                   <li>
-                    &#8226; Collaborated with cross-functional teams to enhance gameplay performance and ensure seamless user
-                    experience.
+                    &#8226; Collaborated with cross-functional teams to enhance
+                    gameplay performance and ensure seamless user experience.
                   </li>
                 </ul>
               </div>
@@ -235,16 +255,21 @@ const AboutMe = () => {
               />
               <div className="work-experience-content">
                 <strong>Project Lead / Technical Designer</strong>
-                <em>Redmist | Finland, Kajaani | Remote (Jan 2024 – Present)</em>
+                <em>
+                  Redmist | Finland, Kajaani | Remote (Jan 2024 – Present)
+                </em>
                 <ul>
                   <li>
-                    &#8226; Led VR development for BloodDrunk, overseeing design and implementation of immersive gameplay systems.
+                    &#8226; Led VR development for BloodDrunk, overseeing design
+                    and implementation of immersive gameplay systems.
                   </li>
                   <li>
-                    &#8226; Managed a remote team using Trello and Discord, improving task completion rate by 20%.
+                    &#8226; Managed a remote team using Trello and Discord,
+                    improving task completion rate by 20%.
                   </li>
                   <li>
-                    &#8226; Refined AI behavior and level design to create dynamic, player-driven VR interactions.
+                    &#8226; Refined AI behavior and level design to create
+                    dynamic, player-driven VR interactions.
                   </li>
                 </ul>
               </div>
@@ -259,16 +284,19 @@ const AboutMe = () => {
               </div>
               <div className="work-experience-content">
                 <strong>Piksel Student Intern</strong>
-                <em>Piksel | Remote (2020)</em>
+                <em>Piksel | York,UK (2019)</em>
                 <ul>
                   <li>
-                    &#8226; Worked on streaming app editors used to configure films for Virgin TV Go.
+                    &#8226; Worked on streaming app editors used to configure
+                    films for Virgin TV Go.
                   </li>
                   <li>
-                    &#8226; Assisted in debugging and optimizing the app's performance to ensure seamless user experience.
+                    &#8226; Assisted in debugging and optimizing the app's
+                    performance to ensure seamless user experience.
                   </li>
                   <li>
-                    &#8226; Collaborated with senior developers to implement new features and improve existing workflows.
+                    &#8226; Collaborated with senior developers to implement new
+                    features and improve existing workflows.
                   </li>
                 </ul>
               </div>
