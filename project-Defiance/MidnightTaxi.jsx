@@ -20,79 +20,79 @@ const roleInfo = ["Lead Game Designer"];
 
 
 
-const tags = ["Unreal", "Blueprint", "Leadership", "Jira", "QA", "Github", "Optimization"];
+const tags = ["Unreal", "Blueprint", "Leadership", "Jira", "QA", "GitHub", "Optimization"];
 
 
 const UIImages = [
   {
     src: "/images/Site Files/UI1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Concept: Inital Interior Taxi Designs",
+    alt: "Concept: Initial interior taxi designs",
+    caption: "Concept: Initial Interior Taxi Designs",
   },
   {
     src: "/images/Site Files/UI2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "UI: Chapter selector based on nights",
     caption: "UI: Chapter Selector Based On Nights",
   },
   {
     src: "/images/Site Files/UI3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Intro Cutscene: Title card that appears on launch",
+    alt: "Intro cutscene title card that appears on launch",
+    caption: "Intro Cutscene: Title Card That Appears on Launch",
   },
   {
     src: "/images/Site Files/UI4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Layout: controls layout presented to player",
     caption: "Layout: Controls Layout Presented To Player",
   },
 ];
 const EnvirShot = [
   {
     src: "/images/Site Files/Envir.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Lvl Design: Map Shots",
+    alt: "Level design: map shot 1",
+    caption: "Level Design: Map Shots",
   },
   {
     src: "/images/Site Files/Envir2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Lvl Design: Map Shots",
+    alt: "Level design: map shot 2",
+    caption: "Level Design: Map Shots",
   },
   {
     src: "/images/Site Files/Envir3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Lvl Design: Map Shots",
+    alt: "Level design: map shot 3",
+    caption: "Level Design: Map Shots",
   },
   {
     src: "/images/Site Files/Envir4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Lvl Design: Map Shots",
+    alt: "Level design: map shot 4",
+    caption: "Level Design: Map Shots",
   },
 ];
 
 const conclusionText = [
   `I'm proud of the final outcome of our collaborative project, both in terms of team performance and my personal contributions. One of the initial challenges was identifying the strengths of each team member. Some of our junior members, while experienced in Unity and programming, initially struggled to adapt to Unreal's Blueprint system.`,
 
-  `To support those less familiar with Unreal, I dedicated time early in the project to explain tasks and approaches in detail. This not only helped others get up to speed with Blueprints but also fostered a more collaborative and supportive environment. In the end, we successfully leveraged each team member’s strengths to deliver a great result.`,
+  `To support those less familiar with Unreal, I dedicated time early in the project to explain tasks and approaches in detail. This not only helped others get up to speed with Blueprints but also fostered a more collaborative and supportive environment. In the end, we successfully leveraged each team member's strengths to deliver a great result.`,
 
   `Cross-department communication was a key strength. As the project progressed, our ability to give and receive feedback across different disciplines significantly improved. This allowed for smoother implementation of changes and more cohesive collaboration. It truly felt like our progress was shaped by shared contributions rather than individual voices.`,
 
   `Within the tech team, senior members communicated exceptionally well. They balanced handling their responsibilities while supporting both juniors and other seniors, contributing to a high-performing team dynamic.`,
 
-  `Early on, I found it difficult to set up Sprints and manage workflow collaboratively, as I was more accustomed to working independently. However, as the project evolved, I introduced weekly stand-up meetings to improve visibility across teams. This helped us align on goals and maintain accountability. Initially, our lack of coordination led to misaligned outcomes, but Sprint planning helped bring clarity and structure.`,
+  `Early on, I found it difficult to set up sprints and manage workflow collaboratively, as I was more accustomed to working independently. However, as the project evolved, I introduced weekly stand-up meetings to improve visibility across teams. This helped us align on goals and maintain accountability. Initially, our lack of coordination led to misaligned outcomes, but sprint planning helped bring clarity and structure.`,
 
   `Mid-week check-ins between the Tech and Design teams were also crucial. Since we only met once weekly in person, these extra sessions helped surface concerns early and kept us on track, preventing miscommunication or delays.`,
 
-  `Looking ahead, one area I want to improve is planning. As the saying goes, “Minutes of planning save hours of programming.” Spending more time understanding design intentions upfront would reduce rework and ensure smoother integration. Additionally, I aim to keep refining my code to ensure it's readable and easy for both Designers and other Developers to understand and build upon.`,
+  `Looking ahead, one area I want to improve is planning. As the saying goes, "Minutes of planning save hours of programming." Spending more time understanding design intentions upfront would reduce rework and ensure smoother integration. Additionally, I aim to keep refining my code to ensure it's readable and easy for both designers and other developers to understand and build upon.`,
 ];
 
 const responsibility = [
-  "Managing the programming department to meet milestones and deadlines​",
-  "Assisting Junior Developers with tasks, teaching new concepts",
-  "Bug Testing and Fixing",
-  "Developing Main Menu Interfaces",
-  "Taxi Driving Mechanics",
-  "Satiscation Mechanic",
-  "Events Manager System",
-  "Optimizing Game Performance",
+  "Managing the programming department to meet milestones and deadlines",
+  "Assisting junior developers with tasks, teaching new concepts",
+  "Bug testing and fixing",
+  "Developing main menu interfaces",
+  "Taxi driving mechanics",
+  "Satisfaction mechanic",
+  "Events manager system",
+  "Optimizing game performance",
 ];
 
 const ProjectDefiance = () => (
@@ -139,20 +139,20 @@ const ProjectDefiance = () => (
           killer on the loose.
           <br />
           <br />
-          For this project I was a part of a 23 person team with the collective
-          goal of making a Narrative Choice Based driving game. During this 8
-          week project I was the Tech Lead for the programming department of the
-          team. My core responsibilities as lead were to ensure the programming
-          team were to meet goals as per Jira deadlines, provide instruction,
-          support and mentoring to Junior programmers on the team, as well as
-          organize weekly standup meetings with seniors from other departments
-          to ensure a coherent team.
+          For this project, I was part of a 23-person team with the collective
+          goal of making a narrative, choice-based driving game. During this
+          8-week project, I was the Tech Lead for the programming department.
+          My core responsibilities as lead were to ensure the programming team
+          met their goals per Jira deadlines, provide instruction, support,
+          and mentoring to junior programmers, and organize weekly standup
+          meetings with seniors from other departments to keep the team
+          coherent.
           <br />
           <br />
-          Outside of project management related tasks I was also primarily
-          responsible for core gameplay factors such as the taxi car mechanics,
-          as well as making the events manager system that was made designer
-          friendly.
+          Outside of project-management tasks, I was also primarily
+          responsible for core gameplay systems such as the taxi car
+          mechanics, as well as building the designer-friendly events manager
+          system.
         </>
       }
     />
@@ -208,7 +208,7 @@ const ProjectDefiance = () => (
     />
     <ProjectImageContainer
       src="/images/Site Files/SteeringWheelGraph.png"
-      alt="Midnight Taxi Gameplay Screenshot"
+      alt="Steering wheel blueprint graph"
     />
     <ProjectVidAndText
       videoUrl="https://www.youtube.com/embed/5BhUijqFuxE"
@@ -230,7 +230,7 @@ const ProjectDefiance = () => (
           </ul>
           <p>
             These additions helped quickly broaden the overall game feel by
-            introducing interactive features that weren’t strictly tied to
+            introducing interactive features that weren't strictly tied to
             driving mechanics.
           </p>
         </>
@@ -238,10 +238,10 @@ const ProjectDefiance = () => (
     />
     <ProjectImgImgContainer
       src1="/images/Site Files/CameraMovement.png"
-      text="Clamping Camera Movement based on Min and Max Yaw/Pitch Values"
-      alt1="Taxi Interior View 1"
+      text="Clamping camera movement based on min and max yaw/pitch values"
+      alt1="Camera yaw/pitch clamping values"
       src2="/images/Site Files/SteeringClamp.png"
-      alt2="Taxi Interior View 2"
+      alt2="Steering angle clamp values"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
@@ -249,9 +249,9 @@ const ProjectDefiance = () => (
 
     <ProjectImgTextImg
       leftImgSrc="/images/Site Files/SeperateEvents.png"
-      leftImgAlt="Midnight Taxi Gameplay Screenshot Left"
+      leftImgAlt="Separated Blueprint event components"
       rightImgSrc="/images/Site Files/Categories.png"
-      rightImgAlt="Midnight Taxi Gameplay Screenshot Right"
+      rightImgAlt="Blueprint variables organized into categories"
     >
       <div>
         As the taxi development progressed, maintaining a clean workflow became
@@ -261,11 +261,11 @@ const ProjectDefiance = () => (
         <br />
         To achieve this, we broke the project down into Child Actor components
         and collapsed nodes when the taxi required Blueprint access. By treating
-        each component as a child actor, we reduced the risk of merge errors and
-        it became easier communication between Blueprints.
+        each component as a child actor, we reduced the risk of merge errors
+        and communication between Blueprints became easier.
         <br />
         <br />
-        The project was segmented into chunks and thoroughly commented /
+        The project was segmented into chunks and thoroughly commented and
         categorized to make it clear for both the tech team and people
         unfamiliar with Blueprint.
         <br />
@@ -275,12 +275,12 @@ const ProjectDefiance = () => (
         taxi to ensure a clean and orderly workflow going forward.
       </div>
     </ProjectImgTextImg>
-    <ProjectTitleDivider title="Readibility" divider={true} />
+    <ProjectTitleDivider title="Readability" divider={true} />
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/i_dw2gM5KcA"
       imgSrc="/images/Site Files/MaterialOutline.png"
       imgAlt="Midnight Taxi Event System"
-      text="As the Taxi systems became more in depth and complex lighting and material effects were added to core components to promote readibility"
+      text="As the taxi systems became more in-depth, complex lighting and material effects were added to core components to promote readability."
       videoTitle="Midnight Taxi Demo Video"
     />
     <ProjectTitleDivider title="Satisfaction Mechanic" divider={true} />
@@ -299,9 +299,11 @@ const ProjectDefiance = () => (
         where collisions with objects would affect the meter. However, it
         evolved to integrate with nearly every interactive element in the game,
         including:
-        <li>Decision Making</li>
-        <li>Colliding with Objects</li>
-        <li>Using or Not Using Car Components</li>
+        <ul>
+          <li>Decision Making</li>
+          <li>Colliding with Objects</li>
+          <li>Using or Not Using Car Components</li>
+        </ul>
       </div>
     </ProjectImageTextContainer>
     <ProjectVidVidComponent
@@ -311,10 +313,10 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/EventTree.png"
-      text="Satisfaction Bar Updated Smoothly by the new inputted value over time, Sounds based on decisions made."
-      alt1="Taxi Interior View 1"
+      text="The satisfaction bar updates smoothly based on the new input value over time, with sounds tied to the decisions made."
+      alt1="Satisfaction event tree, part 1"
       src2="/images/Site Files/EventTree2.png"
-      alt2="Taxi Interior View 2"
+      alt2="Satisfaction event tree, part 2"
     />
 
     <ProjectTitleDivider title="Passenger Mirror" divider={true} />
@@ -324,29 +326,29 @@ const ProjectDefiance = () => (
       imgStyle={{ maxWidth: "500px" }}
     >
       <div>
-        Initially during the project we wanted to reflect seeing the passenger
-        and there reactions to your actions in the game via an mirror, we
-        initially did some 3d facial scans that were optimized down to
-        respectable tri counts and would implement live passengers in the back
-        using an rendered camera projecting on an plane. While this worked we
-        quickly learned it was demanding and taking up far too many frames.<br></br><br></br> For
-        this reason I did some research and some communication with the concept
-        art team and looked at changing the system from an 3D render based
-        mirror to a Sprite UI animation based mirror that would be made as an
-        spatial widget. <br></br><br></br>Each Passenger would have 3 facial expressions happy,
-        neutral and angry and based of current satisfaction levels the
-        expression would be chosen. Alongside this facial expressions
+        Initially during the project, we wanted to reflect seeing the
+        passenger and their reactions to your actions in the game via a
+        mirror. We initially did some 3D facial scans that were optimized down
+        to respectable tri counts and would implement live passengers in the
+        back using a rendered camera projecting onto a plane. While this
+        worked, we quickly learned it was demanding and consumed far too many
+        frames.<br></br><br></br>For this reason, I researched the issue and
+        worked with the concept art team to change the system from a
+        3D-render-based mirror to a sprite-based UI animation mirror, built as
+        a spatial widget. <br></br><br></br>Each passenger has three facial
+        expressions — happy, neutral, and angry — and the expression shown is
+        chosen based on the player's current satisfaction level.
       </div>
     </ProjectImageTextContainer>
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Mirror.png"
-      text="Play Events based on True Bools. Condition checks to make sure designer has setup the manager properly"
-      alt1="Taxi Interior View 1"
+      text="Play events based on true bools. Condition checks ensure the designer has set up the manager properly."
+      alt1="Passenger mirror UI"
       src2="/images/Site Files/Murderer.png"
-      alt2="Taxi Interior View 2"
-      img1Style={{ maxHeight: "400px", width: "100%" }} 
-      img2Style={{ maxHeight: "500px", width: "100%" }} 
+      alt2="Murderer character reveal"
+      img1Style={{ maxHeight: "400px", width: "100%" }}
+      img2Style={{ maxHeight: "500px", width: "100%" }}
     />
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/Z_lQwUEksc8"
@@ -357,14 +359,14 @@ const ProjectDefiance = () => (
     />
     <ProjectImgImgContainer
       src1="/images/Site Files/PassAnim.png"
-      text="Implementing this approach significantly improved the project’s performance, boosting the frame rate by approximately 15 frames. This upgrade contributed greatly to the overall game experience."
-      alt1="Taxi Interior View 1"
+      text="Implementing this approach significantly improved the project's performance, boosting the frame rate by approximately 15 frames. This upgrade contributed greatly to the overall game experience."
+      alt1="Passenger animation setup"
       src2="/images/Site Files/UISprite.png"
-      alt2="Taxi Interior View 2"
-      img1Style={{ maxHeight: "500px", width: "100%" }} 
-      img2Style={{ maxHeight: "550px", width: "100%" }} 
+      alt2="UI sprite setup for the mirror"
+      img1Style={{ maxHeight: "500px", width: "100%" }}
+      img2Style={{ maxHeight: "550px", width: "100%" }}
     />
-    
+
 
     <ProjectTitleDivider title="Event System Manager" divider={true} />
     <ProjectImageTextContainer
@@ -399,19 +401,18 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/EditorTool.png"
-      text="Manager system is a 2 piece component of a trigger and manager, the manager contains construction script code to tell the designer if the system will work or not via red and green sprite images, this helped with streamlining the system and making it easier to understand"
-      alt1="Taxi Interior View 1"
+      text="The manager system is a two-part component consisting of a trigger and a manager. The manager contains construction script code that tells the designer whether the system is set up correctly via red and green sprite indicators, helping streamline the system and make it easier to understand."
+      alt1="Event manager editor tool"
       src2="/images/Site Files/EditorGif.gif"
-      alt2="Taxi Interior View 2"
-      imgClassName="w-100"
+      alt2="Event manager editor tool demo"
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/EventManagerTree.png"
-      text="Play Events based on True Bools. Condition checks to make sure designer has setup the manager properly"
-      alt1="Taxi Interior View 1"
+      text="Play events based on true bools. Condition checks ensure the designer has set up the manager properly."
+      alt1="Event manager blueprint tree"
       src2="/images/Site Files/ContstructionScript.png"
-      alt2="Taxi Interior View 2"
+      alt2="Construction script for the event manager"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
@@ -420,22 +421,22 @@ const ProjectDefiance = () => (
       gifs={[
         {
           src: "/images/Site Files/TaxiEvents.gif",
-          alt: "Steering Wheel",
+          alt: "Window fog event",
           caption: "Window Fog Event",
         },
         {
           src: "/images/Site Files/TaxiEvents2.gif",
-          alt: "Rain Effect",
+          alt: "Fog event",
           caption: "Fog Event",
         },
         {
           src: "/images/Site Files/TaxiEvents3.gif",
-          alt: "Radio Demo",
+          alt: "Fallen tree event",
           caption: "Fallen Tree Event",
         },
         {
           src: "/images/Site Files/TaxiEvents4.gif",
-          alt: "Night Drive",
+          alt: "Police car event",
           caption: "Police Car Event",
         },
       ]}

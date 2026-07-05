@@ -18,39 +18,39 @@ import ScrollToTop from "../src/ScrollToTop";
 
 const roleInfo = ["Programmer"];
 
-const tags = ["Unreal", "C++", "Blueprint", "OOP", "QA", "Local Multiplayer", "Blueprint"];
+const tags = ["Unreal", "C++", "Blueprint", "OOP", "QA", "Local Multiplayer"];
 
 const Projectiles = [
   {
     src: "/images/Site Files/Mini.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Mini projectile",
     caption: "Mini Projectile",
   },
   {
     src: "/images/Site Files/Rocket.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Rocket projectile",
     caption: "Rocket Projectile",
   },
   {
     src: "/images/Site Files/Projectile.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Basic projectile",
     caption: "Basic Projectile",
   },
 ];
 const Maps = [
   {
     src: "/images/Site Files/Map.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Level 1 map layout",
     caption: "Level 1",
   },
   {
     src: "/images/Site Files/Map2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Level 2 map layout",
     caption: "Level 2",
   },
   {
     src: "/images/Site Files/Map3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Level 3 map layout",
     caption: "Level 3",
   },
 ];
@@ -76,7 +76,7 @@ const ProjectDefiance = () => (
       background="#181818"
       cardBackground="#232323"
       heroImage="/images/Site Files/TankBck.jpg"
-      summary="Get ready for an intense showdown in this top-down tank shooter! Strategically use various weapons and abilities to outmaneuver and defeat your opponent. First to three victories takes the crown! Use the terrain to your advantage—bounce projectiles off walls and catch your rival off guard. Think fast and aim true!"
+      summary="Get ready for an intense showdown in this top-down tank shooter! Strategically use various weapons and abilities to outmaneuver and defeat your opponent. First to five victories takes the crown! Use the terrain to your advantage—bounce projectiles off walls and catch your rival off guard. Think fast and aim true!"
     />
     <ProjectTagsBar tags={tags} />
     <ProjectVidAndText
@@ -107,7 +107,7 @@ const ProjectDefiance = () => (
     <ProjectTitleDivider title="Contributions" />
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/TankBounce.gif"
-      imgAlt="Satisfaction Mechanic UI"
+      imgAlt="Tank projectile bouncing off a wall"
       imgStyle={{ maxWidth: "400px" }}
     >
       <div>
@@ -120,7 +120,7 @@ const ProjectDefiance = () => (
     </ProjectImageTextContainer>
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/TankMove.gif"
-      imgAlt="Satisfaction Mechanic UI"
+      imgAlt="Tank movement using WASD controls"
       imgStyle={{ maxWidth: "400px" }}
     >
       <div>
@@ -133,17 +133,19 @@ const ProjectDefiance = () => (
     </ProjectImageTextContainer>
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/TankPickup.gif"
-      imgAlt="Satisfaction Mechanic UI"
+      imgAlt="Tank collecting a power-up"
       imgStyle={{ maxWidth: "400px" }}
     >
       <div>
         Tanks can collect various power-ups to gain an edge over their opponent.
-        These include:<br></br>
-        <br></br> <li>Shield - Temporary Invulnerability</li>{" "}
-        <li>Slow Mo - slows enemy</li>
-        <li>tank Mine - An On contact tank killer</li> <br></br>These power-ups
-        add variety to each match, ensuring that every encounter feels unique
-        and strategic.
+        These include:
+        <ul>
+          <li><strong>Shield</strong> – Temporary invulnerability</li>
+          <li><strong>Slow-Mo</strong> – Slows the enemy tank</li>
+          <li><strong>Tank Mine</strong> – An on-contact tank killer</li>
+        </ul>
+        These power-ups add variety to each match, ensuring that every
+        encounter feels unique and strategic.
       </div>
     </ProjectImageTextContainer>
 
@@ -176,10 +178,10 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/ScoreBoard.png"
-      text="UI Scoreboards - First To Five Wins"
-      alt1="Taxi Interior View 1"
+      text="UI scoreboard - first to five wins"
+      alt1="In-game UI scoreboard"
       src2="/images/Site Files/TankCombat.gif"
-      alt2="Taxi Interior View 2"
+      alt2="Tanks in combat"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "350px", width: "100%" }} // Bigger right image
     />
@@ -187,9 +189,9 @@ const ProjectDefiance = () => (
     <ProjectImgImgContainer
       src1="/images/Site Files/SpawningTank.gif"
       text="A spawn manager was implemented to alternate between weapon pickups and power-ups, with their timing and locations determined randomly. This approach helps keep gameplay varied and constantly changing."
-      alt1="Taxi Interior View 1"
+      alt1="Tank spawning into the level"
       src2="/images/Site Files/SpawnCode.png"
-      alt2="Taxi Interior View 2"
+      alt2="Spawn manager code"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
@@ -223,18 +225,22 @@ const ProjectDefiance = () => (
       header={"Project Conclusions"}
       body={
         <>
-          With the goal of creating a vertical slice of a tank shooter, I’m
+          With the goal of creating a vertical slice of a tank shooter, I'm
           pleased with the learning outcomes of this project. My aim was to
           effectively integrate C++ and Blueprints, and I gained valuable
           insights into when to use each—essentially clarifying the "fuzzy line"
-          between the two.A significant takeaway has been the development of
-          Blueprint Function Libraries. Creating custom nodes in C++ for
-          functionalities not available in Blueprints has proven extremely
-          beneficial. I plan to expand on this approach in future projects by
-          building a more extensive library.This experience has not only
-          enhanced my C++ skills but also deepened my understanding of Unreal
-          Engine. Overall, the project has served as a clear guide for
-          determining when to leverage C++ in my work.
+          between the two.
+          <br /><br />
+          A significant takeaway has been the development of Blueprint
+          Function Libraries. Creating custom nodes in C++ for functionality
+          not available in Blueprints has proven extremely beneficial, and I
+          plan to expand on this approach in future projects by building a
+          more extensive library.
+          <br /><br />
+          This experience has not only enhanced my C++ skills but also
+          deepened my understanding of Unreal Engine. Overall, the project
+          has served as a clear guide for determining when to leverage C++ in
+          my work.
         </>
       }
     />

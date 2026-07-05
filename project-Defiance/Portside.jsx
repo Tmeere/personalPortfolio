@@ -25,39 +25,39 @@ const tags = ["TF2", "Level Design", "Multiplayer", "Hammer Editor", "Balancing"
 const Maps = [
   {
     src: "/images/Site Files/P4.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },{
     src: "/images/Site Files/P5.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },{
     src: "/images/Site Files/P6.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },{
     src: "/images/Site Files/P7.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },
   {
     src: "/images/Site Files/P8.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },
   {
     src: "/images/Site Files/P3.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Undocking containers area",
     caption: "Undocking Containers",
   },
   {
     src: "/images/Site Files/P2.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Blu side sniper tower",
     caption: "Blu Side Sniper Tower",
   },
   {
     src: "/images/Site Files/P1.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Red side canal",
     caption: "Red Side Canal",
   },
 ];
@@ -65,53 +65,53 @@ const Maps = [
 const Blockout = [
   {
     src: "/images/Site Files/GIF Sketch Portside Initial.gif",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Initial map sketch",
     caption: "Initial Map Sketch",
   },
   {
     src: "/images/Site Files/Portside Initial Plans.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Map Design Itteration 1",
+    alt: "Map design iteration 1",
+    caption: "Map Design Iteration 1",
   },
   {
     src: "/images/Site Files/Portside Further Itterations.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Further Tweaks and refining",
+    alt: "Further tweaks and refining to the map",
+    caption: "Further Tweaks and Refining",
   },
   {
     src: "/images/Site Files/Portside Map Itteration 3.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Final Map Design to Ingame Scale",
+    alt: "Final map design at in-game scale",
+    caption: "Final Map Design to In-Game Scale",
   },
-  
+
   {
     src: "/images/Site Files/Map1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Height Map Inner Section",
+    alt: "Height map, inner section",
+    caption: "Height Map: Inner Section",
   },
   {
     src: "/images/Site Files/Map22.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Height Map Upper Sections",
+    alt: "Height map, upper sections",
+    caption: "Height Map: Upper Sections",
   },
   {
     src: "/images/Site Files/Map33.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Map buffer zones",
     caption: "Map Buffer Zones",
   },
   {
     src: "/images/Site Files/Info1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Health information reference",
     caption: "Health Information",
   },
   {
     src: "/images/Site Files/Info2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "King of the Hill capture rates reference",
     caption: "KOTH Capture Rates",
   },
   {
     src: "/images/Site Files/Info3.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Core character information reference",
     caption: "Core Character Information",
   },
 ]
@@ -119,31 +119,31 @@ const Blockout = [
 const MapBlockout = [
   {
     src: "/images/Site Files/Development 1_edited.jpg",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Rough initial blockout",
     caption: "Rough Initial Blockout",
   },
   {
     src: "/images/Site Files/Development 2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Further map blockouts",
     caption: "Further Map Blockouts",
   },
   {
     src: "/images/Site Files/Development 3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Further Tweaks and refining",
+    alt: "Further tweaks and refining to the blockout",
+    caption: "Further Tweaks and Refining",
   },
   {
     src: "/images/Site Files/Development 4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Adding the exterior warehouse",
     caption: "Adding Exterior Warehouse",
   },
-  
+
 ]
 
 const responsibility = [
   "Developed a balanced and engaging King of the Hill map for TF2 (Team Fortress 2)",
-  "Conducted online Q&A sessions with players to ensure a fair and balanced experience for all classes",
-  "Gained understanding, learned, and implemented multiplayer level design theory",
+  "Ran QA testing sessions with players to ensure a fair and balanced experience for all classes",
+  "Learned and applied multiplayer level design theory",
   "Published the map on the Steam Workshop",
 ];
 
@@ -163,7 +163,7 @@ const ProjectDefiance = () => (
       heroImage="/images/Site Files/PortsideSplash.jpg"
       summary={
         <>
-          Fight on this KOTH map for control of the Port. Two ships enter one
+          Fight on this KOTH map for control of the Port. Two ships enter, one
           will leave... <br />
           -Hammer Editor
         </>
@@ -177,7 +177,7 @@ const ProjectDefiance = () => (
         {
           url: "/images/Site Files/DevLogPort.pdf",
           label: "Development Log",
-          description: "Improvement / Itterations",
+          description: "Improvements / Iterations",
         },
         {
           url: "https://steamcommunity.com/sharedfiles/filedetails/?id=3062704992&searchtext=Portsidei",
@@ -202,7 +202,7 @@ const ProjectDefiance = () => (
           I created a King of the Hill map for TF2, now available on the Steam
           Workshop. The development process took 8 weeks, during which I learned
           to use the Hammer Editor from scratch.<br></br>
-          <br></br>Designed for 15v15 gameplay, the map underwent continuous
+          <br></br>Designed for 12v12 gameplay, the map underwent continuous
           refinement based on user feedback and testing.
           <br></br>
           <br></br>During testing, I observed matches as an independent
@@ -210,11 +210,12 @@ const ProjectDefiance = () => (
           map design accordingly.
           <br></br>
           <br></br>This project taught me the core fundamentals of level design
-          and provided valuable insights into creating an enjoyable TF2 map
-          aswell as a wider understanding of multiplayer level design concepts.
+          and provided valuable insights into creating an enjoyable TF2 map, as
+          well as a wider understanding of multiplayer level design concepts.
           <br></br>
-          <br></br>Extra Assets will need to be added to TF2 files to see
-          additional textures and models in game. Download can be found above
+          <br></br>Extra assets will need to be added to your TF2 files to see
+          the additional textures and models in-game. The download can be
+          found above.
         </>
       }
     />
@@ -249,8 +250,8 @@ const ProjectDefiance = () => (
           and long) and distinct areas for different classes of characters.
           Creating a map that accommodates every character type contributes
           significantly to achieving a balanced gameplay experience.<br></br>
-          <br></br>Upon getting an rough level design I made a clear to scale
-          map design 1:1 before beginning the initial level blockouts
+          <br></br>Once I had a rough level design, I created a clear, to-scale
+          (1:1) map layout before beginning the initial level blockouts.
         </>
       }
     />
@@ -263,31 +264,31 @@ const ProjectDefiance = () => (
       minHeight="250px"
       description={
         <>
-          Following initial game research and planning I started some initial
-          steps into learning the hammer editor and starting some of the initial
-          blockout. I found one of the initial challenges I had with this
-          project was grasping scale of maps vs the mockups I made, this had me
-          readjusting the scaling of the map to more accommodate the the typical
-          design of TF map. During this stage it was important to breakdown work
-          quickly, get feedback and iterate and test with other play testers
+          Following initial game research and planning, I took my first steps
+          into learning the Hammer Editor and started on the initial blockout.
+          One of the early challenges I faced was grasping the scale of the
+          map versus the mockups I had made, which led me to readjust the
+          map's scale to better match the typical design of TF2 maps. During
+          this stage, it was important to break down work quickly, get
+          feedback, and iterate with other playtesters.
         </>
       }
     />
 
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/MapCutout.png"
-      imgAlt="Satisfaction Mechanic UI"
+      imgAlt="Map cutout view"
       imgStyle={{ maxWidth: "700px" }}
-      title="Map Itterations"
+      title="Map Iterations"
     >
       <div>
-        Down the line in the project I found myself many small and impactful
-        changes from the map shaped from player testing. When doing this testing
-        It was important to conduct testing from an position of an observer and
-        not as a player, as the way the level designer would play versus and
-        actual player would be drastically different and thus bias, after every
-        test with new players each time I conduct google feedback forms
-        discussing points of feedback and areas that needed imrproving
+        Later in the project, many small but impactful changes to the map
+        were shaped by player testing. When conducting this testing, it was
+        important to observe as an outside observer rather than play as a
+        participant, since the way a level designer plays differs drastically
+        from how an actual player would, which introduces bias. After every
+        test with new players, I collected feedback using Google Forms,
+        focusing on key points and areas that needed improvement.
       </div>
     </ProjectImageTextContainer>
 
@@ -295,9 +296,9 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgText
       src1="/images/Site Files/Itter1A.png"
-      alt1="Placeholder 1"
+      alt1="Courtyard before adding a cover pillar"
       src2="/images/Site Files/Itter1B.png"
-      alt2="Placeholder 2"
+      alt2="Courtyard after adding a cover pillar"
       title="Improving Courtyard"
     >
       The long exposed sightline made it hard for medium to short-range
@@ -308,9 +309,9 @@ const ProjectDefiance = () => (
     </ProjectImgImgText>
     <ProjectImgImgText
       src1="/images/Site Files/Itter2A.png"
-      alt1="Placeholder 1"
+      alt1="Tower position before backboards were added"
       src2="/images/Site Files/Itter2B.png"
-      alt2="Placeholder 2"
+      alt2="Tower position with backboards added"
       title="Tower Backboards"
     >
       Backboards were added to the tower positions, enabling characters like
@@ -320,9 +321,9 @@ const ProjectDefiance = () => (
     </ProjectImgImgText>
     <ProjectImgImgText
       src1="/images/Site Files/Itter3A.png"
-      alt1="Placeholder 1"
+      alt1="Lower section before added catwalks"
       src2="/images/Site Files/Itter3B.png"
-      alt2="Placeholder 2"
+      alt2="Lower section with catwalks added"
       title="Adding Height"
     >
       To encourage more diverse combat in the lower sections of the map,
@@ -333,9 +334,9 @@ const ProjectDefiance = () => (
     </ProjectImgImgText>
     <ProjectImgImgText
       src1="/images/Site Files/Itter4A.png"
-      alt1="Placeholder 1"
+      alt1="Sniper sightline before added cover"
       src2="/images/Site Files/Itter4B.png"
-      alt2="Placeholder 2"
+      alt2="Sniper sightline with added cover"
       title="Enhanced Protection"
     >
       Additionally, throughout development, it became clear that sniper
@@ -345,14 +346,14 @@ const ProjectDefiance = () => (
       from interacting with that channel and improving overall balance.
     </ProjectImgImgText>
 
-    <ProjectTitleDivider title="Map Readibility" />
+    <ProjectTitleDivider title="Map Readability" />
 
     <ProjectImgImgText
       src1="/images/Site Files/Read1A.png"
-      alt1="Placeholder 1"
+      alt1="Map area before added signage"
       src2="/images/Site Files/Read1B.png"
-      alt2="Placeholder 2"
-      title="Improving Map Readibility"
+      alt2="Map area with added signage"
+      title="Improving Map Readability"
     >
       During development, I noticed that players were confused by certain
       elements of the map, such as water hazards and the locations of exits and
@@ -361,12 +362,12 @@ const ProjectDefiance = () => (
     </ProjectImgImgText>
     <ProjectImgImgText
       src1="/images/Site Files/Read2A.png"
-      alt1="Placeholder 1"
+      alt1="Map area before texturing"
       src2="/images/Site Files/Read2B.png"
-      alt2="Placeholder 2"
+      alt2="Map area after texturing and team-side indicators"
       title="Dividing The Map"
     >
-      As my project moved out of the blockout phase, I focused on adding textures and models to enhance the design and overall feel of the map. This not only made the map more visually defined but also improved player navigation by clearly indicating each teams side, and where the flow of enemies comes from.
+      As my project moved out of the blockout phase, I focused on adding textures and models to enhance the design and overall feel of the map. This not only made the map more visually defined but also improved player navigation by clearly indicating each team's side and where the flow of enemies comes from.
     </ProjectImgImgText>
 
     <ProjectVidAndText
@@ -383,7 +384,7 @@ const ProjectDefiance = () => (
           extensive player testing are essential for developing a successful
           level. Initially, I underestimated the impact of player feedback, but
           it proved crucial in shaping the final result.<br></br>
-          <br></br>As I look ahead, I’m excited to be featured in the university
+          <br></br>As I look ahead, I'm excited to be featured in the university
           highlights for this project. This recognition inspires me to continue
           refining my skills and exploring new opportunities in level design.
         </>

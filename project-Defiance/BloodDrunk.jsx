@@ -19,75 +19,75 @@ import ProjectImgImgText from "../components/projectComponents/ProjectImgImgText
 
 const roleInfo = ["Producer / Technical Designer"];
 
-const tags = ["Unreal", "Leadership", "Blueprint", "Jira", "QA", "Github", "Optimzation"];
+const tags = ["Unreal", "Leadership", "Blueprint", "Jira", "QA", "GitHub", "Optimization"];
 
 
 const FlowDiagrams = [
   {
     src: "/images/Site Files/Flow1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 1",
+    caption: "Flow Diagram 1",
   },
   {
     src: "/images/Site Files/Flow2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 2",
+    caption: "Flow Diagram 2",
   },
   {
     src: "/images/Site Files/Flow3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 3",
+    caption: "Flow Diagram 3",
   },
   {
     src: "/images/Site Files/Flow4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 4",
+    caption: "Flow Diagram 4",
   },
 ];
 
 const PlayerDiagrams = [
   {
     src: "/images/Site Files/Dia1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Joy ability diagram",
     caption: "Joy Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Fear ability diagram",
     caption: "Fear Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Rage ability diagram",
     caption: "Rage Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Sad ability diagram",
     caption: "Sad Ability Diagram",
   },
 ]
 const WallRun = [
   {
     src: "/images/Site Files/WallRun1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Use of raycasts for wall detection",
     caption: "Use of Raycasts for Wall Detection",
   },
   {
     src: "/images/Site Files/WallRun4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Boosted Jump following wall running",
-  }, 
+    alt: "Boosted jump following wall running",
+    caption: "Boosted Jump Following Wall Running",
+  },
 ]
 
 
 const responsibility = [
-  "Managing the programming department to meet milestones and deadlines​",
-  "Assisting Junior Developers with tasks, teaching new concepts",
-  "​Bug Testing and Fixing",
-  "Developing Weapon Classes and Sytems",
-  "Enemy AI ",
-  "Player Mechanics​",
+  "Managing the programming department to meet milestones and deadlines",
+  "Assisting junior developers with tasks, teaching new concepts",
+  "Bug testing and fixing",
+  "Developing weapon classes and systems",
+  "Enemy AI",
+  "Player mechanics",
 ];
 
 const ProjectDefiance = () => (
@@ -130,7 +130,7 @@ const ProjectDefiance = () => (
 
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/Wpn.gif"
-      imgAlt="BloodDrunk Overview"
+      imgAlt="Weapon shooting mechanic gameplay"
       title="Overview"
       imgStyle={{ maxWidth: "450px", width: "100%" }}
     >
@@ -146,15 +146,15 @@ const ProjectDefiance = () => (
 
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/Wpn2.gif"
-      imgAlt="BloodDrunk Team Lead"
+      imgAlt="BloodDrunk team collaborating on gameplay systems"
       title="Project Leadership & Development"
       imgStyle={{ maxWidth: "450px", width: "100%" }}
     >
       During the summer, I served as the Project Lead for an eight-person team
       developing a VR shooter called BloodDrunk. Selected by Staffordshire
       University, I joined an international team coming from different
-      Universities at KAMK (Kajaani University of Applied Sciences) in Finland,
-      where we dedicated ourselves to creating an addictive VR Shooter.
+      universities at KAMK (Kajaani University of Applied Sciences) in Finland,
+      where we dedicated ourselves to creating an addictive VR shooter.
       <br />
       <br />
       As the project lead, my primary responsibility was to ensure seamless
@@ -171,7 +171,7 @@ const ProjectDefiance = () => (
 
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/Behaviour.png"
-      imgAlt="BloodDrunk Team Lead"
+      imgAlt="Weapon system data table"
       title="Weapon Systems"
       imgStyle={{ maxWidth: "750px", width: "100%" }}
     >
@@ -190,9 +190,9 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Train1.png"
-      alt1="BloodDrunk Overview"
+      alt1="Weapon data table values"
       src2="/images/Site Files/Train.png"
-      alt2="BloodDrunk Team Lead"
+      alt2="AI shooting range test setup"
       img1Style={{ maxWidth: "400px", width: "100%" }}
       img2Style={{ maxWidth: "700px", width: "100%" }}
       text={
@@ -215,43 +215,29 @@ const ProjectDefiance = () => (
     />
     <br></br>
 
-        <ProjectVidAndText
-          videoUrl="https://www.youtube.com/embed/ONI7gKVKr3A?autoplay=1&loop=1&playlist=ONI7gKVKr3A&mute=1"
-          title=""
-          minHeight="400px"
-          description={
-            <>
-              <p>
-                Using inheritance, we developed seven unique weapon classes, including both live projectile weapons and standard line trace weapons. A critical consideration in designing these weapons was their overall feel, especially since they were for VR. I focused on haptics and feedback to enhance the dynamics of the weapons. Key elements included:
-              </p>
-              <ul>
-                <li>
-                  <b>Weapon Haptics:</b> Providing tactile feedback when shooting, catching, and dropping weapons.
-                </li>
-                <li>
-                  <b>Weapon Visuals:</b> Incorporating realistic gunfire effects and ejected casings.
-                </li>
-                <li>
-                  <b>VFX Laser Pointers:</b> Adding visual helpers for long-range shooting.
-                </li>
-              </ul>
-              <p>
-                These elements collectively contributed to a more immersive experience in the VR shooter.
-              </p>
-            </>
-          }
-        />
-
-<ProjectImgImgContainer
-      src1="/images/Site Files/Train1.png"
-      alt1="BloodDrunk Overview"
-      src2="/images/Site Files/Train.png"
-      alt2="BloodDrunk Team Lead"
-      img1Style={{ maxWidth: "400px", width: "100%" }}
-      img2Style={{ maxWidth: "700px", width: "100%" }}
-      text={
+    <ProjectVidAndText
+      videoUrl="https://www.youtube.com/embed/ONI7gKVKr3A?autoplay=1&loop=1&playlist=ONI7gKVKr3A&mute=1"
+      title="Weapon Design"
+      minHeight="400px"
+      description={
         <>
-          
+          <p>
+            Using inheritance, we developed seven unique weapon classes, including both live projectile weapons and standard line trace weapons. A critical consideration in designing these weapons was their overall feel, especially since they were for VR. I focused on haptics and feedback to enhance the dynamics of the weapons. Key elements included:
+          </p>
+          <ul>
+            <li>
+              <b>Weapon Haptics:</b> Providing tactile feedback when shooting, catching, and dropping weapons.
+            </li>
+            <li>
+              <b>Weapon Visuals:</b> Incorporating realistic gunfire effects and ejected casings.
+            </li>
+            <li>
+              <b>VFX Laser Pointers:</b> Adding visual helpers for long-range shooting.
+            </li>
+          </ul>
+          <p>
+            These elements collectively contributed to a more immersive experience in the VR shooter.
+          </p>
         </>
       }
     />
@@ -270,25 +256,32 @@ const ProjectDefiance = () => (
           managerial hurdles of keeping all departments aligned with our weekly
           milestones and supporting their individual goals. I quickly learned
           that the greatest challenges often come from unforeseen circumstances.
+          <br /><br />
           From the start, I prioritized getting to know each team member
           personally to understand their strengths and weaknesses. This
-          knowledge allowed me to assign tasks that suited their skills best. I
-          discovered that while some team members excelled at working
+          knowledge allowed me to assign tasks that suited their skills best —
+          I discovered that while some team members excelled at working
           independently, others thrived with more guidance. This tailored
           approach significantly enhanced our teamwork and was crucial in
-          achieving our goal of developing a VR shooter. ​ At the outset, we
-          established key goals: ​ - Improve Unreal Engine understanding - Gain
-          VR development experience - Foster teamwork and communication ​ We
-          succeeded in creating a vertical slice of our game, and while we met
-          these initial objectives, we aspire to go further. We’ve decided to
-          continue developing the project independently under our Indie Studio
-          "Redmist" with the aim of a commercial release on Steam. Although this
-          journey will present its own challenges, we firmly believe our game
-          has much more potential than just a vertical slice. ​ After our
-          university trip, we set up a Discord channel to facilitate
-          collaboration in an international remote setting, focusing on the
-          clear objectives of: more levels, more gameplay, and more fun! I’m
-          excited about this upcoming phase and all that it entails.
+          achieving our goal of developing a VR shooter.
+          <br /><br />
+          At the outset, we established three key goals:
+          <ul>
+            <li>Improve our Unreal Engine understanding</li>
+            <li>Gain VR development experience</li>
+            <li>Foster teamwork and communication</li>
+          </ul>
+          We succeeded in creating a vertical slice of our game, and while we
+          met these initial objectives, we aspire to go further. We've decided
+          to continue developing the project independently under our indie
+          studio, "Redmist," with the aim of a commercial release on Steam.
+          Although this journey will present its own challenges, we firmly
+          believe our game has much more potential than just a vertical slice.
+          <br /><br />
+          After our university trip, we set up a Discord channel to facilitate
+          collaboration in an international remote setting, focusing on clear
+          objectives: more levels, more gameplay, and more fun! I'm excited
+          about this upcoming phase and all that it entails.
         </>
       }
     />

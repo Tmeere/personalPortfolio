@@ -25,68 +25,68 @@ const tags = ["AI", "Unreal", "Blueprint", "Learning", "Animation"];
 const FlowDiagrams = [
   {
     src: "/images/Site Files/Flow1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 1",
+    caption: "Flow Diagram 1",
   },
   {
     src: "/images/Site Files/Flow2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 2",
+    caption: "Flow Diagram 2",
   },
   {
     src: "/images/Site Files/Flow3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 3",
+    caption: "Flow Diagram 3",
   },
   {
     src: "/images/Site Files/Flow4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Flow Diagram",
+    alt: "Flow diagram 4",
+    caption: "Flow Diagram 4",
   },
 ];
 
 const PlayerDiagrams = [
   {
     src: "/images/Site Files/Dia1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Joy ability diagram",
     caption: "Joy Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia2.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Fear ability diagram",
     caption: "Fear Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia3.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Rage ability diagram",
     caption: "Rage Ability Diagram",
   },
   {
     src: "/images/Site Files/Dia4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Sad ability diagram",
     caption: "Sad Ability Diagram",
   },
 ]
 const WallRun = [
   {
     src: "/images/Site Files/WallRun1.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
+    alt: "Use of raycasts for wall detection",
     caption: "Use of Raycasts for Wall Detection",
   },
   {
     src: "/images/Site Files/WallRun4.png",
-    alt: "Midnight Taxi Gameplay Screenshot 1",
-    caption: "Boosted Jump following wall running",
-  }, 
+    alt: "Boosted jump following wall running",
+    caption: "Boosted Jump Following Wall Running",
+  },
 ]
 
 
 const responsibility = [
-  "Learning and developing AI Characters",
-  "Making an High Octane shooter with an complete gameplay loop",
-  "Improving technical understanding of blueprint",
+  "Learning and developing AI characters",
+  "Building a high-octane shooter with a complete gameplay loop",
+  "Improving technical understanding of Blueprint",
   "Developing a set of fun gameplay mechanics",
-  "Further Expanding of Unreal Knowledge / Skillset",
+  "Further expanding my Unreal Engine knowledge and skillset",
 ];
 
 const ProjectDefiance = () => (
@@ -105,14 +105,16 @@ const ProjectDefiance = () => (
       heroImage="/images/Site Files/EmoSplash.png"
       summary={
         <>
-          Stay fast, go room to room killing enemies in this high octane shooter, speed is key. Complete the level before the timer runs out. Match the enemy aspect should you intend to cause harm!
+          Stay fast and clear room after room in this high-octane shooter —
+          speed is everything. Complete the level before the timer runs out,
+          and match your aspect to the enemy's if you want to deal damage!
         </>
       }
       downloadLinks={[
         {
           url: "/images/Site Files/Emo Edge Making Of.pdf",
           label: "Making Of Document",
-          description: "Please Read for full proejct summary",
+          description: "Please read for the full project summary",
         },
       ]}
     />
@@ -149,17 +151,17 @@ const ProjectDefiance = () => (
       alt="Emo Edge Gameplay Showcase"
       caption="Showcase of Emo Edge gameplay and environment"
       summary={
-        "When Starting this project I initially made a simplistic game loop to understand what I was aiming for"
+        "When starting this project, I initially made a simplistic game loop to understand what I was aiming for."
       }
     />
 
     <ProjectImgImgContainer
       src1="/images/Site Files/ProjPlan.png"
-      alt1="Emo Edge Gameplay 1"
+      alt1="Project plan and timeline sketch"
       src2="/images/Site Files/Inspo.png"
-      alt2="Emo Edge Gameplay 2"
+      alt2="Inspiration reference for similar titles"
       title="Gameplay Highlights"
-      text="Alongside this plans were made into similar titles for inspirations as well as planning out the projects timeline and scope"
+      text="Alongside this, I researched similar titles for inspiration and planned out the project's timeline and scope."
     />
 
     <ProjectVidAndText
@@ -188,41 +190,41 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Rage1.png"
-      alt1="Example Screenshot 1"
+      alt1="Rage aspect ability icon"
       src2="/images/Site Files/Rage2.gif"
-      alt2="Example Screenshot 2"
-      title="Development Progress"
-      text="Fire Projectile applies an Actor Component that burns the enemy over time (DOT)"
+      alt2="Rage aspect fire projectile in action"
+      title="Rage Aspect"
+      text="Fire Projectile applies an Actor Component that burns the enemy over time (DOT)."
       img2Style={{ height: "400px", objectFit: "cover" }}
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/Sad2.png"
-      alt1="Example Screenshot 1"
+      alt1="Sad aspect ability icon"
       src2="/images/Site Files/Sad1.gif"
-      alt2="Example Screenshot 2"
-      title="Development Progress"
-      text="Fully Automatic Fire, while mouse is held down"
+      alt2="Sad aspect automatic fire in action"
+      title="Sad Aspect"
+      text="Fully automatic fire while the mouse is held down."
       img2Style={{ height: "390px", objectFit: "cover" }}
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/Fear2.png"
-      alt1="Example Screenshot 1"
+      alt1="Fear aspect ability icon"
       src2="/images/Site Files/Fear1.gif"
-      alt2="Example Screenshot 2"
-      title="Development Progress"
-      text="Constant DOT while in the path of the flame"
+      alt2="Fear aspect flame damage-over-time in action"
+      title="Fear Aspect"
+      text="Constant damage-over-time while standing in the path of the flame."
       img2Style={{ height: "350px", objectFit: "cover" }}
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/Joy2.png"
-      alt1="Example Screenshot 1"
+      alt1="Joy aspect ability icon"
       src2="/images/Site Files/Joy1.gif"
-      alt2="Example Screenshot 2"
-      title="Development Progress"
-      text="Charged Attack that regains the player mana based on number of enemies hit"
+      alt2="Joy aspect charged attack in action"
+      title="Joy Aspect"
+      text="A charged attack that regains player mana based on the number of enemies hit."
       img2Style={{ height: "390px", objectFit: "cover" }}
     />
     <br></br>
@@ -232,14 +234,17 @@ const ProjectDefiance = () => (
       header={"Development Of Movement Mechanics"}
       body={
         <>
-          Alongside the shooting mechanics for the game, developments in the movement aspect included a range of mechanics, those being:
+          Alongside the shooting mechanics, I developed a range of movement
+          mechanics, including:
           <ul>
             <li>Sliding</li>
             <li>Wall Running</li>
             <li>Grapple Points</li>
             <li>Dodging</li>
           </ul>
-          When making these systems, while it was important to create each mechanic, it was even more important from a design point of view that each of the mechanics worked together well in tandem.
+          When building these systems, it was important not just to implement
+          each mechanic individually, but to ensure they all worked well
+          together from a design perspective.
         </>
       }
     />
@@ -284,11 +289,11 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/WallUI.png"
-      alt1="Example Screenshot 1"
+      alt1="Wall-running indicator UI, inactive state"
       src2="/images/Site Files/WallUI2.png"
-      alt2="Example Screenshot 2"
+      alt2="Wall-running indicator UI, active state"
       title="Development Progress"
-      text="Wall running opportunities is indicated to the player by the white arrows either side of the crosshair, helping with clearer indication to the player"
+      text="Wall-running opportunities are indicated to the player by white arrows on either side of the crosshair, giving a clear visual cue."
       img1Style={{ height: "300px", objectFit: "cover" }}
       img2Style={{ height: "300px", objectFit: "cover" }}
     />
@@ -385,10 +390,10 @@ const ProjectDefiance = () => (
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/CL8S6SieLR0?autoplay=1&loop=1&playlist=CL8S6SieLR0&mute=1"
       imgSrc="/images/Site Files/GrappleShot.png"
-      imgAlt="Sliding Mechanic Video Thumbnail"
-      title="Sliding Mechanic In Action"
+      imgAlt="Grapple mechanic in action"
+      title="Grapple Mechanic In Action"
       imgStyle={{ maxWidth: "400px", width: "100%" }}
-    ></ProjectVideoAndImg>
+    />
 
     <ProjectVidAndText
       videoUrl="https://www.youtube.com/embed/D0hg8HAqsAg?autoplay=1&loop=1&playlist=D0hg8HAqsAg&mute=1"
@@ -400,9 +405,9 @@ const ProjectDefiance = () => (
           Players have two dash charges that regenerate while they are idle. By
           using their movement input, players can dash in the desired direction.
           <br></br>
-          <br></br>To Improve the feel behind this time dilation and custom time
-          dilation is used on the player, alongside this ground friction is used
-          to make sure the dodge smooth feels impactful. 
+          <br></br>To improve the feel of the dash, custom time dilation is
+          applied to the player, and ground friction is adjusted to make the
+          dodge feel smooth and impactful.
         </>
       }
     />
@@ -410,7 +415,7 @@ const ProjectDefiance = () => (
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/iuGoAK1NNyw?autoplay=1&mute=1&loop=1&playlist=iuGoAK1NNyw&start=2"
       imgSrc="/images/Site Files/PickupEmo.png"
-      imgAlt="Dash Mechanic Example 1"
+      imgAlt="Dash mechanic in action"
       title="Dash Mechanic Visuals"
       imgStyle={{ height: "300px", objectFit: "contain" }}
     >
@@ -421,12 +426,12 @@ const ProjectDefiance = () => (
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/eSYDSYbuDAw?autoplay=1&mute=1&loop=1&playlist=eSYDSYbuDAw&start=2"
       imgSrc="/images/Site Files/KickEmo.png"
-      imgAlt="Dash Mechanic Example 1"
-      title="Dash Mechanic Visuals"
+      imgAlt="Kick mechanic in action"
+      title="Kick Mechanic Visuals"
       imgStyle={{ height: "300px", objectFit: "contain" }}
     >
-      Visual demonstration of the dash mechanic in action, highlighting
-      direction and time dilation effects.
+      Visual demonstration of the kick mechanic in action, used as a melee
+      option when players run out of ammo.
     </ProjectVideoAndImg>
     <ProjectTextBody
       header={""}
@@ -451,17 +456,17 @@ const ProjectDefiance = () => (
           second key component I looked at initially. For initial testing, I
           created a simple AI class and made a cube go to the player's position.
           Although this was a good place to start, it required more, so I got
-          into contact with programmers to get some pointers on AI 
+          in contact with programmers to get some pointers on AI development.
         </>
       }
     />
     <ProjectVideoAndImg
       videoUrl="https://www.youtube.com/embed/irWZA0EgGqU?autoplay=1&mute=1&loop=1&playlist=irWZA0EgGqU&start=81"
       imgSrc="/images/Site Files/AI.png"
-      imgAlt="Dash Mechanic Example 1"
-      title="Dash Mechanic Visuals"
+      imgAlt="AI behavior demonstration"
+      title="AI Behavior Demo"
       imgStyle={{ height: "300px", objectFit: "contain" }}
-    ></ProjectVideoAndImg>
+    />
 
     <ProjectImageTextContainer
       imgSrc="/images/Site Files/AIState.png"
@@ -469,17 +474,17 @@ const ProjectDefiance = () => (
       title="AI System: State Machine Approach"
       imgStyle={{ maxWidth: "900px", width: "100%" }}
     >
-      With the option of two approaches, those being:
+      I had two approaches to choose from:
       <ul>
         <li>Finite State Machines</li>
         <li>Behavior Trees</li>
       </ul>
-      With the two options having both pros and cons, I decided to go forward
-      with the finite state machines. This came down to needing to cover a range
-      of new topics for this project under a constrained timeline, as well as
-      wanting to cover a range of AI states quickly under one class. After
-      various levels of trial and error, I made 4 different AI States for the 4
-      enemy archetypes in the game.
+      Weighing the pros and cons of each, I decided to move forward with
+      finite state machines. This came down to needing to learn a range of
+      new topics under a constrained timeline, as well as wanting to
+      implement several AI states quickly within one class. After some trial
+      and error, I created four different AI states for the four enemy
+      archetypes in the game.
       <br />
       <br />
       The state selector is dictated by an Enum variable for what behavior is
@@ -489,12 +494,12 @@ const ProjectDefiance = () => (
       images={[
         {
           src: "/images/Site Files/AIMeth1.png",
-          alt: "AI Method Example 1",
+          alt: "Taking many commands, executing many responses",
           caption: "Taking many commands, executing many responses",
         },
         {
           src: "/images/Site Files/AIMeth2.png",
-          alt: "AI Method Example 2",
+          alt: "Taking many commands, filtering, and executing one",
           caption: "Taking many commands, filtering, and executing one",
         },
       ]}
@@ -518,23 +523,23 @@ const ProjectDefiance = () => (
       images={[
         {
           src: "/images/Site Files/AIBev1.png",
-          alt: "AI Method Example 1",
-          caption: "AI Behaviour",
+          alt: "AI behavior tree, section 1",
+          caption: "AI Behaviour 1",
         },
         {
           src: "/images/Site Files/AIBev2.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour",
+          alt: "AI behavior tree, section 2",
+          caption: "AI Behaviour 2",
         },
         {
           src: "/images/Site Files/AIBev3.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour",
+          alt: "AI behavior tree, section 3",
+          caption: "AI Behaviour 3",
         },
         {
           src: "/images/Site Files/AIBev4.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour",
+          alt: "AI behavior tree, section 4",
+          caption: "AI Behaviour 4",
         },
       ]}
     />
@@ -543,23 +548,23 @@ const ProjectDefiance = () => (
       images={[
         {
           src: "/images/Site Files/BP1.png",
-          alt: "AI Method Example 1",
-          caption: "AI Behaviour BP",
+          alt: "AI behavior Blueprint, part 1",
+          caption: "AI Behaviour Blueprint 1",
         },
         {
           src: "/images/Site Files/BP2.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour BP",
+          alt: "AI behavior Blueprint, part 2",
+          caption: "AI Behaviour Blueprint 2",
         },
         {
           src: "/images/Site Files/BP3.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour BP",
+          alt: "AI behavior Blueprint, part 3",
+          caption: "AI Behaviour Blueprint 3",
         },
         {
           src: "/images/Site Files/BP4.png",
-          alt: "AI Method Example 2",
-          caption: "AI Behaviour BP",
+          alt: "AI behavior Blueprint, part 4",
+          caption: "AI Behaviour Blueprint 4",
         },
       ]}
     />
@@ -568,10 +573,10 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Anim1.png"
-      alt1="First Image Alt Text"
+      alt1="Enemy AI animation state machine"
       src2="/images/Site Files/Anim2.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Player animation state machine"
+      title="Animation State Machines"
       text={
         <>
           As the project scaled up in scope and new challenges arose, I wanted
@@ -600,17 +605,17 @@ const ProjectDefiance = () => (
     <ProjectTitleDivider title="Level Design" />
 
     <ProjectTextBody
-      header={"Level Itteration"}
+      header={"Level Iteration"}
       body={
         <>
-          While it wasn't a primary goal, level design was paramount towards
-          showcasing off a high octane shooter. Different maps were made over
-          the projects cycle
+          While it wasn't a primary goal, level design was paramount to
+          showcasing a high-octane shooter. Different maps were made over the
+          project's development cycle.
           <br></br>
-          <br></br>Initially these started as testing ground for the player
-          mechanics. From here full levels were made. These were user tested and
-          iterated on, in the final state 2 levels were made to showcase all the
-          gameplay mechanics
+          <br></br>Initially, these started as a testing ground for the player
+          mechanics. From here, full levels were built. These were user-tested
+          and iterated on, and in the final version, two levels were created to
+          showcase all the gameplay mechanics.
         </>
       }
     />
@@ -618,14 +623,14 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Lvl1.png"
-      alt1="First Image Alt Text"
+      alt1="Testing room prototype"
       src2="/images/Site Files/Lvl2.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Practice map prototype"
+      title="Level Prototypes"
       text={
         <>
-          Initial Room prototypes for the game this included an testing room and
-          pratice map
+          Initial room prototypes for the game, including a testing room and a
+          practice map.
         </>
       }
       img1Style={{ height: "300px", objectFit: "contain" }}
@@ -635,14 +640,13 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Lvl3.png"
-      alt1="First Image Alt Text"
+      alt1="Room prototype variant 1"
       src2="/images/Site Files/Lvl4.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Room prototype variant 2"
+      title="Additional Level Prototypes"
       text={
         <>
-          Initial Room prototypes for the game this included an testing room and
-          pratice map
+          Additional room prototypes used for early testing and iteration.
         </>
       }
       img1Style={{ height: "300px", objectFit: "contain" }}
@@ -652,10 +656,10 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Room1A.png"
-      alt1="First Image Alt Text"
+      alt1="Level room 1, screenshot 1"
       src2="/images/Site Files/Room1B.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Level room 1, screenshot 2"
+      title="Level Room 1"
       img1Style={{ height: "300px", objectFit: "contain" }}
       img2Style={{ height: "300px", objectFit: "contain" }}
     />
@@ -663,20 +667,20 @@ const ProjectDefiance = () => (
 
     <ProjectImgImgContainer
       src1="/images/Site Files/Room2A.png"
-      alt1="First Image Alt Text"
+      alt1="Level room 2, screenshot 1"
       src2="/images/Site Files/Room2B.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Level room 2, screenshot 2"
+      title="Level Room 2"
       img1Style={{ height: "300px", objectFit: "contain" }}
       img2Style={{ height: "300px", objectFit: "contain" }}
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/Room3A.png"
-      alt1="First Image Alt Text"
+      alt1="Level room 3, screenshot 1"
       src2="/images/Site Files/Room3B.png"
-      alt2="Second Image Alt Text"
-      title="AI Visual Examples"
+      alt2="Level room 3, screenshot 2"
+      title="Level Room 3"
       img1Style={{ height: "300px", objectFit: "contain" }}
       img2Style={{ height: "300px", objectFit: "contain" }}
     />
@@ -686,10 +690,10 @@ const ProjectDefiance = () => (
       header={"Conclusion"}
       body={
         <>
-          Overall, I’m very pleased with the final results of the project. My
+          Overall, I'm very pleased with the final results of the project. My
           primary goals were to deepen my understanding of Unreal Engine and to
           enhance my skills with Blueprints. This was accomplished through the
-          development of a Complex Player Character, Dynamic AI, and various
+          development of a complex player character, dynamic AI, and various
           mechanics. While the project was a significant success, there are
           several areas where I see room for improvement.
           <br />
@@ -697,14 +701,14 @@ const ProjectDefiance = () => (
           Moving forward, I plan to explore more advanced aspects of AI, such as
           behavior trees and complex systems, as I found the challenge of
           learning AI particularly rewarding. Additionally, I intend to focus
-          more on optimization. As the player character’s abilities and
+          more on optimization. As the player character's abilities and
           mechanics grew in complexity, performance issues arose. I will work on
           breaking down components and optimizing mechanics like wall running,
           which can become resource-intensive due to frequent use.
           <br />
           <br />
-          I’m proud to have achieved the objectives outlined in my initial
-          Moscow briefs. This project has successfully advanced my technical
+          I'm proud to have achieved the objectives outlined in my initial
+          MoSCoW briefs. This project has successfully advanced my technical
           skills in Unreal Engine and provided valuable insights for future
           endeavors.
         </>

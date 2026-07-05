@@ -20,11 +20,11 @@ const roleInfo = ["Junior Programmer"];
 
 
 
-const tags = ["Unreal", "Blueprint", "Teamwork", "Jira", "QA", "Github",];
+const tags = ["Unreal", "Blueprint", "Teamwork", "Jira", "QA", "GitHub"];
 
 const responsibility = [
   "Developing core gameplay mechanics.",
-  "Conducting Q&A bug testing and resolving issues.",
+  "Conducting QA bug testing and resolving issues.",
   "Creating tools tailored for designers' needs.",
   "Implementing designer-made sounds and utilizing meta sounds effectively.",
 ];
@@ -43,7 +43,7 @@ const ProjectDefiance = () => (
       background="#181818"
       cardBackground="#232323"
       heroImage="/images/Site Files/AIApplianceDefianceRender.png"
-      summary="You wake up from Cyro during your long space travel. You wake up with the ship breaking down and the appliances have come to life! Bring order to the ship and defeat the appliances!"
+      summary="You wake from cryosleep during your long space voyage to find the ship breaking down and its appliances come to life. Restore order to the ship and defeat the appliances!"
       downloadLinks={[
         {
           url: "/images/Site Files/GDD.pdf",
@@ -67,22 +67,23 @@ const ProjectDefiance = () => (
           In this game, it is the goal of the player to restore order to the
           ship. During the player's time in cryosleep, the ship's appliances
           have come to life and begun to wreak havoc on the ship. <br></br>
-          <br></br>Save your crewmates, shoot the appliances, save the shipThis
-          project was a collaborative project where I worked with an amazing
-          team of 23 People. In this team, we had people with a range of
-          backgrounds going from Art, Design, Animation, and Programming During
-          this time my role on the team was a Junior Programmer. This task had
-          me implementing gameplay features specified by design and doing the
-          core bug testing/fixing for the game.<br></br>
-          <br></br>This was a fun and insightful experience to teach me
-          teamwork, communication, and working in a group environment.
+          <br></br>Save your crewmates, shoot the appliances, save the ship.
+          This was a collaborative project where I worked with an amazing
+          team of 23 people spanning a range of backgrounds, from art and
+          design to animation and programming. My role on the team was
+          Junior Programmer, implementing gameplay features specified by
+          design and handling the core bug testing and fixing for the
+          game.<br></br>
+          <br></br>This was a fun and insightful experience that taught me
+          teamwork, communication, and how to work effectively in a group
+          environment.
         </>
       }
     />
 
     <ProjectTitleDivider title="Contributions" />
     <ProjectTextBody
-      header={"Overview"}
+      header={"Gameplay Systems"}
       body={
         <>
           During this project, I was tasked with designing and implementing
@@ -139,19 +140,19 @@ const ProjectDefiance = () => (
     <ProjectImgImgContainer
       src1="/images/Site Files/Collect.gif"
       text="Powerups and hazards"
-      alt1="Taxi Interior View 1"
+      alt1="Player collecting a powerup pickup"
       src2="/images/Site Files/Shock.gif"
-      alt2="Taxi Interior View 2"
+      alt2="Player being shocked by exposed wiring"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
     <br></br>
     <ProjectImgImgContainer
       src1="/images/Site Files/EasterEgg.gif"
-      text="Easter Eggs and Sound Files"
-      alt1="Taxi Interior View 1"
+      text="Easter eggs and sound files"
+      alt1="In-game Easter egg"
       src2="/images/Site Files/Sounds.png"
-      alt2="Taxi Interior View 2"
+      alt2="Sound file list used in the game"
       img1Style={{ maxHeight: "500px", width: "100%" }} // Smaller left image
       img2Style={{ maxHeight: "450px", width: "100%" }} // Bigger right image
     />
@@ -183,10 +184,10 @@ const ProjectDefiance = () => (
     />
     <ProjectImgImgContainer
       src1="/images/Site Files/Pause Menu.gif"
-      text="Satisfaction Bar Updated Smoothly by the new inputted value over time, Sounds based on decisions made."
-      alt1="Taxi Interior View 1"
+      text="The satisfaction bar updates smoothly based on player decisions, with sound feedback tied to each outcome."
+      alt1="Pause menu with satisfaction bar"
       src2="/images/Site Files/Enemies.gif"
-      alt2="Taxi Interior View 2"
+      alt2="Enemy appliances attacking the player"
     />
     <br></br>
     <ProjectTextBody

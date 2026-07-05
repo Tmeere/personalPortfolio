@@ -81,10 +81,11 @@ const Projects = () => {
       title: "Mechanic Shop API",
       description: (
         <>
-          Developed an <span className="blue-bold">eCommerce website</span>{" "}
-          using <span className="blue-bold">React/JS</span>, fetching product
-          data from an <span className="blue-bold">API</span> to display a range
-          of custom products with varying prices, titles, and descriptions.
+          Built a <span className="blue-bold">RESTful API</span> for a mechanic
+          shop management system using <span className="blue-bold">Flask</span>{" "}
+          and <span className="blue-bold">MySQL</span>, managing customers,
+          mechanics, service tickets, and parts inventory with authentication
+          for both customers and staff.
         </>
       ),
       link: "https://mechanicshopapi.onrender.com/api/docs/",
@@ -117,15 +118,14 @@ const Projects = () => {
       title: "Tank Busters",
       description: (
         <>
-          Collaborated with students from European universities to develop a{" "}
-          <span className="blue-bold">VR high-octane shooter</span> for release
-          on <span className="blue-bold">Steam</span>. Led the project as{" "}
-          <span className="blue-bold">Project Lead</span>, overseeing the entire
-          development cycle, providing strategic direction, and ensuring
-          successful project completion.
+          Led development as <span className="blue-bold">Project Lead</span> on
+          a <span className="blue-bold">VR high-octane tank shooter</span>,
+          overseeing the entire development cycle, providing strategic
+          direction, and steering the team toward a planned release on{" "}
+          <span className="blue-bold">Steam</span>.
         </>
       ),
-      link: "/tank", 
+      link: "/tank",
       image: "./images/Site Files/TankBuster.png",
       date: "2024",
       tags: ["VR", "Project Management", "Steam Release"],
@@ -134,17 +134,17 @@ const Projects = () => {
       title: "KAMK Summer Games Exchange Project",
       description: (
         <>
-          Collaborated with students from European universities to develop a{" "}
-          <span className="blue-bold">VR high-octane shooter</span> for release
-          on <span className="blue-bold">Steam</span>. Led the project as{" "}
-          <span className="blue-bold">Project Lead</span>, overseeing the entire
-          development cycle, providing strategic direction, and ensuring
-          successful project completion.
+          Spent a summer at{" "}
+          <span className="blue-bold">Kajaani University of Applied Sciences</span>{" "}
+          (Finland), collaborating with an international team of students
+          from European universities to build <span className="blue-bold">Tank Busters</span>{" "}
+          from concept to vertical slice, gaining hands-on experience in VR
+          development and cross-cultural team collaboration.
         </>
       ),
       image: "",
       date: "2024",
-      tags: ["VR", "Project Management", "Steam Release"],
+      tags: ["VR", "Project Management", "Team Collaboration"],
     },
 
     // 3. Game dev (in development, Unity/Unreal)
@@ -247,13 +247,14 @@ const Projects = () => {
 
     // 5. Team/Collaboration/Internship
     {
-      title: "AI-Appliance",
+      title: "Appliance-Defiance",
       description: (
         <>
           <span className="blue-bold">Junior Programmer</span> within a
           23-member team. Created{" "}
-          <span className="blue-bold">core player mechanics</span> and tested
-          and resolved <span className="blue-bold">bugs</span>.
+          <span className="blue-bold">core player mechanics</span> and
+          identified and resolved <span className="blue-bold">bugs</span>{" "}
+          throughout development.
         </>
       ),
       link: "/defiance", 

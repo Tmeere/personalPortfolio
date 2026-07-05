@@ -1,5 +1,5 @@
 .about {
-  border-top: 1px solid var(--border);
+  padding-top: var(--space-8);
 }
 
 .about-intro {
@@ -18,15 +18,17 @@
 }
 
 .about-portrait {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
 }
 
 .about-heading {
-  font-size: 1.6rem;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
   margin-bottom: var(--space-3);
 }
 
@@ -35,6 +37,11 @@
   line-height: 1.7;
   color: var(--fg-dim);
   max-width: 70ch;
+  margin-bottom: var(--space-5);
+}
+
+.about-cta {
+  font-size: 0.85rem;
 }
 
 .about-block {
@@ -78,8 +85,7 @@
   object-fit: contain;
 }
 
-.expertise-list,
-.experience-list {
+.expertise-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
@@ -103,47 +109,150 @@
   line-height: 1.6;
 }
 
-.experience-item {
-  padding: var(--space-4);
+.git-branch-tags {
   display: flex;
-  gap: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
-.experience-logo {
-  width: 64px;
-  height: 64px;
+.git-branch-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.6rem;
+}
+
+.git-branch-icon {
+  color: currentColor;
+}
+
+.git-log-wrap {
+  position: relative;
+}
+
+.git-graph-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+
+.git-log {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  row-gap: var(--space-5);
+}
+
+.commit-row {
+  display: contents;
+}
+
+.commit-graph {
+  grid-column: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.commit-dot {
+  position: absolute;
+  top: 22px;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--panel);
+  box-shadow: 0 0 0 1px var(--border);
+}
+
+.commit-row.is-head .commit-dot {
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--lane-color, var(--accent)) 25%, transparent);
+  animation: commit-pulse 2s ease-in-out infinite;
+}
+
+@keyframes commit-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--lane-color, var(--accent)) 25%, transparent); }
+  50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--lane-color, var(--accent)) 12%, transparent); }
+}
+
+.commit-card {
+  grid-column: 2;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.commit-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.commit-hash {
+  color: var(--accent);
+}
+
+.commit-date {
+  color: var(--wire);
+}
+
+.commit-head-badge {
+  margin-left: auto;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.05rem 0.4rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+}
+
+.commit-summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.commit-avatar {
+  width: 44px;
+  height: 44px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
   flex-shrink: 0;
 }
 
-.experience-body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-1);
-}
-
-.experience-body strong {
+.commit-summary strong {
+  display: block;
   font-size: 1rem;
   color: var(--fg);
 }
 
-.experience-body em {
+.commit-summary em {
   font-family: var(--font-mono);
   font-style: normal;
   font-size: 0.75rem;
-  color: var(--wire);
+  color: var(--fg-dim);
 }
 
-.experience-body ul {
-  margin-top: var(--space-2);
+.commit-body {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
 }
 
-.experience-body ul li {
+.commit-body li {
   font-size: 0.85rem;
   line-height: 1.6;
   color: var(--fg-dim);
@@ -151,7 +260,7 @@
   position: relative;
 }
 
-.experience-body ul li::before {
+.commit-body li::before {
   content: "▸";
   position: absolute;
   left: 0;
@@ -168,13 +277,12 @@
     margin: 0 auto;
   }
 
-  .experience-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .commit-dot {
+    width: 10px;
+    height: 10px;
   }
 
-  .experience-body ul li {
-    text-align: left;
+  .commit-summary {
+    flex-wrap: wrap;
   }
 }

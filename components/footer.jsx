@@ -24,7 +24,7 @@ const Footer = () => {
           <FaArrowUp /> Return up <FaArrowUp />
         </a>
         <p className="footer-text">
-          Thomas Meere — Technical Designer | Software Engineer
+          Thomas Meere — Automation Engineer | Technical Designer
           <a href="https://www.linkedin.com/in/thomasmeere/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={20} />
           </a>

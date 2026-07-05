@@ -4,6 +4,12 @@
   padding: var(--space-5);
 }
 
+.video-img-title {
+  color: var(--accent);
+  font-size: 1.05rem;
+  margin-bottom: var(--space-4);
+}
+
 .video-img-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

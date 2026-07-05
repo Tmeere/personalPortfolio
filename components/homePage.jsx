@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/navbar';
-import HeroSection from '../components/heroSection';
 import About from '../components/aboutme';
 import Projects from '../components/projects';
 import Footer from '../components/footer';
@@ -11,7 +10,6 @@ function HomePage() {
   return (
     <div className="app-container">
       <Navbar />
-      <HeroSection />
       <About />
       <Projects />
       <ContactSection />
