@@ -4,12 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMobileAlt, faGamepad, faVrCardboard, faBug, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Add this line
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Add this line
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 const tagIcons = {
   HTML: faCode,
@@ -18,12 +14,12 @@ const tagIcons = {
   React: faCode,
   JavaScript: faCode,
   'API Integration': faCogs,
-  Unity: <FontAwesomeIcon icon={faGamepad} style={{ color: 'white' }} />, // Unity icon in white
+  Unity: faGamepad,
   'Deck-Building': faGamepad,
   'Procedural Generation': faCogs,
   'Turn-Based': faGamepad,
   'Mobile Game': faMobileAlt,
-  'Unreal Engine': <FontAwesomeIcon icon={faGamepad} style={{ color: 'white' }} />, // Unreal Engine icon in white
+  'Unreal Engine': faGamepad,
   VR: faVrCardboard,
   'AI Design': faCogs,
   'Project Management': faCogs,
@@ -333,97 +329,68 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects" className="projects container-fluid py-5">
-      <div className="text-center mb-4">
-        <h2>Projects</h2>
-      </div>
-      <div className="projects-container d-flex flex-wrap justify-content-center">
-        {/* Projects List */}
-        <ul className="projects-list d-flex flex-wrap justify-content-center w-100">
-          {projects.map((project, index) => (
-            <li key={index} className="project-item mb-4">
-              <div className="project-card p-3 shadow-sm rounded">
-                <h3 className="project-title">{project.title}</h3>
-                {project.image && project.image.trim() !== '' && (
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image mb-3"
-                    onError={e => (e.target.style.display = 'none')}
-                  />
-                )}
-                <p className="project-description">{project.description}</p>
-                <p className="project-date text-muted">Date: {project.date}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="project-tag">
-                      <FontAwesomeIcon icon={tagIcons[tag] || faCode} className="me-2" />
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+    <section id="projects" className="projects section">
+      <p className="kicker">// projects</p>
+      <h2 className="projects-heading">Projects</h2>
+      <ul className="projects-grid">
+        {projects.map((project, index) => (
+          <li key={index} className="project-card panel">
+            <h3 className="project-title">{project.title}</h3>
+            {project.image && project.image.trim() !== '' && (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+                onError={e => (e.target.style.display = 'none')}
+              />
+            )}
+            <p className="project-description">{project.description}</p>
+            <p className="project-date">{project.date}</p>
+            <div className="project-tags">
+              {project.tags.map((tag, tagIndex) => (
+                <span key={tagIndex} className="chip">
+                  <FontAwesomeIcon icon={tagIcons[tag] || faCode} />
+                  {tag}
+                </span>
+              ))}
+            </div>
 
-                <div className="project-links mt-3 d-flex justify-content-center">
-                  {project.link && project.link.startsWith('/') ? (
-                    <NavLink
-                      to={project.link}
-                      className="btn btn-gradient me-2"
-                    >
-                      <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
-                      View Project
-                    </NavLink>
-                  ) : project.link ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-gradient me-2"
-                    >
-                      <FontAwesomeIcon icon={faExternalLinkAlt} className="me-2" />
-                      View Project
-                    </a>
-                  ) : null}
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-dark me-2"
-                    >
-                      <FontAwesomeIcon icon={faGithub} className="me-2" />
-                      GitHub
-                    </a>
-                  )}
-                  {project.externalLink && (
-                    <a
-                      href={project.externalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-secondary"
-                    >
-                      <FontAwesomeIcon icon={faGlobe} className="me-2" />
-                      Web Link
-                    </a>
-                  )}
-                </div>
+            <div className="project-links">
+              {project.link && project.link.startsWith('/') ? (
+                <NavLink to={project.link} className="btn btn-primary">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  View Project
+                </NavLink>
+              ) : project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                  View Project
+                </a>
+              ) : null}
+              {project.github && (
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                  <FontAwesomeIcon icon={faGithub} />
+                  GitHub
+                </a>
+              )}
+              {project.externalLink && (
+                <a href={project.externalLink} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                  <FontAwesomeIcon icon={faGlobe} />
+                  Web Link
+                </a>
+              )}
+            </div>
 
-                {project.inDevelopment && (
-                  <div className="badge-container w-100 text-center mt-3">
-                    <span className="badge bg-warning text-dark">
-                      <FontAwesomeIcon icon={faTools} className="me-2" />
-                      In Development
-                      <FontAwesomeIcon icon={faTools} className="ms-2" />
-                    </span>
-                  </div>
-                )}
+            {project.inDevelopment && (
+              <div className="project-wip">
+                <FontAwesomeIcon icon={faTools} />
+                In Development
+                <FontAwesomeIcon icon={faTools} />
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      {/* <Link to="/projects" className="btn btn-primary">
-        View Projects
-      </Link> */}
+            )}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

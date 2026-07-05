@@ -1,228 +1,96 @@
-.projects-list {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  gap: 20px; /* Add spacing between rows */
-  padding: 0;
-  list-style: none;
-  width: 100%; /* Ensure the list takes full width */
+.projects {
+  border-top: 1px solid var(--border);
 }
 
-.project-item {
-  width: 100%; /* Make each project take the full width */
-  max-width: 800px; /* Optional: Limit the width for better readability */
-  box-sizing: border-box; /* Include padding and border in width */
+.projects-heading {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-6);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-5);
 }
 
 .project-card {
+  padding: var(--space-4);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(135deg, #2a2a3f, #3a3f4b); /* Subtle gradient for the cards */
-  border: 1px solid #444; /* Dark border for a clean look */
-  color: #ffffff; /* White text inside the cards */
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 0.5rem; /* Rounded corners */
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.project-card:hover {
+  border-color: var(--wire);
+  transform: translateY(-2px);
+}
+
+.project-title {
+  font-size: 1rem;
+  color: var(--fg);
+  margin-bottom: var(--space-3);
 }
 
 .project-image {
   width: 100%;
-  max-width: 650px;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 1rem;
-  display: block;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-bottom: var(--space-3);
 }
 
-@media (max-width: 900px) {
-  .project-image {
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 600px) {
-  .project-image {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-  }
-}
-
-/* Add faint background to project description */
 .project-description {
-  background-color: rgba(255, 255, 255, 0.1); /* Faint white background */
-  padding: 10px; /* Add padding for spacing */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-bottom: 10px; /* Add spacing below */
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--fg-dim);
+  margin-bottom: var(--space-2);
 }
 
-/* Add faint background to project tags */
-.project-tag {
-  background: rgba(255, 255, 255, 0.1); /* Faint white background */
-  color: white; /* Ensure text is readable */
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  margin-right: 5px;
-  display: inline-block;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+.project-description .blue-bold {
+  color: var(--wire);
+  font-weight: 600;
 }
 
-.project-tag:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
-  transform: scale(1.01); /* Slightly enlarge on hover */
+.project-date {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--fg-dim);
+  margin-bottom: var(--space-3);
 }
 
-.project-badge {
-  display: inline-block;
-  color: #ffffff !important; /* Dark text */
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  margin-top: 10px;
-}
-
-.badge-container {
-  text-align: center;
+.project-tags {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.project-links .btn {
+  font-size: 0.78rem;
+  padding: 0.5rem 0.9rem;
+}
+
+.project-wip {
+  margin-top: var(--space-3);
+  display: inline-flex;
   align-items: center;
-  background-color: #ffc107; /* Yellow background */
-  padding: 10px; /* Add some padding around the badge */
-  border-radius: 8px; /* Rounded corners */
-  display: inline-block; /* Ensure it wraps tightly around the badge */
-  animation: pulse 1.5s infinite; /* Add pulsing animation */
+  gap: 0.5rem;
+  align-self: flex-start;
+  background: rgba(235, 165, 59, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(235, 165, 59, 0.4);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-  }
-  50% {
-    transform: scale(1.005);
-    box-shadow: 0 0 20px rgba(194, 149, 16, 0.7);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-  }
-}
-
-@media (max-width: 768px) {
-  .project-item {
-    max-width: 100%; /* Ensure full width on smaller screens */
-  }
-}
-
-.projects {
-  background: linear-gradient(135deg, #0a1f33, #1b3755); /* Dark blue gradient */
-  color: #ffffff; /* Ensure text is readable on the dark background */
-  padding: 2rem 0; /* Add padding for spacing */
-}
-
-.projects h2 {
-  font-family: 'Press Start 2P', cursive; /* Pixel font */
-  font-size: 2rem; /* Slightly smaller size */
-  color: #67a2e9; /* Lighter blue color */
-  text-decoration: underline; /* Underline the text */
-  margin-bottom: 1.5rem; /* Add spacing below the header */
-  text-transform: uppercase; /* Make text uppercase */
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem; /* Space between projects and timeline */
-}
-
-.timeline {
-  flex-basis: 25%; /* Adjust width of the timeline */
-  max-width: 300px;
-}
-
-.timeline-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #5fa8ff; /* Match the header color */
-}
-
-.timeline-list {
-  list-style: none;
-  padding: 0;
-}
-
-.timeline-item {
-  margin-bottom: 1rem;
-  border-left: 2px solid #5fa8ff; /* Vertical line for the timeline */
-  padding-left: 1rem;
-}
-
-.timeline-date {
-  font-weight: bold;
-  color: #67a2e9;
-}
-
-.timeline-title {
-  display: block;
-  margin-top: 0.5rem;
-  color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .timeline {
-    display: none; /* Hide the timeline on smaller screens */
-  }
-}
-
-.btn-gradient {
-  background: linear-gradient(90deg, #007bff, #00c6ff);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn-gradient:hover {
-  background: linear-gradient(90deg, #0056b3, #0099cc);
-  color: #fff;
-  text-decoration: none;
-}
-
-.blue-bold {
-  color: rgb(87, 138, 214);
-  font-weight: bold;
-  background-color: rgba(135, 206, 250, 0.2); /* Light blue background */
-  border-radius: 4px; /* Rounded corners */
-}
-
-.project-title {
-  color: #8099be;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  background: #343a40;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem 0.25rem 0 0;
-  margin-bottom: 1rem;
-  width: 100%;
-  display: block;
-  text-align: center;
-}
-
-.icon-white {
-  color: white;
-}
-
-

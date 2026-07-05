@@ -4,25 +4,26 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'; // Import icons
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="contact-section"> {/* Added id="contact" */}
-      <h2>Links & Socials</h2>
-      <p>Feel free to reach out or find more here!</p>
+    <section id="contact" className="contact-section section">
+      <p className="kicker">// contact</p>
+      <h2>Links &amp; Socials</h2>
+      <p className="contact-subtitle">Feel free to reach out or find more here.</p>
       <div className="contact-links">
         <a
           href="https://github.com/Tmeere"
           target="_blank"
           rel="noopener noreferrer"
-          className="contact-link"
+          className="btn btn-ghost"
         >
-          <FaGithub size={24} className="me-2" /> GitHub
+          <FaGithub size={18} /> GitHub
         </a>
         <a
           href="https://linkedin.com/in/thomasmeere"
           target="_blank"
           rel="noopener noreferrer"
-          className="contact-link"
+          className="btn btn-ghost"
         >
-          <FaLinkedin size={24} className="me-2" /> LinkedIn
+          <FaLinkedin size={18} /> LinkedIn
         </a>
       </div>
     </section>

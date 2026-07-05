@@ -11,37 +11,25 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer bg-dark text-white py-3">
-      <div className="container text-center">
+    <footer className="site-footer">
+      <div className="site-footer-inner">
         <a
           href="#"
-          className="back-to-top mb-2"
+          className="back-to-top"
           onClick={(e) => {
-            e.preventDefault(); // Prevent default link behavior
+            e.preventDefault();
             scrollToTop();
           }}
         >
-          <FaArrowUp/> RETURN UP  <FaArrowUp /> 
-          
+          <FaArrowUp /> Return up <FaArrowUp />
         </a>
-        <br></br>
-        <p className="footer-text mb-0 mt-3">
-          Thomas Meere - Technical Designer | Software Engineer | 
-          <a
-            href="https://www.linkedin.com/in/thomasmeere/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white mx-1"
-          >
-            <FaLinkedin size={32} />
-          </a> | 
-          <a
-            href="https://github.com/Tmeere"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white mx-1"
-          >
-            <FaGithub size={32} />
+        <p className="footer-text">
+          Thomas Meere — Technical Designer | Software Engineer
+          <a href="https://www.linkedin.com/in/thomasmeere/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={20} />
+          </a>
+          <a href="https://github.com/Tmeere" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={20} />
           </a>
         </p>
       </div>

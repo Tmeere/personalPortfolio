@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectMediaLayouts.css";
 
 const ProjectImgTextImg = ({
   leftImgSrc,
@@ -9,52 +10,29 @@ const ProjectImgTextImg = ({
   style = {},
   className = "",
   imgStyle = {},
-  flip = false
-}) => (
-  <div
-    className={`container my-4 d-flex flex-column flex-md-row align-items-center justify-content-center ${className}`}
-    style={{ background: "#232323", borderRadius: "12px", padding: "2rem", ...style }}
-  >
-    {flip ? (
-      <>
-        {/* Right Image */}
-        <img
-          src={rightImgSrc}
-          alt={rightImgAlt}
-          className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "320px", borderRadius: "8px", ...imgStyle }}
-        />
-        {/* Text */}
-        <div className="flex-fill text-white px-3 py-2">{children}</div>
-        {/* Left Image */}
-        <img
-          src={leftImgSrc}
-          alt={leftImgAlt}
-          className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "480px", borderRadius: "8px", ...imgStyle }}
-        />
-      </>
-    ) : (
-      <>
-        {/* Left Image */}
-        <img
-          src={leftImgSrc}
-          alt={leftImgAlt}
-          className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "380px", borderRadius: "8px", ...imgStyle }}
-        />
-        {/* Text */}
-        <div className="flex-fill text-white px-3 py-2">{children}</div>
-        {/* Right Image */}
-        <img
-          src={rightImgSrc}
-          alt={rightImgAlt}
-          className="mb-3 mb-md-0 mx-md-3"
-          style={{ maxWidth: "320px", borderRadius: "8px", ...imgStyle }}
-        />
-      </>
-    )}
-  </div>
-);
+  flip = false,
+}) => {
+  const leftImg = <img src={leftImgSrc} alt={leftImgAlt} className="media-img media-flex-img" style={imgStyle} />;
+  const rightImg = <img src={rightImgSrc} alt={rightImgAlt} className="media-img media-flex-img" style={imgStyle} />;
+  const text = <div className="media-flex-text">{children}</div>;
+
+  return (
+    <div className={`media-block panel media-flex-row ${className}`} style={style}>
+      {flip ? (
+        <>
+          {rightImg}
+          {text}
+          {leftImg}
+        </>
+      ) : (
+        <>
+          {leftImg}
+          {text}
+          {rightImg}
+        </>
+      )}
+    </div>
+  );
+};
 
 export default ProjectImgTextImg;

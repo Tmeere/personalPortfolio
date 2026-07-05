@@ -1,14 +1,13 @@
 import React from "react";
-import DefianceHeroSection from "../components/projectComponents/ProjectHeroSection";
+import ProjectHero from "../components/projectComponents/ProjectHeroSection";
 import ProjectTagsBar from "../components/projectComponents/ProjectTagsBar";
 import ProjectNavbar from "../components/projectComponents/ProjectNavbar"; // <-- Use your custom navbar
-import ProjectVidAndText from "../components/projectComponents/ProjectVid&Text"; // <-- Add this import
+import ProjectVidAndText from "../components/projectComponents/ProjectVidAndText"; // <-- Add this import
 import ProjectTitleDivider from "../components/projectComponents/ProjectTitleDivider"; // <-- Add this import
 import ProjectImageContainer from "../components/projectComponents/ProjectImageContainer"; // <-- Add this import
 import ProjectImgTextImg from "../components/projectComponents/ProjectImgTextImg"; // <-- Add this import
-import ProjectImgSideBySideComponent from "../components/projectComponents/ProjectImgSideBySideComponent"; // <-- Add this import
-import ProjectImageCarousel from "../components/projectComponents/ProjectImageCarosel"; // Add this import
-import ProjectVideoAndImg from "../components/projectComponents/ProjectVideo&Img"; // Add this import
+import ProjectImageCarousel from "../components/projectComponents/ProjectImageCarousel"; // Add this import
+import ProjectVideoAndImg from "../components/projectComponents/ProjectVideoAndImg"; // Add this import
 import ProjectImageTextContainer from "../components/projectComponents/ProjectImageTextContainer";
 import ProjectTextBody from "../components/projectComponents/ProjectTextBody";
 import ProjectVidVidComponent from "../components/projectComponents/ProjectVidVidComponent";
@@ -16,7 +15,6 @@ import Footer from "../components/footer"; // <-- Add this import
 import ProjectImgImgContainer from "../components/projectComponents/ProjectImgImgContainer"; // Add this import
 import ProjectGifGrid from "../components/projectComponents/ProjectGifGrid";
 import ScrollToTop from "../src/ScrollToTop";
-import "./MidnightTaxi.css";
 
 const roleInfo = ["Junior Programmer"];
 
@@ -35,7 +33,7 @@ const ProjectDefiance = () => (
   <>
     <ScrollToTop />
     <ProjectNavbar />
-    <DefianceHeroSection
+    <ProjectHero
       title="Appliance-Defiance"
       showLogo={false}
       videoUrl="https://www.youtube.com/embed/og4CZvxNWIA?autoplay=1&loop=1&playlist=og4CZvxNWIA&mute=1"

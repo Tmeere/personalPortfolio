@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProjectMediaLayouts.css";
 
 const ProjectImageContainer = ({
   src,
@@ -7,24 +8,9 @@ const ProjectImageContainer = ({
   className = "",
   summary = null,
 }) => (
-  <div
-    className={`container my-4 d-flex flex-column align-items-center bg-dark ${className}`}
-    style={{ borderRadius: "12px", padding: "1.5rem", background: "#23272b", ...style }}
-  >
-    <img
-      src={src}
-      alt={alt}
-      style={{
-        maxWidth: "100%",
-        borderRadius: "8px",
-        boxShadow: "0 2px 16px rgba(0,0,0,0.25)"
-      }}
-    />
-    {summary && (
-      <div style={{ color: "#fff", marginTop: "1rem", textAlign: "center" }}>
-        {summary}
-      </div>
-    )}
+  <div className={`media-block panel ${className}`} style={style}>
+    <img src={src} alt={alt} className="media-img" />
+    {summary && <div className="media-caption">{summary}</div>}
   </div>
 );
 

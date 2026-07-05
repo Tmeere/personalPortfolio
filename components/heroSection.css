@@ -1,146 +1,78 @@
-/* General Hero Section Styling */
-.hero-section {
-    background: #1e1e2f; /* Dark background for programming theme */
-    color: #ffffff;
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fira Code', monospace; /* Code-like font */
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 20px 20px; /* Subtle grid background */
-    margin: 0;
-    padding: 0;
+.hero {
+  min-height: calc(100vh - 62px);
+  display: flex;
+  align-items: center;
 }
 
-/* Text Column Wrapper */
-.text-column-wrapper {
-    background-color: rgba(30, 30, 47, 0.9); /* Slightly transparent dark background */
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-6);
+  align-items: center;
+  width: 100%;
 }
 
-/* Editor Header Styling */
-.editor-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #282c34; /* Dark editor background */
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem 0.5rem 0 0;
-    margin-bottom: 1rem;
+.hero-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
 }
 
-.editor-buttons .circle {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    animation: pulse 1.5s infinite ease-in-out;
-    margin-right: 8px; /* Add spacing between circles */
+.hero-subtitle {
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--fg-dim);
+  margin-bottom: var(--space-4);
 }
 
-.editor-buttons .circle:last-child {
-    margin-right: 0; /* Remove margin from the last circle */
+.hero-bio {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--fg);
+  max-width: 52ch;
+  margin-bottom: var(--space-5);
 }
 
-.editor-buttons .red {
-    background-color: #ff5f56;
+.hero-cta {
+  font-size: 0.85rem;
 }
 
-.editor-buttons .yellow {
-    background-color: #ffbd2e;
+.hero-diagram {
+  overflow: hidden;
 }
 
-.editor-buttons .green {
-    background-color: #27c93f;
+.hero-svg .node {
+  fill: var(--panel-raised);
+  stroke: var(--border);
 }
 
-/* Glow Text */
-.glow-text {
-    color: #61dafb;
-    text-shadow: 0 0 5px #61dafb, 0 0 10px #61dafb;
+.hero-svg .node-title {
+  font-family: var(--font-mono);
+  font-size: 8px;
+  fill: var(--fg);
 }
 
-#btn-primary {
-    background-color: #61dafb; /* React blue */
-    color: #1e1e2f; /* Dark text for contrast */
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+.hero-svg .wire {
+  fill: none;
+  stroke: var(--wire);
+  stroke-width: 1.5;
 }
 
-#btn-primary:hover {
-    background-color: #4a90e2; /* Vibrant blue on hover */
-    color: white; /* White text for better contrast */
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #4a90e2, 0 0 20px #4a90e2; /* Add a glowing effect */
-    cursor: pointer;
-}
-/* Image Styling */
-.image-column img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #61dafb; /* React blue border */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: bounceDown 1s ease-out;
+.hero-svg .pin {
+  fill: var(--accent);
 }
 
-.image-column img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Keyframes */
-@keyframes bounceDown {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(10px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
-}
-
-/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .text-column h1 {
-        font-size: 1.5rem; /* Reduced font size for smaller screens */
-    }
-
-    .text-column h2 {
-        font-size: 1rem; /* Reduced font size for smaller screens */
-    }
-
-    .btn-primary {
-        font-size: 0.8rem; /* Slightly smaller button text */
-        padding: 0.4rem 0.8rem; /* Adjust padding for smaller buttons */
-    }
-
-    .glow-text {
-        font-size: 1rem; /* Adjust glow text size */
-    }
-
-    #btn-primary {
-        display: none; /* Hide the button on smaller screens */
-    }
+  .hero {
+    min-height: auto;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
 }

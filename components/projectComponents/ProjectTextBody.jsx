@@ -1,23 +1,11 @@
 import React from "react";
+import "./ProjectTextBody.css";
 
 const ProjectTextBody = ({ body, header }) => (
-  <div className="container px-1">
-    <div className="bg-dark text-white px-3 py-4" style={{ borderRadius: "1rem" }}>
-      {header && (
-        <h3
-          className="mb-3"
-          style={{
-            color: "#2196f3", // Blue color to match ProjectTitleDivider
-            fontWeight: 700,
-            fontFamily: "Segoe UI, Arial, sans-serif"
-          }}
-        >
-          {header}
-        </h3>
-      )}
-      <p>
-        {body}
-      </p>
+  <div className="proj-text-body-wrap section">
+    <div className="proj-text-body panel">
+      {header && <h3 className="proj-text-body-header">{header}</h3>}
+      <div className="proj-text-body-content">{body}</div>
     </div>
   </div>
 );

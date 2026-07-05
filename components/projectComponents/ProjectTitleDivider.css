@@ -1,0 +1,27 @@
+.title-divider-wrap {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-5) auto;
+  max-width: 1100px;
+  padding: 0 var(--space-4);
+}
+
+.title-divider-wrap.full {
+  width: 100%;
+}
+
+.title-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-5);
+}
+
+.title-divider-wrap.full .title-divider {
+  width: 100%;
+}
+
+.title-divider h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+}

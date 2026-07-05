@@ -1,0 +1,25 @@
+.gif-grid-block {
+  max-width: 1200px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+}
+
+.gif-grid-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.gif-grid-caption {
+  margin-top: var(--space-2);
+  text-align: center;
+  color: var(--fg-dim);
+  font-size: 0.85rem;
+}
