@@ -1,0 +1,292 @@
+/* Appliance-Defiance case study — bespoke card system (scoped to this page only) */
+
+.df-page {
+  --df-signal: #8f6fd6;
+  --df-signal-dim: #3c2f5c;
+  --df-meter: #6b46a3;
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+
+.df-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.df-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .df-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Base card ---------- */
+
+.df-card {
+  position: relative;
+  max-width: 1100px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.df-card:hover {
+  border-color: var(--df-signal-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+.df-card--stage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--df-meter);
+}
+
+.df-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.df-eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.df-card-title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+.df-card-text {
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.df-card-text p + p {
+  margin-top: var(--space-3);
+}
+
+.df-card-text ul {
+  margin-top: var(--space-2);
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.df-card-text b,
+.df-card-text strong {
+  color: var(--fg);
+}
+
+/* ---------- Title bar (chapter divider) ---------- */
+
+.df-title-bar {
+  max-width: 1100px;
+  margin: var(--space-6) auto var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.df-title-bar h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.df-title-bar::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 72px;
+  margin: var(--space-3) auto 0;
+  border-radius: 999px;
+  background: var(--df-meter);
+}
+
+/* ---------- Image + text stage card ---------- */
+
+.df-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.df-media-text.df-flip {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.df-media-text.df-flip .df-media-frame {
+  order: 2;
+}
+
+.df-media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.df-media {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.df-card:hover .df-media {
+  transform: scale(1.045);
+}
+
+.df-media-zoomable {
+  cursor: zoom-in;
+}
+
+.df-media-tag {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: rgba(10, 11, 13, 0.72);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ---------- Two images side by side ---------- */
+
+.df-dual-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ---------- Video + text card ---------- */
+
+.df-video-text {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.df-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000;
+}
+
+.df-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Two videos side by side ---------- */
+
+.df-vid-vid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.df-vid-vid .df-video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+}
+
+/* ---------- Lightbox ---------- */
+
+.df-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 11, 13, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.df-lightbox-image {
+  max-width: 90vw;
+  max-height: 88vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.df-lightbox-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 42px;
+  height: 42px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 800px) {
+  .df-media-text,
+  .df-media-text.df-flip,
+  .df-dual-media,
+  .df-video-text,
+  .df-vid-vid {
+    grid-template-columns: 1fr;
+  }
+
+  .df-media-text.df-flip .df-media-frame {
+    order: 0;
+  }
+
+  .df-media {
+    height: 240px;
+  }
+
+  .df-video-text .df-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}

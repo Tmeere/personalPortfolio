@@ -1,0 +1,277 @@
+/* BloodDrunk case study — bespoke card system (scoped to this page only) */
+
+.bd-page {
+  --bd-blood: #e2483d;
+  --bd-blood-dim: #4a201c;
+  --bd-meter: #7a1f1a;
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+
+.bd-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.bd-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Base card ---------- */
+
+.bd-card {
+  position: relative;
+  max-width: 1100px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.bd-card:hover {
+  border-color: var(--bd-blood-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+/* Numbered "stage" cards carry the blood-meter thread along the top edge */
+.bd-card--stage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--bd-meter);
+}
+
+.bd-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.bd-eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.bd-card-title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+.bd-card-text {
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.bd-card-text p + p {
+  margin-top: var(--space-3);
+}
+
+.bd-card-text ul {
+  margin-top: var(--space-2);
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.bd-card-text b {
+  color: var(--fg);
+}
+
+/* ---------- Title bar (chapter divider) ---------- */
+
+.bd-title-bar {
+  max-width: 1100px;
+  margin: var(--space-6) auto var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.bd-title-bar h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.bd-title-bar::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 72px;
+  margin: var(--space-3) auto 0;
+  border-radius: 999px;
+  background: var(--bd-meter);
+}
+
+/* ---------- Image + text stage card ---------- */
+
+.bd-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.bd-media-text.bd-flip {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.bd-media-text.bd-flip .bd-media-frame {
+  order: 2;
+}
+
+.bd-media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.bd-media {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.bd-card:hover .bd-media {
+  transform: scale(1.045);
+}
+
+.bd-media-tag {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: rgba(10, 11, 13, 0.72);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+
+.bd-media-zoomable {
+  cursor: zoom-in;
+}
+
+/* ---------- Lightbox ---------- */
+
+.bd-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 11, 13, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.bd-lightbox-image {
+  max-width: 90vw;
+  max-height: 88vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.bd-lightbox-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 42px;
+  height: 42px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+/* ---------- Two images side by side ---------- */
+
+.bd-dual-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ---------- Video + text card ---------- */
+
+.bd-video-text {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.bd-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000;
+}
+
+.bd-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .bd-media-text,
+  .bd-media-text.bd-flip,
+  .bd-dual-media,
+  .bd-video-text {
+    grid-template-columns: 1fr;
+  }
+
+  .bd-media-text.bd-flip .bd-media-frame {
+    order: 0;
+  }
+
+  .bd-media {
+    height: 240px;
+  }
+
+  .bd-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}

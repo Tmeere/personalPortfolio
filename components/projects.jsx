@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faMobileAlt, faGamepad, faVrCardboard, faBug, faCogs, faTools } from '@fortawesome/free-solid-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'; // Add this line
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Add this line
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
+
+const categoryMeta = {
+  web: { label: 'Web' },
+  game: { label: 'Game' },
+  script: { label: 'Script' },
+};
 
 const tagIcons = {
   HTML: faCode,
@@ -59,9 +66,11 @@ const Projects = () => {
       image: "./images/Site Files/GW Website.png", // Replace with the path to your saved image
       date: "2025",
       tags: ["HTML", "Bootstrap", "Responsive Design"],
+      category: "web",
+      subLabel: "Frontend",
     },
     {
-      title: "Ecommerce Website Using React/JS and Product API",
+      title: "Ecommerce Website (Product API)",
       description: (
         <>
           Developed an <span className="blue-bold">eCommerce website</span>{" "}
@@ -76,6 +85,8 @@ const Projects = () => {
       image: "./images/Site Files/Ecommerce Webstore.png",
       date: "2025",
       tags: ["React", "JavaScript", "API Integration"],
+      category: "web",
+      subLabel: "Backend",
     },
     {
       title: "Mechanic Shop API",
@@ -94,6 +105,8 @@ const Projects = () => {
       image: "./images/Site Files/Mechanic API.png",
       date: "2025",
       tags: ["React", "JavaScript", "API Integration"],
+      category: "web",
+      subLabel: "Backend",
     },
 
     // 2. Game dev leadership & VR
@@ -113,6 +126,9 @@ const Projects = () => {
       date: "2025",
       tags: ["Unreal Engine", "VR", "AI Design"],
       inDevelopment: true,
+      category: "game",
+      subLabel: "VR",
+      featured: true,
     },
     {
       title: "Tank Busters",
@@ -129,6 +145,8 @@ const Projects = () => {
       image: "./images/Site Files/TankBuster.png",
       date: "2024",
       tags: ["VR", "Project Management", "Steam Release"],
+      category: "game",
+      featured: true,
     },
     {
       title: "KAMK Summer Games Exchange Project",
@@ -145,6 +163,8 @@ const Projects = () => {
       image: "",
       date: "2024",
       tags: ["VR", "Project Management", "Team Collaboration"],
+      category: "game",
+      archive: true,
     },
 
     // 3. Game dev (in development, Unity/Unreal)
@@ -166,6 +186,8 @@ const Projects = () => {
       date: "2025",
       tags: ["Unity", "Deck-Builder", "Procedural Gen"],
       inDevelopment: true,
+      category: "game",
+      archive: true,
     },
     {
       title: "Haunts",
@@ -184,6 +206,7 @@ const Projects = () => {
       date: "2025",
       tags: ["Unity", "Turn-Based", "Mobile Game"],
       inDevelopment: true,
+      category: "game",
     },
     {
       title: "Midnight Taxi",
@@ -203,6 +226,7 @@ const Projects = () => {
       image: "./images/Site Files/TechDesign.png",
       date: "2024",
       tags: ["Game Design", "Team Leadership", "Itch.io"],
+      category: "game",
     },
     {
       title: "Emo-Edge",
@@ -220,6 +244,7 @@ const Projects = () => {
       image: "./images/Site Files/EmoSplash.png",
       date: "2022",
       tags: ["Unreal Engine", "Parkour", "AI Design"],
+      category: "game",
     },
 
     // 4. Classic web dev
@@ -243,6 +268,8 @@ const Projects = () => {
       image: "./images/Site Files/Events Page.png",
       date: "2025",
       tags: ["HTML", "CSS", "Bootstrap", "Frontend"],
+      category: "web",
+      subLabel: "Frontend",
     },
 
     // 5. Team/Collaboration/Internship
@@ -261,6 +288,7 @@ const Projects = () => {
       image: "./images/Site Files/AIApplianceDefianceRender.png",
       date: "2023",
       tags: ["Programming", "Bug Fixing", "Team Collaboration"],
+      category: "game",
     },
 
     // 6. Level design & older projects
@@ -282,6 +310,7 @@ const Projects = () => {
       image: "./images/Site Files/Portside.png",
       date: "2021",
       tags: ["TF2", "Level Design", "Multiplayer"],
+      category: "game",
     },
 
     // 7. Python/terminal projects (at the bottom)
@@ -308,6 +337,8 @@ const Projects = () => {
       image: "./images/Site Files/TaskManager.png",
       date: "2025",
       tags: ["Python"],
+      category: "script",
+      archive: true,
     },
     {
       title: "Evil Wizard Python Game",
@@ -326,27 +357,124 @@ const Projects = () => {
       image: "./images/Site Files/Evil Wizard.png",
       date: "2025",
       tags: ["Python", "RPG", "Turn-Based", "ASCII"],
+      category: "script",
+      archive: true,
     }
   );
+
+  const gridProjects = projects.filter((project) => !project.archive);
+  const archiveProjects = projects
+    .filter((project) => project.archive)
+    .sort((a, b) => parseInt(b.date, 10) - parseInt(a.date, 10));
+
+  const trackRef = useRef(null);
+  const sliderRef = useRef(null);
+  const draggingRef = useRef(false);
+  const [thumb, setThumb] = useState({ width: 100, left: 0 });
+
+  const updateThumb = () => {
+    const el = trackRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    if (scrollWidth <= clientWidth) {
+      setThumb({ width: 100, left: 0 });
+      return;
+    }
+    const widthPct = (clientWidth / scrollWidth) * 100;
+    const maxScroll = scrollWidth - clientWidth;
+    const leftPct = (scrollLeft / maxScroll) * (100 - widthPct);
+    setThumb({ width: widthPct, left: leftPct });
+  };
+
+  useEffect(() => {
+    updateThumb();
+    const el = trackRef.current;
+    if (!el) return undefined;
+    el.addEventListener('scroll', updateThumb, { passive: true });
+    window.addEventListener('resize', updateThumb);
+    return () => {
+      el.removeEventListener('scroll', updateThumb);
+      window.removeEventListener('resize', updateThumb);
+    };
+  }, [gridProjects.length]);
+
+  const scrollByAmount = (direction) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: el.clientWidth * 0.85 * direction, behavior: 'smooth' });
+  };
+
+  const scrollToRatio = (ratio) => {
+    const el = trackRef.current;
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    el.scrollLeft = Math.max(0, Math.min(maxScroll, ratio * maxScroll));
+  };
+
+  const updateFromPointer = (e) => {
+    const track = sliderRef.current;
+    if (!track) return;
+    const rect = track.getBoundingClientRect();
+    const ratio = (e.clientX - rect.left) / rect.width;
+    scrollToRatio(Math.max(0, Math.min(1, ratio)));
+  };
+
+  const handleSliderPointerDown = (e) => {
+    draggingRef.current = true;
+    sliderRef.current?.setPointerCapture(e.pointerId);
+    updateFromPointer(e);
+  };
+
+  const handleSliderPointerMove = (e) => {
+    if (!draggingRef.current) return;
+    updateFromPointer(e);
+  };
+
+  const handleSliderPointerUp = (e) => {
+    draggingRef.current = false;
+    if (sliderRef.current?.hasPointerCapture(e.pointerId)) {
+      sliderRef.current.releasePointerCapture(e.pointerId);
+    }
+  };
 
   return (
     <section id="projects" className="projects section">
       <p className="kicker">// projects</p>
       <h2 className="projects-heading">Projects</h2>
-      <ul className="projects-grid">
-        {projects.map((project, index) => (
-          <li key={index} className="project-card panel">
+      <div className="projects-carousel">
+        <button
+          type="button"
+          className="projects-carousel-arrow projects-carousel-arrow--prev"
+          onClick={() => scrollByAmount(-1)}
+          aria-label="Scroll to previous projects"
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+
+        <ul className="projects-grid" ref={trackRef}>
+        {gridProjects.map((project, index) => (
+          <li
+            key={index}
+            data-category={project.category}
+            className={`project-card panel${project.featured ? ' project-card--featured' : ''}`}
+          >
+            <div className="project-eyebrow">
+              <span className={`project-pin project-pin--${project.category}`} />
+              <span className="project-category-label">{project.subLabel || categoryMeta[project.category]?.label}</span>
+              <span className="project-eyebrow-date">{project.date}</span>
+            </div>
             <h3 className="project-title">{project.title}</h3>
             {project.image && project.image.trim() !== '' && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-                onError={e => (e.target.style.display = 'none')}
-              />
+              <div className="project-image-frame">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                  onError={(e) => (e.target.style.display = 'none')}
+                />
+              </div>
             )}
             <p className="project-description">{project.description}</p>
-            <p className="project-date">{project.date}</p>
             <div className="project-tags">
               {project.tags.map((tag, tagIndex) => (
                 <span key={tagIndex} className="chip">
@@ -391,7 +519,72 @@ const Projects = () => {
             )}
           </li>
         ))}
-      </ul>
+        </ul>
+
+        <button
+          type="button"
+          className="projects-carousel-arrow projects-carousel-arrow--next"
+          onClick={() => scrollByAmount(1)}
+          aria-label="Scroll to next projects"
+        >
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+      </div>
+
+      <div
+        className="projects-carousel-slider"
+        ref={sliderRef}
+        onPointerDown={handleSliderPointerDown}
+        onPointerMove={handleSliderPointerMove}
+        onPointerUp={handleSliderPointerUp}
+        onPointerCancel={handleSliderPointerUp}
+        role="slider"
+        tabIndex={0}
+        aria-label="Projects carousel scroll position"
+        aria-valuenow={Math.round(thumb.left)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+        <div className="projects-carousel-slider-thumb" style={{ width: `${thumb.width}%`, marginLeft: `${thumb.left}%` }} />
+      </div>
+
+      {archiveProjects.length > 0 && (
+        <div className="projects-archive">
+          <p className="archive-label">// archive — smaller experiments &amp; practice builds</p>
+          <ul className="archive-list">
+            {archiveProjects.map((project, index) => (
+              <li key={index} data-category={project.category} className="archive-row">
+                <span className={`project-pin project-pin--${project.category}`} />
+                <span className="archive-title">{project.title}</span>
+                <div className="archive-tags">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="archive-tag">{tag}</span>
+                  ))}
+                </div>
+                <span className="archive-date">{project.date}</span>
+                <div className="archive-links">
+                  {project.link && (
+                    project.link.startsWith('/') ? (
+                      <NavLink to={project.link} aria-label={`View ${project.title}`}>
+                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      </NavLink>
+                    ) : (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title}`}>
+                        <FontAwesomeIcon icon={faExternalLinkAlt} />
+                      </a>
+                    )
+                  )}
+                  {project.github && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`${project.title} on GitHub`}>
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 };

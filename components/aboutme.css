@@ -18,8 +18,8 @@
 }
 
 .about-portrait {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
@@ -36,12 +36,32 @@
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--fg-dim);
-  max-width: 70ch;
   margin-bottom: var(--space-5);
 }
 
+.about-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
 .about-cta {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.85rem;
+  border-radius: 999px;
+  gap: 0.6rem;
+}
+
+.about-cta svg {
+  transition: transform var(--transition-fast);
+}
+
+.about-cta:hover {
+  box-shadow: 0 8px 20px -8px color-mix(in srgb, var(--accent) 65%, transparent);
+}
+
+.about-cta:hover svg {
+  transform: translateY(2px);
 }
 
 .about-block {
@@ -87,24 +107,53 @@
 
 .expertise-list {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
 }
 
 .expertise-item {
+  flex: 1 1 300px;
+  max-width: 340px;
   padding: var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  border-top: 2px solid var(--expertise-color, var(--accent));
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.expertise-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--expertise-color, var(--accent)) 55%, transparent);
+}
+
+.expertise-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  font-size: 1.05rem;
+  background: color-mix(in srgb, var(--expertise-color, var(--accent)) 12%, transparent);
+}
+
+.expertise-copy {
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
 }
 
 .expertise-item strong {
-  color: var(--accent);
-  font-size: 0.9rem;
+  color: var(--fg);
+  font-size: 0.92rem;
 }
 
 .expertise-item span {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--fg-dim);
   line-height: 1.6;
 }
@@ -274,6 +323,8 @@
   }
 
   .about-portrait {
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
 

@@ -42,12 +42,14 @@
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: var(--space-5);
+  align-items: stretch;
 }
 
 .proj-hero-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
+  min-height: 260px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   background: #000;
@@ -111,5 +113,10 @@
 @media (max-width: 800px) {
   .proj-hero-card {
     grid-template-columns: 1fr;
+  }
+
+  .proj-hero-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 }

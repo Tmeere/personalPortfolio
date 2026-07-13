@@ -19,6 +19,7 @@
   --accent: #eba53b;
   --accent-ink: #1a1207;
   --wire: #4fd8c4;
+  --violet: #b98af6;
 
   /* Type */
   --font-sans: "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -119,6 +120,8 @@ ul {
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 22px 22px;
   background-position: -1px -1px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
 }
 
 .panel {

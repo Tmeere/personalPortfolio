@@ -26,7 +26,7 @@
 }
 
 .vid-text-copy h2 {
-  font-size: 1.4rem;
+  font-size: 1.15rem;
   color: var(--accent);
   margin-bottom: var(--space-3);
 }
@@ -35,13 +35,18 @@
 .vid-text-description {
   color: var(--fg-dim);
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .vid-text-description ul {
   margin-top: var(--space-2);
   padding-left: 1.2rem;
   list-style: disc;
+}
+
+.vid-text-description p + p,
+.vid-text-description ul + p {
+  margin-top: var(--space-3);
 }
 
 @media (max-width: 800px) {

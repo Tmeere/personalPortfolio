@@ -40,7 +40,7 @@
 
 .media-title {
   color: var(--accent);
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   margin-bottom: var(--space-3);
 }
 
@@ -48,7 +48,12 @@
 .media-text-col p {
   color: var(--fg-dim);
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.7;
+}
+
+.media-text p + p,
+.media-caption p + p {
+  margin-top: var(--space-3);
 }
 
 .media-flex-row {
@@ -68,7 +73,7 @@
   flex: 1 1 260px;
   color: var(--fg-dim);
   font-size: 0.9rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {

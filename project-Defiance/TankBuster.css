@@ -1,0 +1,278 @@
+/* Tank Busters case study — bespoke card system (scoped to this page only) */
+
+.tb-page {
+  --tb-blast: #d9711f;
+  --tb-blast-dim: #4a2a10;
+  --tb-meter: #b3491f;
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+
+.tb-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tb-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tb-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Base card ---------- */
+
+.tb-card {
+  position: relative;
+  max-width: 1100px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.tb-card:hover {
+  border-color: var(--tb-blast-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+/* Numbered "stage" cards carry the blast marker along the top edge */
+.tb-card--stage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tb-meter);
+}
+
+.tb-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.tb-eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.tb-card-title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+.tb-card-text {
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.tb-card-text p + p {
+  margin-top: var(--space-3);
+}
+
+.tb-card-text ul {
+  margin-top: var(--space-2);
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.tb-card-text b,
+.tb-card-text strong {
+  color: var(--fg);
+}
+
+/* ---------- Title bar (chapter divider) ---------- */
+
+.tb-title-bar {
+  max-width: 1100px;
+  margin: var(--space-6) auto var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.tb-title-bar h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.tb-title-bar::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 72px;
+  margin: var(--space-3) auto 0;
+  border-radius: 999px;
+  background: var(--tb-meter);
+}
+
+/* ---------- Image + text stage card ---------- */
+
+.tb-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.tb-media-text.tb-flip {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.tb-media-text.tb-flip .tb-media-frame {
+  order: 2;
+}
+
+.tb-media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.tb-media {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.tb-card:hover .tb-media {
+  transform: scale(1.045);
+}
+
+.tb-media-zoomable {
+  cursor: zoom-in;
+}
+
+.tb-media-tag {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: rgba(10, 11, 13, 0.72);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ---------- Two images side by side ---------- */
+
+.tb-dual-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ---------- Video + text card ---------- */
+
+.tb-video-text {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.tb-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000;
+}
+
+.tb-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Lightbox ---------- */
+
+.tb-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 11, 13, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.tb-lightbox-image {
+  max-width: 90vw;
+  max-height: 88vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.tb-lightbox-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 42px;
+  height: 42px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 800px) {
+  .tb-media-text,
+  .tb-media-text.tb-flip,
+  .tb-dual-media,
+  .tb-video-text {
+    grid-template-columns: 1fr;
+  }
+
+  .tb-media-text.tb-flip .tb-media-frame {
+    order: 0;
+  }
+
+  .tb-media {
+    height: 240px;
+  }
+
+  .tb-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+}

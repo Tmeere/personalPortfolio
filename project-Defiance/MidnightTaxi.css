@@ -1,0 +1,346 @@
+/* Midnight Taxi case study — bespoke card system (scoped to this page only) */
+
+.mt-page {
+  --mt-signal: #5a72e0;
+  --mt-signal-dim: #26305c;
+  --mt-meter: #3d4fb3;
+}
+
+/* ---------- Reveal-on-scroll ---------- */
+
+.mt-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mt-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mt-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Base card ---------- */
+
+.mt-card {
+  position: relative;
+  max-width: 1100px;
+  margin: var(--space-5) auto;
+  padding: var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.mt-card:hover {
+  border-color: var(--mt-signal-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.6);
+}
+
+.mt-card--stage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--mt-meter);
+}
+
+.mt-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.mt-eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.mt-card-title {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-3);
+}
+
+.mt-card-text {
+  color: var(--fg-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.mt-card-text p + p {
+  margin-top: var(--space-3);
+}
+
+.mt-card-text ul {
+  margin-top: var(--space-2);
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+.mt-card-text b,
+.mt-card-text strong {
+  color: var(--fg);
+}
+
+/* ---------- Title bar (chapter divider) ---------- */
+
+.mt-title-bar {
+  max-width: 1100px;
+  margin: var(--space-6) auto var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.mt-title-bar h2 {
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.mt-title-bar::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 72px;
+  margin: var(--space-3) auto 0;
+  border-radius: 999px;
+  background: var(--mt-meter);
+}
+
+/* ---------- Image + text stage card ---------- */
+
+.mt-media-text {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.mt-media-text.mt-flip {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+.mt-media-text.mt-flip .mt-media-frame {
+  order: 2;
+}
+
+.mt-media-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+}
+
+.mt-media {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.mt-card:hover .mt-media {
+  transform: scale(1.045);
+}
+
+.mt-media-zoomable {
+  cursor: zoom-in;
+}
+
+.mt-media-tag {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+  background: rgba(10, 11, 13, 0.72);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* ---------- Two images side by side ---------- */
+
+.mt-dual-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+/* ---------- Video + text card ---------- */
+
+.mt-video-text {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.mt-video {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #000;
+}
+
+.mt-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- Two videos side by side ---------- */
+
+.mt-vid-vid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.mt-vid-vid .mt-video {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+}
+
+/* ---------- Image + text + image (flanked) ---------- */
+
+.mt-flanked {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+/* ---------- Video + image, caption below ---------- */
+
+.mt-video-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+/* ---------- Single standalone image ---------- */
+
+.mt-single-media {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: #000;
+  border-radius: var(--radius-sm);
+  display: block;
+  margin: 0 auto;
+}
+
+/* ---------- Four-tile grid ---------- */
+
+.mt-quad-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.mt-tile-caption {
+  margin-top: var(--space-2);
+  text-align: center;
+  color: var(--fg-dim);
+  font-size: 0.85rem;
+}
+
+/* ---------- Lightbox ---------- */
+
+.mt-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 11, 13, 0.9);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.mt-lightbox-image {
+  max-width: 90vw;
+  max-height: 88vh;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.mt-lightbox-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 42px;
+  height: 42px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+@media (max-width: 800px) {
+  .mt-media-text,
+  .mt-media-text.mt-flip,
+  .mt-dual-media,
+  .mt-video-text,
+  .mt-vid-vid,
+  .mt-flanked,
+  .mt-video-img,
+  .mt-quad-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mt-media-text.mt-flip .mt-media-frame {
+    order: 0;
+  }
+
+  .mt-media {
+    height: 240px;
+  }
+
+  .mt-video-text .mt-video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
+  .mt-video-img .mt-video {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+  }
+}

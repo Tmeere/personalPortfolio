@@ -1,6 +1,6 @@
 .proj-text-body-wrap {
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-6);
+  max-width: 1100px;
+  margin: var(--space-5) auto;
 }
 
 .proj-text-body {
@@ -9,18 +9,23 @@
 
 .proj-text-body-header {
   color: var(--accent);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   margin-bottom: var(--space-3);
 }
 
 .proj-text-body-content {
   color: var(--fg-dim);
   line-height: 1.7;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 .proj-text-body-content ul {
   margin-top: var(--space-2);
   padding-left: 1.2rem;
   list-style: disc;
+}
+
+.proj-text-body-content p + p,
+.proj-text-body-content ul + p {
+  margin-top: var(--space-3);
 }

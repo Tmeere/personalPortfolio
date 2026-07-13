@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown, FaGamepad, FaLaptopCode, FaCube, FaVrCardboard, FaBug } from 'react-icons/fa';
 import './aboutme.css';
 
 const MAIN_COLOR = '#eba53b';
@@ -21,6 +21,7 @@ const skills = {
     { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
     { name: 'Flask', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
+    { name: 'pytest', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
   ],
   'Tools': [
     { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
@@ -30,6 +31,12 @@ const skills = {
     { name: 'Unreal Engine', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unrealengine/unrealengine-original.svg' },
     { name: '3Ds Max', logo: '/images/3ds.png' },
     { name: 'Fusion 360', logo: '/images/fusion.png' },
+    { name: 'Selenium', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg' },
+    { name: 'Playwright', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg' },
+    { name: 'Azure DevOps', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+    { name: 'GitHub Actions', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg' },
+    { name: 'Postman', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
+    { name: 'Claude AI', logo: 'https://cdn.simpleicons.org/claude/FFFFFF' },
   ],
   'Technical Skills': [
     { name: 'Rapid Prototyping', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
@@ -41,6 +48,10 @@ const skills = {
     { name: 'Automated Testing', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg' },
     { name: 'Manual Testing', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg' },
     { name: 'Test-Driven Development', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'CI/CD Pipelines', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+    { name: 'API Testing', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
+    { name: 'Test Data Management', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    { name: 'Regression Testing', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg' },
   ],
 };
 
@@ -111,7 +122,7 @@ const experienceLog = [
     hash: 'a08f3d6',
     logo: '/images/CT_LOGO_NEW.jpg',
     alt: 'Coding Temple Logo',
-    title: 'Apprentice',
+    title: 'Software Engineer Apprentice',
     company: 'Coding Temple',
     location: 'Remote',
     dates: 'Feb 2025 – Jun 2025',
@@ -151,11 +162,11 @@ const experienceLog = [
 ];
 
 const expertise = [
-  { label: 'Game Development', text: 'Proficient in Unity and Unreal Engine, with experience creating immersive gameplay and retro gaming solutions.' },
-  { label: 'Full-Stack Development', text: 'Skilled in building scalable web applications using React, Node.js, and Flask.' },
-  { label: '3D Modeling & Animation', text: 'Expertise in Blender and 3ds Max for creating high-quality assets and animations.' },
-  { label: 'VR/AR Development', text: 'Experienced in designing and developing virtual and augmented reality experiences.' },
-  { label: 'Test Automation & QA', text: 'Proficient in automated and manual testing, CI/CD integration, and test-driven development to ensure software reliability.' },
+  { label: 'Game Development', icon: FaGamepad, color: '#eba53b', text: 'Proficient in Unity and Unreal Engine, with experience creating immersive gameplay and retro gaming solutions.' },
+  { label: 'Full-Stack Development', icon: FaLaptopCode, color: '#4fd8c4', text: 'Skilled in building scalable web applications using React, Node.js, and Flask.' },
+  { label: '3D Modeling & Animation', icon: FaCube, color: '#b98af6', text: 'Expertise in Blender and 3ds Max for creating high-quality assets and animations.' },
+  { label: 'VR/AR Development', icon: FaVrCardboard, color: '#5fb0f0', text: 'Experienced in designing and developing virtual and augmented reality experiences.' },
+  { label: 'Test Automation & QA', icon: FaBug, color: '#6bdd8c', text: 'Proficient in automated and manual testing, CI/CD integration, and test-driven development to ensure software reliability.' },
 ];
 
 const AboutMe = () => {
@@ -291,8 +302,8 @@ const AboutMe = () => {
             I'm an Automation Engineer at Arrive Logistics, where I build and maintain automated
             testing solutions that keep logistics software reliable at scale. Alongside that, I
             have a strong foundation in gameplay systems, VR development, and full-stack web
-            applications, and I specialize in building immersive experiences with Unity and
-            Unreal Engine — from mobile dungeon crawlers to high-octane VR shooters.
+            applications, specializing in immersive experiences built with Unity and Unreal
+            Engine, ranging from mobile dungeon crawlers to high-octane VR shooters.
             <br /><br />
             My background spans studio and indie work, including a producer/technical design
             role at Redmist, game development at Bitmask Games, and QA testing at DAQA. I've
@@ -300,13 +311,16 @@ const AboutMe = () => {
             and JavaScript. I'm passionate about designing reliable, interactive systems,
             collaborating with cross-functional teams, and constantly pushing my technical
             boundaries. Originally from the UK and now based in Austin, Texas, I'm committed
-            to contributing to both quality software engineering and the evolving landscape
-            of interactive media.
+            to advancing both quality software engineering and the evolving landscape of
+            interactive media.
           </p>
-          <button className="btn btn-primary about-cta" onClick={scrollToProjects}>
-            <FaChevronDown /> See Projects <FaChevronDown />
-          </button>
         </div>
+      </div>
+
+      <div className="about-cta-wrap">
+        <button className="btn btn-primary about-cta" onClick={scrollToProjects}>
+          <FaChevronDown /> See Projects <FaChevronDown />
+        </button>
       </div>
 
       <div className="about-block">
@@ -332,9 +346,18 @@ const AboutMe = () => {
         <h3 className="about-block-title">Areas of Expertise</h3>
         <ul className="expertise-list">
           {expertise.map((item) => (
-            <li key={item.label} className="expertise-item panel">
-              <strong>{item.label}</strong>
-              <span>{item.text}</span>
+            <li
+              key={item.label}
+              className="expertise-item panel"
+              style={{ '--expertise-color': item.color }}
+            >
+              <span className="expertise-icon" style={{ color: item.color, borderColor: item.color }}>
+                <item.icon />
+              </span>
+              <div className="expertise-copy">
+                <strong>{item.label}</strong>
+                <span>{item.text}</span>
+              </div>
             </li>
           ))}
         </ul>
