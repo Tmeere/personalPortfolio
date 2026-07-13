@@ -142,23 +142,21 @@ const ProjectDefiance = () => {
           <h3 className="bd-card-title">Project Leadership & Development</h3>
           <div className="bd-card-text">
             <p>
-              During the summer, I served as the Project Lead for an eight-person team
-              developing a VR shooter called BloodDrunk. Selected by Staffordshire
-              University, I joined an international team coming from different
-              universities at KAMK (Kajaani University of Applied Sciences) in Finland,
-              where we dedicated ourselves to creating an addictive VR shooter.
+              During the summer, I served as Project Lead for an eight-person team
+              developing BloodDrunk, a VR shooter. Selected by Staffordshire
+              University, I joined an international team from several universities at
+              KAMK (Kajaani University of Applied Sciences) in Finland to build an
+              addictive VR shooter together.
             </p>
             <p>
-              As the project lead, my primary responsibility was to ensure seamless
-              collaboration across all departments. I set goals and deadlines using
-              project management tools like Jira and Trello, and I provided mentorship
-              and support to junior developers.
+              As lead, my main responsibility was keeping collaboration seamless
+              across every department. I set goals and deadlines using tools like
+              Jira and Trello, while mentoring junior developers along the way.
             </p>
             <p>
-              In addition to my leadership role, I actively contributed to the project
-              by designing and developing core gameplay mechanics, enemy AI systems, and
-              user interfaces. I also played a key role in crafting level design
-              blockouts and refining the overall VR experience.
+              Beyond leadership, I designed and built core gameplay mechanics, enemy
+              AI, and UI, and helped block out levels and refine the overall VR
+              experience.
             </p>
           </div>
         </div>
@@ -177,19 +175,15 @@ const ProjectDefiance = () => {
           <h3 className="bd-card-title">Weapon Systems</h3>
           <div className="bd-card-text">
             <p>
-              One of the first mechanics I developed for BloodDrunk was the weapon
-              shooting system. Initially, I aimed to create a straightforward shooting
-              mechanic, but as the project progressed, it became clear that a more
-              complex, scalable system was necessary to accommodate the diverse range of
-              weapons we planned to include.
+              One of the first mechanics I built for BloodDrunk was the weapon
+              shooting system. I started with something simple, but as the project
+              grew it became clear that the range of weapons we'd planned needed a
+              more complex, scalable system.
             </p>
             <p>
-              I focused on designing a user-friendly system that would allow
-              designers to modify weapon attributes without needing to dive into the
-              blueprint code. This system utilized data tables, enabling designers to
-              easily adjust values for balancing and other purposes on the fly. This
-              approach streamlined the development process and empowered the team to
-              iterate quickly.
+              I designed it around data tables, so designers could tweak weapon
+              values on the fly without touching blueprint code. That kept
+              development fast and let the team iterate on balance quickly.
             </p>
           </div>
         </div>
@@ -237,19 +231,16 @@ const ProjectDefiance = () => {
         </div>
         <div className="bd-card-text" style={{ marginTop: "var(--space-4)" }}>
           <p>
-            <b>Data Table Systems:</b> Data table systems were made so a designer
-            or VFX Artist could go into the weapon values and quickly change and
-            iterate values on the go for the weapon. This sped up development time
-            for making further weapons, as no new blueprint would be needed for
-            alternate weapons and aided with quickly being able to balance the
-            weapons in the game.
+            <b>Data Table Systems:</b> This let a designer or VFX artist open the
+            weapon values directly and iterate on the fly. New weapons no longer
+            needed a new blueprint, which sped up development and made balancing
+            far quicker.
           </p>
           <p>
-            <b>Shooting Ranges:</b> Shooting ranges were created for designers to
-            test Patrolling AI shooting targets. This setup allowed for easy
-            evaluation of weapon feel and balance. It was developed during the
-            project's early phases, while core mechanics were being refined before
-            moving on to level testing.
+            <b>Shooting Ranges:</b> These let designers test weapon feel against
+            patrolling AI targets. Built early in the project, they gave us a
+            controlled space to evaluate and balance weapons before moving on to
+            full level testing.
           </p>
         </div>
       </div>
@@ -268,7 +259,10 @@ const ProjectDefiance = () => {
           <h3 className="bd-card-title">Weapon Design</h3>
           <div className="bd-card-text">
             <p>
-              Using inheritance, we developed seven unique weapon classes, including both live projectile weapons and standard line trace weapons. A critical consideration in designing these weapons was their overall feel, especially since they were for VR. I focused on haptics and feedback to enhance the dynamics of the weapons. Key elements included:
+              Using inheritance, we built seven unique weapon classes spanning
+              live projectile weapons and standard line-trace weapons. Since this
+              was VR, feel mattered more than almost anything else, so I focused
+              on haptics and feedback. Key elements included:
             </p>
             <ul>
               <li>
@@ -282,7 +276,7 @@ const ProjectDefiance = () => {
               </li>
             </ul>
             <p>
-              These elements collectively contributed to a more immersive experience in the VR shooter.
+              Together, these elements made the VR shooting feel far more immersive.
             </p>
           </div>
         </div>
@@ -293,26 +287,23 @@ const ProjectDefiance = () => {
         <h3 className="bd-card-title">Conclusion</h3>
         <div className="bd-card-text">
           <p>
-            Reflecting on the conclusion of this project, I feel immense pride in
-            the results our team achieved and the contributions I made. Leading
-            this project was a significant challenge for me, as it required me to
-            step into a producer role rather than solely a technical designer. The
-            most demanding aspect wasn't the technical side, but rather the
-            managerial hurdles of keeping all departments aligned with our weekly
-            milestones and supporting their individual goals. I quickly learned
-            that the greatest challenges often come from unforeseen circumstances.
+            I'm genuinely proud of what our team achieved on this project, and of
+            my own contributions to it. Leading it was a real challenge, since it
+            pushed me into a producer role rather than a purely technical one. The
+            hardest part wasn't the technical work — it was the managerial side:
+            keeping every department aligned to our weekly milestones while
+            supporting each person's individual goals. I learned quickly that the
+            biggest challenges tend to come from the things you don't see coming.
           </p>
           <p>
-            From the start, I prioritized getting to know each team member
-            personally to understand their strengths and weaknesses. This
-            knowledge allowed me to assign tasks that suited their skills best —
-            I discovered that while some team members excelled at working
-            independently, others thrived with more guidance. This tailored
-            approach significantly enhanced our teamwork and was crucial in
-            achieving our goal of developing a VR shooter.
+            From the start, I made it a priority to get to know each team member
+            and understand their strengths and weaknesses. That let me assign
+            tasks that actually suited people — some thrived working
+            independently, others needed more guidance. Tailoring my approach
+            this way made a real difference to how well the team worked together.
           </p>
           <p>
-            At the outset, we established three key goals:
+            At the outset, we set three key goals:
           </p>
           <ul>
             <li>Improve our Unreal Engine understanding</li>
@@ -320,18 +311,16 @@ const ProjectDefiance = () => {
             <li>Foster teamwork and communication</li>
           </ul>
           <p>
-            We succeeded in creating a vertical slice of our game, and while we
-            met these initial objectives, we aspire to go further. We've decided
-            to continue developing the project independently under our indie
-            studio, "Redmist," with the aim of a commercial release on Steam.
-            Although this journey will present its own challenges, we firmly
-            believe our game has much more potential than just a vertical slice.
+            We hit all three and shipped a solid vertical slice, but we want to
+            go further. We're continuing development independently under our
+            indie studio, "Redmist," aiming for a commercial release on Steam. It
+            won't be an easy road, but we firmly believe this game has more in it
+            than a vertical slice.
           </p>
           <p>
-            After our university trip, we set up a Discord channel to facilitate
-            collaboration in an international remote setting, focusing on clear
-            objectives: more levels, more gameplay, and more fun! I'm excited
-            about this upcoming phase and all that it entails.
+            After the university trip ended, we set up a Discord to keep
+            collaborating remotely across countries, with clear goals: more
+            levels, more gameplay, more fun. I'm excited for what comes next.
           </p>
         </div>
       </div>

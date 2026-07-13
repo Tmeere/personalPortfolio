@@ -106,11 +106,10 @@ const ProjectDefiance = () => {
           <h3 className="tb-card-title">Overview</h3>
           <div className="tb-card-text">
             <p>
-              In this competitive local multiplayer tank game, players engage in
-              intense head-to-head battles across multiple maps, racing to achieve
-              three wins. Only one player can emerge victorious. Drawing inspiration
-              from "Tank Trouble," I set out to develop a C++ local multiplayer tank
-              shooter.
+              This competitive local multiplayer tank game pits two players in
+              head-to-head battles across multiple maps, racing to three wins.
+              Drawing inspiration from "Tank Trouble," I set out to build a C++
+              local multiplayer tank shooter.
             </p>
             <p>
               The goal was to create an engaging three-level experience
@@ -118,13 +117,11 @@ const ProjectDefiance = () => {
               keyboard.
             </p>
             <p>
-              For this project, I focused on building a straightforward
-              tank shooter that leverages C++ in conjunction with Blueprints. This
-              involved creating a custom library of Blueprint nodes from C++,
-              allowing for a seamless integration of gameplay mechanics. This
-              endeavor also served as an exploration of the classic "Fuzzy
-              Line"—determining the optimal balance between tasks best suited for
-              C++ and those handled by Blueprints.
+              I focused on building a straightforward tank shooter that leverages
+              C++ alongside Blueprints — creating a custom library of Blueprint
+              nodes from C++ for seamless integration. It also became an
+              exploration of the classic "fuzzy line": where to draw the boundary
+              between C++ and Blueprint work.
             </p>
           </div>
         </div>
@@ -152,8 +149,8 @@ const ProjectDefiance = () => {
               cooldown period.
             </p>
             <p>
-              The projectiles bounce off surfaces, adding an exciting layer
-              of strategy and encouraging more dynamic gameplay.
+              Bouncing projectiles off surfaces adds a layer of strategy and
+              keeps fights more dynamic.
             </p>
           </div>
         </div>
@@ -176,9 +173,9 @@ const ProjectDefiance = () => {
               forward and backward movement, and A and D for rotation.
             </p>
             <p>
-              This design frees up more keyboard space for two players,
-              promoting cooperation while encouraging players to carefully consider
-              their movement and positioning in the game.
+              This frees up keyboard space for two players sharing one keyboard,
+              and forces players to think carefully about movement and
+              positioning.
             </p>
           </div>
         </div>
@@ -206,8 +203,8 @@ const ProjectDefiance = () => {
               <li><strong>Tank Mine</strong> – An on-contact tank killer</li>
             </ul>
             <p>
-              These power-ups add variety to each match, ensuring that every
-              encounter feels unique and strategic.
+              They add variety to each match, so no two encounters feel quite
+              the same.
             </p>
           </div>
         </div>
@@ -217,11 +214,9 @@ const ProjectDefiance = () => {
 
       <div className="tb-card tb-reveal">
         <div className="tb-card-text">
-          The game includes various projectile classes with differing speeds,
-          radii, bounce counts, and ammo. A parent class was created to
-          streamline the implementation and balancing of these projectiles,
-          ensuring consistent behavior and easy adjustments for enhanced
-          gameplay.
+          The game includes several projectile classes with different speeds,
+          radii, bounce counts, and ammo. A shared parent class kept their
+          implementation and balancing consistent, making them easy to tune.
         </div>
       </div>
 
@@ -239,10 +234,10 @@ const ProjectDefiance = () => {
           <h3 className="tb-card-title">Save System</h3>
           <div className="tb-card-text">
             <p>
-              For the game, I implemented a custom save data system to track scores
-              between rounds. While this could have been managed through the Game
-              Instance, I aimed to create a dedicated C++ save manager as part of my
-              personal deliverables.
+              I implemented a custom save data system to track scores between
+              rounds. It could have been handled through the Game Instance, but
+              I wanted a dedicated C++ save manager as one of my personal
+              deliverables.
             </p>
           </div>
         </div>
@@ -274,7 +269,7 @@ const ProjectDefiance = () => {
           </div>
         </div>
         <div className="tb-card-text" style={{ marginTop: "var(--space-4)" }}>
-          <p>UI scoreboard - first to five wins.</p>
+          <p>The in-match UI scoreboard — first to five wins takes the match.</p>
         </div>
       </div>
 
@@ -306,9 +301,8 @@ const ProjectDefiance = () => {
         </div>
         <div className="tb-card-text" style={{ marginTop: "var(--space-4)" }}>
           <p>
-            A spawn manager was implemented to alternate between weapon pickups and
-            power-ups, with their timing and locations determined randomly. This
-            approach helps keep gameplay varied and constantly changing.
+            A spawn manager alternates between weapon pickups and power-ups,
+            with randomized timing and locations to keep gameplay varied.
           </p>
         </div>
       </div>
@@ -321,8 +315,9 @@ const ProjectDefiance = () => {
       <div className="tb-card tb-reveal">
         <div className="tb-card-text">
           <p>
-            Although not the primary focus of this project, I designed three
-            distinct levels to enhance gameplay. Key considerations included:
+            Level design wasn't the primary focus of this project, but I built
+            three distinct levels to support the gameplay. Key considerations
+            included:
           </p>
           <ul>
             <li>
@@ -335,7 +330,7 @@ const ProjectDefiance = () => {
               <strong>Map Geometry:</strong> Designing the environment to facilitate interesting rebounding shots and create tactical opportunities.
             </li>
           </ul>
-          <p>These elements contribute to varied and engaging gameplay, keeping each match fresh and exciting.</p>
+          <p>Together, these choices keep each match feeling fresh.</p>
         </div>
       </div>
 
@@ -344,24 +339,22 @@ const ProjectDefiance = () => {
         <h3 className="tb-card-title">Project Conclusions</h3>
         <div className="tb-card-text">
           <p>
-            With the goal of creating a vertical slice of a tank shooter, I'm
-            pleased with the learning outcomes of this project. My aim was to
-            effectively integrate C++ and Blueprints, and I gained valuable
-            insights into when to use each—essentially clarifying the "fuzzy line"
-            between the two.
+            I set out to build a vertical slice of a tank shooter, and I'm
+            pleased with what I learned along the way. My goal was to integrate
+            C++ and Blueprints effectively, and I came away with a much
+            clearer sense of when to use each — the "fuzzy line" between the
+            two.
           </p>
           <p>
-            A significant takeaway has been the development of Blueprint
-            Function Libraries. Creating custom nodes in C++ for functionality
-            not available in Blueprints has proven extremely beneficial, and I
-            plan to expand on this approach in future projects by building a
-            more extensive library.
+            A big takeaway was building Blueprint Function Libraries — writing
+            custom C++ nodes for functionality Blueprints can't handle
+            natively proved extremely useful, and I plan to build out a much
+            larger library on future projects.
           </p>
           <p>
-            This experience has not only enhanced my C++ skills but also
-            deepened my understanding of Unreal Engine. Overall, the project
-            has served as a clear guide for determining when to leverage C++ in
-            my work.
+            This project sharpened my C++ skills and deepened my understanding
+            of Unreal Engine, and it's given me a much clearer guide for when
+            to reach for C++ in future work.
           </p>
         </div>
       </div>

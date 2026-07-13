@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/resume/Thomas Meere - Fullstack Dev 2025 V3.pdf"
+              href="/resume/Thomas Meere 2026 Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}

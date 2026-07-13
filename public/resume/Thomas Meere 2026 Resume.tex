@@ -1,0 +1,217 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-7pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-0.5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Thomas Meere} \\ \vspace{4pt}
+    \small 401-378-1527 $|$ \href{mailto:tmeere88@gmail.com}{\underline{tmeere88@gmail.com}} $|$
+    \href{https://linkedin.com/in/thomasmeere}{\underline{linkedin.com/in/thomasmeere}} $|$
+    \href{https://github.com/Tmeere}{\underline{github.com/Tmeere}} $|$
+    \href{https://thomasmeere.netlify.app/}{\underline{thomasmeere.netlify.app}}
+\end{center}
+
+%----------SUMMARY----------
+\small{Automation Engineer and Full Stack Developer skilled in React, Flask, SQLAlchemy, Selenium/Playwright,
+and CI/CD workflows. Experienced in building scalable APIs, dynamic UIs, and reliable automated test suites
+across gameplay, VR, and web projects.}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, HTML5, CSS3, Python, C++, C\#, SQL} \\
+     \textbf{Frameworks \& Libraries}{: React, Node.js, Flask, Bootstrap, SQLAlchemy} \\
+     \textbf{Testing \& QA}{: Manual Testing, Test-Driven Development, API Testing, Regression Testing, Test Data Management, Selenium, Playwright, pytest, Postman, CI/CD Pipelines} \\
+     \textbf{Tools \& Platforms}{: Git, GitHub, GitHub Actions, Azure DevOps, Trello, Jira, VS Code, Rider, Blender, Claude AI} \\
+     \textbf{Development Areas}{: RESTful APIs, OOP, Agile Development, Web Security Awareness} \\
+     \textbf{Game Engines / VR \& Other Tools}{: Unreal Engine 4/5, Unity (Blueprints \& C++), Performance Optimization, 3Ds Max, Fusion 360, Adobe Suite}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Automation Engineer}{Jul 2025 -- Present}
+      {Arrive Logistics}{Austin, TX}
+      \resumeItemListStart
+        \resumeItem{Built and maintained automated testing solutions using Selenium, Playwright, and pytest to ensure the quality and reliability of logistics software systems}
+        \resumeItem{Wrote and refined test cases, integrating automated test processes into CI/CD pipelines (GitHub Actions, Azure DevOps) with cross-functional teams}
+        \resumeItem{Enhanced test coverage and identified bugs early through API testing with Postman, supporting fast-paced delivery of logistics technology}
+        \resumeItem{Partnered with developers to embed quality checks earlier in the development lifecycle, reducing regressions reaching production}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Coding Temple Apprentice}{Feb 2025 -- Jun 2025}
+      {Coding Temple}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built 9+ end-to-end web applications through hands-on, project-driven development using Flask, React.js, SQL, and RESTful APIs}
+        \resumeItem{Exceeded project expectations by implementing advanced frontend logic and optimizing backend processes while maintaining clean, testable code and on-time delivery}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Game Developer}{Nov 2024 -- May 2025}
+      {Bitmask Games}{Rhode Island}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented core gameplay systems using Unity and NES Maker, contributing to the timely delivery of commercial retro gaming projects}
+        \resumeItem{Reduced in-game bugs by 30\% through rigorous QA testing and performance profiling}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Game QA Tester (Contract)}{Nov 2024 -- Jul 2025}
+      {DAQA}{Remote}
+      \resumeItemListStart
+        \resumeItem{Provided QA testing services for AAA and indie titles, identifying and reporting over 200 bugs across multiple platforms}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Project Lead / Technical Designer}{Jan 2024 -- Present}
+      {Redmist}{Kajaani, Finland (Remote)}
+      \resumeItemListStart
+        \resumeItem{Led the design and technical development of BloodDrunk, a high-speed VR shooter, from concept to working prototype using Unreal Engine 5 and Blueprints}
+        \resumeItem{Managed a remote, interdisciplinary team via Trello and Discord, improving sprint efficiency and project delivery by 20\%}
+        \resumeItem{Engineered immersive AI behavior and modular level design, enabling replayability and high user engagement in VR environments}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Mechanic Shop Database API} $|$ \emph{Flask, SQLAlchemy, Marshmallow}}{}
+          \resumeItemListStart
+            \resumeItem{Built a scalable RESTful API for a mechanic shop, implementing CRUD functionality, modular blueprints, and many-to-many ticket assignments, streamlining task tracking and technician assignment workflows}
+            \resumeItem{Integrated token-based authentication (python-jose), rate limiting (Flask-Limiter), and caching (Flask-Caching), enhancing data protection, reducing server load, and improving response speed}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{FakeStore E-commerce Web App} $|$ \emph{React, React Router, Axios}}{}
+          \resumeItemListStart
+            \resumeItem{Built a dynamic, mobile-responsive eCommerce site using React Router and Axios, enabling seamless product browsing, filtering, and admin-level CRUD control}
+            \resumeItem{Created modular, reusable UI components with props and state management, and integrated real-time API interaction for live product-data editing}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Coding Temple}{Feb 2025 -- May 2025}
+      {Certificate, Software Engineering}{}
+    \resumeSubheading
+      {University of Staffordshire}{2021 -- 2024}
+      {B.S. Computer Games Design, First Class Honours (4.0 GPA)}{Stoke-on-Trent, UK}
+  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}

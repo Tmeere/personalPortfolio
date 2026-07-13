@@ -82,23 +82,20 @@ const ProjectDefiance = () => {
           <h3 className="df-card-title">Overview</h3>
           <div className="df-card-text">
             <p>
-              In this game, it is the goal of the player to restore order to the
-              ship. During the player's time in cryosleep, the ship's appliances
-              have come to life and begun to wreak havoc on the ship.
+              The player's goal is to restore order to the ship. While they were
+              in cryosleep, the ship's appliances came to life and began
+              wreaking havoc.
             </p>
             <p>
               Save your crewmates, shoot the appliances, save the ship.
-              This was a collaborative project where I worked with an amazing
-              team of 23 people spanning a range of backgrounds, from art and
-              design to animation and programming. My role on the team was
-              Junior Programmer, implementing gameplay features specified by
-              design and handling the core bug testing and fixing for the
-              game.
+              This was a collaborative project with a 23-person team spanning
+              art, design, animation, and programming. My role was Junior
+              Programmer — implementing gameplay features from design and
+              handling core bug testing and fixing.
             </p>
             <p>
-              This was a fun and insightful experience that taught me
-              teamwork, communication, and how to work effectively in a group
-              environment.
+              It was a fun, insightful experience that taught me teamwork,
+              communication, and how to work effectively as part of a group.
             </p>
           </div>
         </div>
@@ -123,21 +120,20 @@ const ProjectDefiance = () => {
             <li><strong>Oxygen Pickups/Drain Mechanic:</strong> Managing oxygen levels to ensure player survival amidst a draining mechanic.</li>
             <li><strong>Spatial UI Objective Markers</strong></li>
           </ul>
-          <p>In addition to player pickups, I designed and integrated a range of traps into the game, such as:</p>
+          <p>Alongside pickups, I designed and integrated a range of traps, including:</p>
           <ul>
             <li><strong>Exploding Barrels:</strong> Harming nearby enemies on contact.</li>
             <li><strong>Exposed Wiring:</strong> Occasionally zapping the player.</li>
             <li><strong>Exposed Steam Pipes:</strong> Constantly damaging the player while in contact.</li>
           </ul>
           <p>
-            Beyond these responsibilities, I collaborated with a Sound Designer to
-            integrate over 92 unique sounds into the game. This included
-            everything from background music to enemy impact sounds, enhancing the
-            overall audio experience.
+            Beyond this, I worked with a sound designer to integrate over 92
+            unique sounds — everything from background music to enemy impact
+            sounds — for a much richer audio experience.
           </p>
           <p>
-            Alongside this, I performed weekly testing of all work produced by the
-            programming team, reporting and fixing issues found.
+            I also ran weekly QA passes on everything the programming team
+            produced, reporting and fixing issues as they came up.
           </p>
         </div>
       </div>
@@ -208,24 +204,20 @@ const ProjectDefiance = () => {
         <h3 className="df-card-title">Challenges</h3>
         <div className="df-card-text">
           <p>
-            The core challenge of this project stemmed from it being my first
-            team-based endeavor. In the past, I had primarily worked on
-            game-related projects independently, allowing me to work according to
-            my own flow and style.
+            The core challenge of this project was that it was my first
+            team-based endeavor. I'd mostly worked on games independently
+            before, at my own pace and in my own style.
           </p>
           <p>
-            However, transitioning to a team setting required me to focus
-            on communication and building team-based relationships, especially
-            given the dramatic increase in scope and challenge presented by a
-            project involving 23 team members from a range of different
-            disciplines.
+            Moving to a team setting meant focusing on communication and
+            building relationships, especially given the jump in scope with 23
+            team members across a range of disciplines.
           </p>
           <p>
-            In addition to improving communication, I had to adapt to
-            shared programming styles and best practices, which was not something
-            I typically considered in my solo projects. Embracing these changes
-            significantly benefited me in subsequent settings and future group
-            projects.
+            I also had to adapt to shared programming styles and best
+            practices — something I'd rarely had to think about in solo
+            projects. Embracing that shift paid off significantly in later
+            team settings.
           </p>
         </div>
       </div>
@@ -286,25 +278,23 @@ const ProjectDefiance = () => {
         <h3 className="df-card-title">Conclusion</h3>
         <div className="df-card-text">
           <p>
-            Completing this project stands out as one of my most significant
-            achievements in game development to date. As my first team-based
-            endeavor, it introduced a new dimension of collaboration, requiring me
-            to integrate my work with contributions from various departments to
-            produce a cohesive, high-quality game.
+            Completing this project is one of my most significant achievements
+            in game development to date. As my first team-based endeavor, it
+            pushed me to integrate my work with contributions from across
+            departments into one cohesive, high-quality game.
           </p>
           <p>
-            Despite the challenges, the learning curve and high project
-            expectations, I adapted quickly to the team environment. I became
-            proficient at meeting deadlines while maintaining the quality of my
-            work. A key lesson I learned was to treat my contributions as if they
-            were the final touches on the project. This approach ensured that
-            nothing was overlooked and that our collective efforts remained
-            organized and on track.
+            Despite the learning curve and high project expectations, I
+            adapted quickly to the team environment and got good at meeting
+            deadlines without sacrificing quality. A key lesson: treat every
+            contribution as if it were the final touch on the project. That
+            mindset kept nothing overlooked and kept our collective effort
+            organized.
           </p>
           <p>
-            Overall, this project served as an excellent introduction to
-            working with Unreal Blueprint and navigating team dynamics, providing
-            invaluable experience for my future endeavors in game development.
+            Overall, this project was an excellent introduction to Unreal
+            Blueprint and team dynamics alike, and it gave me experience I'll
+            carry into every future project.
           </p>
         </div>
       </div>

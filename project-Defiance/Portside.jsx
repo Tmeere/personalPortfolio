@@ -160,25 +160,25 @@ const ProjectDefiance = () => {
           <h3 className="pt-card-title">Overview</h3>
           <div className="pt-card-text">
             <p>
-              I created a King of the Hill map for TF2, now available on the Steam
-              Workshop. The development process took 8 weeks, during which I learned
-              to use the Hammer Editor from scratch.
+              I created a King of the Hill map for TF2, now live on the Steam
+              Workshop. It took 8 weeks, during which I learned the Hammer
+              Editor from scratch.
             </p>
             <p>Designed for 12v12 gameplay, the map underwent continuous refinement based on user feedback and testing.</p>
             <p>
-              During testing, I observed matches as an independent observer, allowing
-              me to identify player frustrations and refine the map design
+              During testing, I observed matches as an independent observer,
+              which let me spot player frustrations and refine the map design
               accordingly.
             </p>
             <p>
               This project taught me the core fundamentals of level design
-              and provided valuable insights into creating an enjoyable TF2 map, as
-              well as a wider understanding of multiplayer level design concepts.
+              and gave me valuable insight into what makes a TF2 map enjoyable,
+              along with a wider understanding of multiplayer level design.
             </p>
             <p>
-              Extra assets will need to be added to your TF2 files to see
-              the additional textures and models in-game. The download can be
-              found above.
+              You'll need to add the extra assets to your TF2 files to see the
+              additional textures and models in-game — the download is linked
+              above.
             </p>
           </div>
         </div>
@@ -196,30 +196,25 @@ const ProjectDefiance = () => {
         <h3 className="pt-card-title">Initial Stages</h3>
         <div className="pt-card-text">
           <p>
-            In the early stages of this project, I concentrated on researching map
-            design philosophies for team-based shooters, with a particular focus
-            on existing maps in games like Team Fortress 2 (TF2). Gaining an
-            understanding of these design principles was essential before creating
-            a new level, as it helped avoid the pitfalls of developing a subpar
-            map. My research involved analyzing the elements of maps in TF2,
-            Overwatch, and Valorant to gain a comprehensive understanding of map
-            theory. Additionally, I studied common gameplay aspects such as
-            character health and abilities to ensure a well-rounded design
-            approach.
+            In the early stages, I focused on researching map design
+            philosophies for team-based shooters, particularly existing TF2
+            maps. Understanding these principles first was essential — it's
+            what kept me from building a subpar map. I analyzed maps from TF2,
+            Overwatch, and Valorant for a broader sense of map theory, and
+            studied gameplay fundamentals like character health and abilities
+            to keep the design well-rounded.
           </p>
           <p>
-            Following this research, I progressed through various stages
-            of map design, starting with simple sketches. These early drafts
-            underwent multiple iterations, refining the design with each pass.
-            Once I had a clearer vision, I moved on to using the Hammer Editor to
-            develop the map further.
+            From there, I moved through several stages of map design,
+            starting with simple sketches that went through multiple
+            iterations. Once I had a clearer vision, I moved into the Hammer
+            Editor to develop the map further.
           </p>
           <p>
-            In this stage, it was essential to incorporate a lane
-            structure into the map, featuring three main pathways (short, medium,
-            and long) and distinct areas for different classes of characters.
-            Creating a map that accommodates every character type contributes
-            significantly to achieving a balanced gameplay experience.
+            At this stage, it was essential to build in a lane structure —
+            three main pathways (short, medium, and long) with distinct areas
+            for different character classes. A map that accommodates every
+            class goes a long way toward balanced gameplay.
           </p>
           <p>
             Once I had a rough level design, I created a clear, to-scale
@@ -244,13 +239,12 @@ const ProjectDefiance = () => {
           <h3 className="pt-card-title">Initial Development</h3>
           <div className="pt-card-text">
             <p>
-              Following initial game research and planning, I took my first steps
-              into learning the Hammer Editor and started on the initial blockout.
-              One of the early challenges I faced was grasping the scale of the
-              map versus the mockups I had made, which led me to readjust the
-              map's scale to better match the typical design of TF2 maps. During
-              this stage, it was important to break down work quickly, get
-              feedback, and iterate with other playtesters.
+              With research and planning done, I took my first steps into the
+              Hammer Editor and started the initial blockout. One early
+              challenge was scale — my mockups didn't quite match reality, so
+              I readjusted to better fit typical TF2 map proportions. At this
+              stage, breaking work into small chunks and iterating quickly
+              with other playtesters mattered most.
             </p>
           </div>
         </div>
@@ -265,13 +259,13 @@ const ProjectDefiance = () => {
           <h3 className="pt-card-title">Map Iterations</h3>
           <div className="pt-card-text">
             <p>
-              Later in the project, many small but impactful changes to the map
-              were shaped by player testing. When conducting this testing, it was
-              important to observe as an outside observer rather than play as a
-              participant, since the way a level designer plays differs drastically
-              from how an actual player would, which introduces bias. After every
-              test with new players, I collected feedback using Google Forms,
-              focusing on key points and areas that needed improvement.
+              Later in the project, small but impactful changes were shaped
+              almost entirely by player testing. I made a point of observing
+              as an outsider rather than playing myself, since a level
+              designer plays very differently from an actual player — playing
+              it myself would have introduced bias. After every test, I
+              collected feedback through Google Forms, focused on key pain
+              points.
             </p>
           </div>
         </div>
@@ -291,11 +285,10 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          The long exposed sightline made it hard for medium to short-range
-          characters to use this area without being shot from afar by long-range
-          characters. Adding a pillar provides cover, enabling safer approaches and
-          requiring snipers to play more aggressively if they want to use the long
-          channel, as it increases their risk.
+          The long, exposed sightline made this area unusable for medium- and
+          short-range characters without getting picked off from afar. Adding
+          a pillar gave them cover, forcing snipers to play more aggressively
+          — and accept more risk — if they wanted to hold the long channel.
         </p>
       </CompareCard>
 
@@ -309,10 +302,9 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          Backboards were added to the tower positions, enabling characters like
-          Demoman and Soldier to inflict damage on enemies in these spots. This
-          adjustment enhances game fairness without compromising the cover typically
-          used by players such as Engineer and Sniper.
+          Backboards at the tower positions let characters like Demoman and
+          Soldier hit enemies in these spots, improving fairness without
+          taking away the cover Engineer and Sniper rely on.
         </p>
       </CompareCard>
 
@@ -326,10 +318,9 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          To encourage more diverse combat in the lower sections of the map,
-          additional catwalks were added. This change increased the map's
-          verticality, enabling players to execute more dynamic plays and providing
-          characters like Medic and Engineer with more options for movement and
+          Additional catwalks in the lower sections encourage more diverse
+          combat. The extra verticality opens up more dynamic plays, giving
+          characters like Medic and Engineer more options for movement and
           setup.
         </p>
       </CompareCard>
@@ -344,11 +335,10 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          Additionally, throughout development, it became clear that sniper
-          characters dominated the long, open sightlines extending from the spawn
-          areas, making it difficult for players to leave safely. To address this,
-          we added extra protection and cover, preventing external lanes of play
-          from interacting with that channel and improving overall balance.
+          It became clear during development that snipers dominated the long,
+          open sightlines out of spawn, making it hard for players to leave
+          safely. We added extra protection and cover to cut that channel off
+          from external lanes of play, improving overall balance.
         </p>
       </CompareCard>
 
@@ -366,10 +356,10 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          During development, I noticed that players were confused by certain
-          elements of the map, such as water hazards and the locations of exits and
-          resupply points near spawn areas. This feedback prompted me to add signage
-          throughout the map to improve clarity and guide players more effectively.
+          Playtesting showed players were confused by certain map elements —
+          water hazards, exits, resupply points near spawn. That feedback led
+          me to add signage throughout the map to improve clarity and guide
+          players more effectively.
         </p>
       </CompareCard>
 
@@ -383,11 +373,10 @@ const ProjectDefiance = () => {
         onZoom={setLightbox}
       >
         <p>
-          As my project moved out of the blockout phase, I focused on adding
-          textures and models to enhance the design and overall feel of the map.
-          This not only made the map more visually defined but also improved
-          player navigation by clearly indicating each team's side and where the
-          flow of enemies comes from.
+          As the project moved out of the blockout phase, I focused on
+          textures and models to sharpen the map's look and feel. Beyond
+          visual polish, this improved navigation by clearly indicating each
+          team's side and where the enemy flow comes from.
         </p>
       </CompareCard>
 
@@ -405,15 +394,16 @@ const ProjectDefiance = () => {
           <h3 className="pt-card-title">Conclusions</h3>
           <div className="pt-card-text">
             <p>
-              Overall, I am very pleased with the outcome of this project, achieving
-              the goals I set out to learn the Hammer Editor, publish a map to the
-              Steam Workshop, and understand multiplayer level design.
+              Overall, I'm very pleased with this project's outcome — I set
+              out to learn the Hammer Editor, publish a map to the Steam
+              Workshop, and understand multiplayer level design, and I
+              managed all three.
             </p>
             <p>
-              Reflecting on the experience, I realize that iteration and
-              extensive player testing are essential for developing a successful
-              level. Initially, I underestimated the impact of player feedback, but
-              it proved crucial in shaping the final result.
+              Looking back, iteration and extensive player testing turned out
+              to be essential to a successful level. I underestimated the
+              impact of player feedback at first, but it proved crucial in
+              shaping the final result.
             </p>
             <p>
               As I look ahead, I'm excited to be featured in the university

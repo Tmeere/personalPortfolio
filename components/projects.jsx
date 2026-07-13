@@ -46,28 +46,26 @@ const tagIcons = {
 
 const Projects = () => {
   const projects = [
-    // 1. Modern web dev & API
+    // 1. Modern web dev & API (ordered by technical depth)
     {
-      title: "Games Workshop Website",
+      title: "Mechanic Shop API",
       description: (
         <>
-          Replicated the <span className="blue-bold">Games Workshop</span>{" "}
-          website using <span className="blue-bold">HTML</span> and{" "}
-          <span className="blue-bold">Bootstrap</span>, focusing on core
-          components. Developed{" "}
-          <span className="blue-bold">responsive pages</span> (Home, Unique
-          Pages, Product Pages) optimized for all device sizes. Implemented{" "}
-          <span className="blue-bold">dynamic components</span> to enhance UI/UX
-          and improve user interaction.
+          Built a <span className="blue-bold">RESTful API</span> for a mechanic
+          shop management system using <span className="blue-bold">Flask</span>{" "}
+          and <span className="blue-bold">MySQL</span>, managing customers,
+          mechanics, service tickets, and parts inventory with authentication
+          for both customers and staff.
         </>
       ),
-      link: "https://warhammermocksite.netlify.app/",
-      github: "https://github.com/Tmeere/MakingFavouriteWebsite",
-      image: "./images/Site Files/GW Website.png", // Replace with the path to your saved image
+      link: "https://mechanicshopapi.onrender.com/api/docs/",
+      github:
+        "https://github.com/Tmeere/MechanicShopAPI?tab=readme-ov-file#mechanic-shop-management-system",
+      image: "./images/Site Files/Mechanic API.png",
       date: "2025",
-      tags: ["HTML", "Bootstrap", "Responsive Design"],
+      tags: ["React", "JavaScript", "API Integration"],
       category: "web",
-      subLabel: "Frontend",
+      subLabel: "Backend",
     },
     {
       title: "Ecommerce Website (Product API)",
@@ -89,24 +87,26 @@ const Projects = () => {
       subLabel: "Backend",
     },
     {
-      title: "Mechanic Shop API",
+      title: "Games Workshop Website",
       description: (
         <>
-          Built a <span className="blue-bold">RESTful API</span> for a mechanic
-          shop management system using <span className="blue-bold">Flask</span>{" "}
-          and <span className="blue-bold">MySQL</span>, managing customers,
-          mechanics, service tickets, and parts inventory with authentication
-          for both customers and staff.
+          Replicated the <span className="blue-bold">Games Workshop</span>{" "}
+          website using <span className="blue-bold">HTML</span> and{" "}
+          <span className="blue-bold">Bootstrap</span>, focusing on core
+          components. Developed{" "}
+          <span className="blue-bold">responsive pages</span> (Home, Unique
+          Pages, Product Pages) optimized for all device sizes. Implemented{" "}
+          <span className="blue-bold">dynamic components</span> to enhance UI/UX
+          and improve user interaction.
         </>
       ),
-      link: "https://mechanicshopapi.onrender.com/api/docs/",
-      github:
-        "https://github.com/Tmeere/MechanicShopAPI?tab=readme-ov-file#mechanic-shop-management-system",
-      image: "./images/Site Files/Mechanic API.png",
+      link: "https://warhammermocksite.netlify.app/",
+      github: "https://github.com/Tmeere/MakingFavouriteWebsite",
+      image: "./images/Site Files/GW Website.png", // Replace with the path to your saved image
       date: "2025",
-      tags: ["React", "JavaScript", "API Integration"],
+      tags: ["HTML", "Bootstrap", "Responsive Design"],
       category: "web",
-      subLabel: "Backend",
+      subLabel: "Frontend",
     },
 
     // 2. Game dev leadership & VR
@@ -131,11 +131,31 @@ const Projects = () => {
       featured: true,
     },
     {
+      title: "Midnight Taxi",
+      description: (
+        <>
+          <span className="blue-bold">Design Lead</span> responsible for the
+          conceptualization and development of{" "}
+          <span className="blue-bold">game mechanics</span> within a 23-person
+          team. Guided the overall{" "}
+          <span className="blue-bold">design direction</span> of the game and
+          oversaw and assisted{" "}
+          <span className="blue-bold">Junior Designers</span>.
+        </>
+      ),
+      link: "/taxi",
+      externalLink: "https://group-twenty8.itch.io/midnight-taxi",
+      image: "./images/Site Files/TechDesign.png",
+      date: "2024",
+      tags: ["Game Design", "Team Leadership", "Itch.io"],
+      category: "game",
+    },
+    {
       title: "Tank Busters",
       description: (
         <>
           Led development as <span className="blue-bold">Project Lead</span> on
-          a <span className="blue-bold">VR high-octane tank shooter</span>,
+          a <span className="blue-bold">high-octane tank shooter</span>,
           overseeing the entire development cycle, providing strategic
           direction, and steering the team toward a planned release on{" "}
           <span className="blue-bold">Steam</span>.
@@ -144,7 +164,7 @@ const Projects = () => {
       link: "/tank",
       image: "./images/Site Files/TankBuster.png",
       date: "2024",
-      tags: ["VR", "Project Management", "Steam Release"],
+      tags: ["Project Management", "Steam Release"],
       category: "game",
       featured: true,
     },
@@ -156,13 +176,13 @@ const Projects = () => {
           <span className="blue-bold">Kajaani University of Applied Sciences</span>{" "}
           (Finland), collaborating with an international team of students
           from European universities to build <span className="blue-bold">Tank Busters</span>{" "}
-          from concept to vertical slice, gaining hands-on experience in VR
+          from concept to vertical slice, gaining hands-on experience in game
           development and cross-cultural team collaboration.
         </>
       ),
       image: "",
       date: "2024",
-      tags: ["VR", "Project Management", "Team Collaboration"],
+      tags: ["Project Management", "Team Collaboration"],
       category: "game",
       archive: true,
     },
@@ -206,26 +226,6 @@ const Projects = () => {
       date: "2025",
       tags: ["Unity", "Turn-Based", "Mobile Game"],
       inDevelopment: true,
-      category: "game",
-    },
-    {
-      title: "Midnight Taxi",
-      description: (
-        <>
-          <span className="blue-bold">Design Lead</span> responsible for the
-          conceptualization and development of{" "}
-          <span className="blue-bold">game mechanics</span> within a 23-person
-          team. Guided the overall{" "}
-          <span className="blue-bold">design direction</span> of the game and
-          oversaw and assisted{" "}
-          <span className="blue-bold">Junior Designers</span>.
-        </>
-      ),
-      link: "/taxi",
-      externalLink: "https://group-twenty8.itch.io/midnight-taxi",
-      image: "./images/Site Files/TechDesign.png",
-      date: "2024",
-      tags: ["Game Design", "Team Leadership", "Itch.io"],
       category: "game",
     },
     {
@@ -362,8 +362,21 @@ const Projects = () => {
     }
   );
 
-  const gridProjects = projects.filter((project) => !project.archive);
-  const archiveProjects = projects
+  const filters = [
+    { key: 'all', label: 'All Projects' },
+    { key: 'web', label: 'Full-Stack' },
+    { key: 'game', label: 'Game Dev' },
+  ];
+  const [filter, setFilter] = useState('all');
+
+  const visibleProjects = projects.filter(
+    (project) => filter === 'all' || project.category === filter
+  );
+  const hasViewLink = (project) => Boolean(project.link && project.link.trim() !== '');
+  const gridProjects = visibleProjects
+    .filter((project) => !project.archive)
+    .sort((a, b) => Number(hasViewLink(b)) - Number(hasViewLink(a)));
+  const archiveProjects = visibleProjects
     .filter((project) => project.archive)
     .sort((a, b) => parseInt(b.date, 10) - parseInt(a.date, 10));
 
@@ -387,8 +400,9 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    updateThumb();
     const el = trackRef.current;
+    if (el) el.scrollLeft = 0;
+    updateThumb();
     if (!el) return undefined;
     el.addEventListener('scroll', updateThumb, { passive: true });
     window.addEventListener('resize', updateThumb);
@@ -396,7 +410,7 @@ const Projects = () => {
       el.removeEventListener('scroll', updateThumb);
       window.removeEventListener('resize', updateThumb);
     };
-  }, [gridProjects.length]);
+  }, [filter, gridProjects.length]);
 
   const scrollByAmount = (direction) => {
     const el = trackRef.current;
@@ -441,6 +455,21 @@ const Projects = () => {
     <section id="projects" className="projects section">
       <p className="kicker">// projects</p>
       <h2 className="projects-heading">Projects</h2>
+
+      <div className="projects-filter" role="group" aria-label="Filter projects by category">
+        {filters.map((f) => (
+          <button
+            key={f.key}
+            type="button"
+            className={`projects-filter-btn projects-filter-btn--${f.key}${filter === f.key ? ' is-active' : ''}`}
+            onClick={() => setFilter(f.key)}
+            aria-pressed={filter === f.key}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
       <div className="projects-carousel">
         <button
           type="button"

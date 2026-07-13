@@ -69,7 +69,7 @@ const conclusionText = [
 
   `Mid-week check-ins between the Tech and Design teams were also crucial. Since we only met once weekly in person, these extra sessions helped surface concerns early and kept us on track, preventing miscommunication or delays.`,
 
-  `Looking ahead, one area I want to improve is planning. As the saying goes, "Minutes of planning save hours of programming." Spending more time understanding design intentions upfront would reduce rework and ensure smoother integration. Additionally, I aim to keep refining my code to ensure it's readable and easy for both designers and other developers to understand and build upon.`,
+  `Looking ahead, one area I want to improve is planning. As the saying goes, "Minutes of planning save hours of programming." Spending more time understanding design intentions upfront would reduce rework and ensure smoother integration. I also aim to keep refining my code so it stays readable and easy for both designers and other developers to understand and build upon.`,
 ];
 
 const responsibility = [
@@ -171,29 +171,25 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Overview</h3>
           <div className="mt-card-text">
             <p>
-              In the shadowy rural town of Georgetown, players take on the role of a
-              newly minted taxi driver tasked with navigating a series of intriguing
-              challenges. The primary objective is to transport passengers from one
-              location to another, all while engaging in choice-based dialogue.
-              Making the right decisions is crucial, as keeping passengers satisfied
-              is key to avoiding dire consequences—especially with a dangerous
-              killer on the loose.
+              In the shadowy rural town of Georgetown, players step into the role
+              of a newly minted taxi driver navigating a series of intriguing
+              challenges. The core objective: transport passengers from A to B
+              while engaging in choice-based dialogue. Choosing wisely matters —
+              keeping passengers satisfied is what keeps you safe from the killer
+              on the loose.
             </p>
             <p>
-              For this project, I was part of a 23-person team with the collective
-              goal of making a narrative, choice-based driving game. During this
-              8-week project, I was the Tech Lead for the programming department.
-              My core responsibilities as lead were to ensure the programming team
-              met their goals per Jira deadlines, provide instruction, support,
-              and mentoring to junior programmers, and organize weekly standup
-              meetings with seniors from other departments to keep the team
-              coherent.
+              I was part of a 23-person team building a narrative, choice-based
+              driving game over 8 weeks. As Tech Lead for the programming
+              department, my core responsibilities were keeping the team on
+              track against Jira deadlines, mentoring junior programmers, and
+              running weekly standups with seniors from other departments to
+              keep everyone aligned.
             </p>
             <p>
-              Outside of project-management tasks, I was also primarily
-              responsible for core gameplay systems such as the taxi car
-              mechanics, as well as building the designer-friendly events manager
-              system.
+              Outside of project management, I was also primarily responsible
+              for core gameplay systems like the taxi car mechanics, plus
+              building the designer-friendly events manager system.
             </p>
           </div>
         </div>
@@ -220,18 +216,16 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Car Framework</h3>
           <div className="mt-card-text">
             <p>
-              For the project, my initial tasks involved creating the framework
-              for the car in the game. This included implementing the basic
-              functions a car would need, as well as additional components
-              specific to the game mechanics. I began with a basic Car Template
-              that could accelerate and decelerate, and a first-person cam that
-              could look around to the left or right with limited range, ensuring
-              the player primarily faces forward.
+              My initial task was building the car framework — the basic
+              functions a car needs, plus components specific to the game's
+              mechanics. I started with a basic car template that could
+              accelerate and decelerate, and a first-person camera with limited
+              left/right range so the player stays facing mostly forward.
             </p>
             <p>
-              During this initial proof of concept, I added a simple debug key to
-              toggle the headlights with the dialogue mechanic selector to
-              showcase the car's behavior.
+              For this proof of concept, I added a debug key to toggle the
+              headlights alongside the dialogue mechanic selector, to showcase
+              the car's behavior.
             </p>
           </div>
         </div>
@@ -251,12 +245,10 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Camera &amp; Steering Wheel</h3>
           <div className="mt-card-text">
             <p>
-              As the car was developed and iterated on in the early stages of the
-              project, new components and changes were introduced to enhance
-              player control and improve the car's functionality. I focused on
-              making a cam that moves in a 180-degree cone, while keeping the
-              Y-axis movement locked. Additionally, features like a steering wheel
-              were added that are animated and work as intended.
+              As the car was iterated on in the early stages, I introduced new
+              components to improve player control. I built a camera that moves
+              within a 180-degree cone while keeping the Y-axis locked, and
+              added an animated, fully-functional steering wheel.
             </p>
             <p>
               The steering wheel movement is constrained by comparing the current
@@ -292,9 +284,8 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Interactive Car Components</h3>
           <div className="mt-card-text">
             <p>
-              As the project expanded and new gameplay mechanics were implemented,
-              I focused on adding core car components to enhance player
-              interaction beyond basic driving.
+              As the project expanded, I added core car components to give
+              players more to interact with beyond basic driving.
             </p>
             <ul>
               <li>Window Locks</li>
@@ -303,9 +294,8 @@ const ProjectDefiance = () => {
               <li>Controllable Radio</li>
             </ul>
             <p>
-              These additions helped quickly broaden the overall game feel by
-              introducing interactive features that weren't strictly tied to
-              driving mechanics.
+              These additions quickly broadened the game's feel with
+              interactive features that went beyond pure driving.
             </p>
           </div>
         </div>
@@ -361,15 +351,15 @@ const ProjectDefiance = () => {
           />
           <div className="mt-card-text">
             <p>
-              As the taxi development progressed, maintaining a clean workflow became
-              essential due to the project's collaborative nature and the need for
-              multiple team members to access the taxi.
+              As taxi development progressed, a clean workflow became essential
+              — the project was collaborative, and multiple team members needed
+              access to the same taxi blueprint.
             </p>
             <p>
-              To achieve this, we broke the project down into Child Actor components
-              and collapsed nodes when the taxi required Blueprint access. By treating
-              each component as a child actor, we reduced the risk of merge errors
-              and communication between Blueprints became easier.
+              We broke the project into Child Actor components and collapsed
+              nodes wherever the taxi needed Blueprint access. Treating each
+              component as its own child actor reduced merge conflicts and made
+              communication between Blueprints easier.
             </p>
             <p>
               The project was segmented into chunks and thoroughly commented and
@@ -377,9 +367,9 @@ const ProjectDefiance = () => {
               unfamiliar with Blueprint.
             </p>
             <p>
-              Additionally, I organized all variables and components into categories
-              to streamline the code. This was encouraged for everyone working on the
-              taxi to ensure a clean and orderly workflow going forward.
+              I also organized all variables and components into categories to
+              streamline the code, and encouraged the same discipline from
+              everyone else working on the taxi.
             </p>
           </div>
           <img
@@ -444,15 +434,12 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Satisfaction Mechanic</h3>
           <div className="mt-card-text">
             <p>
-              In addition to handling the basic car mechanics, I developed the
-              satisfaction mechanic for the game. This mechanic directly impacted the
-              final score a player received. If a player made poor decisions or drove
-              badly, their satisfaction would decrease. Conversely, making smart
-              choices and driving skillfully would lead to a rising satisfaction
-              meter. Initially, the satisfaction mechanic was a straightforward system
-              where collisions with objects would affect the meter. However, it
-              evolved to integrate with nearly every interactive element in the game,
-              including:
+              Alongside the car mechanics, I developed the satisfaction
+              mechanic, which directly impacted a player's final score. Poor
+              decisions or bad driving dropped it; smart choices and skillful
+              driving raised it. It started as a simple system tied to object
+              collisions, but evolved to integrate with nearly every
+              interactive element in the game, including:
             </p>
             <ul>
               <li>Decision Making</li>
@@ -536,19 +523,16 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Passenger Mirror</h3>
           <div className="mt-card-text">
             <p>
-              Initially during the project, we wanted to reflect seeing the
-              passenger and their reactions to your actions in the game via a
-              mirror. We initially did some 3D facial scans that were optimized down
-              to respectable tri counts and would implement live passengers in the
-              back using a rendered camera projecting onto a plane. While this
-              worked, we quickly learned it was demanding and consumed far too many
-              frames.
+              Early in the project, we wanted a mirror that reflected the
+              passenger's reactions to the player's choices. We started with 3D
+              facial scans optimized down to a reasonable tri count, rendering
+              a live passenger onto a plane via a secondary camera. It worked,
+              but we quickly learned it was far too demanding on frame rate.
             </p>
             <p>
-              For this reason, I researched the issue and
-              worked with the concept art team to change the system from a
-              3D-render-based mirror to a sprite-based UI animation mirror, built as
-              a spatial widget.
+              So I worked with the concept art team to switch from a
+              3D-render-based mirror to a sprite-based UI animation mirror,
+              built as a spatial widget.
             </p>
             <p>
               Each passenger has three facial
@@ -613,11 +597,10 @@ const ProjectDefiance = () => {
         </div>
         <div className="mt-card-text" style={{ marginTop: "var(--space-4)" }}>
           <p>
-            To enhance the dynamic feel of the mirror and create a more immersive
-            experience, I designed it with three components: a foreground, a
-            background, and animated passenger images. The passenger and front seat
-            animations were specifically included to make the mirror feel less
-            static and more engaging.
+            To make the mirror feel more dynamic, I designed it with three
+            layers: a foreground, a background, and animated passenger
+            images. The passenger and front-seat animations specifically kept
+            the mirror from feeling static.
           </p>
         </div>
       </div>
@@ -651,9 +634,9 @@ const ProjectDefiance = () => {
         </div>
         <div className="mt-card-text" style={{ marginTop: "var(--space-4)" }}>
           <p>
-            Implementing this approach significantly improved the project's
-            performance, boosting the frame rate by approximately 15 frames. This
-            upgrade contributed greatly to the overall game experience.
+            This approach significantly improved performance, boosting the
+            frame rate by roughly 15 frames — a big contributor to the overall
+            game feel.
           </p>
         </div>
       </div>
@@ -676,10 +659,9 @@ const ProjectDefiance = () => {
           <h3 className="mt-card-title">Event System Manager</h3>
           <div className="mt-card-text">
             <p>
-              In addition to handling the driving mechanics for the game, I was
-              responsible for developing the events manager system, which controls all
-              external gameplay factors. This system encompasses a variety of
-              environmental and interactive elements, including:
+              Alongside the driving mechanics, I was responsible for the events
+              manager system, which controls all external gameplay factors — a
+              range of environmental and interactive elements, including:
             </p>
             <ul>
               <li>Police Car Event</li>
@@ -692,13 +674,12 @@ const ProjectDefiance = () => {
               <li>NPC Shooter Event</li>
             </ul>
             <p>
-              Initially, I implemented each event as a separate actor or component.
-              However, based on feedback from the design team, it became clear that
-              they needed a more unified approach. Designers required better control
-              over all components collectively, rather than managing numerous
-              individual pieces. To address this, I developed a shared event manager
-              system designed to be more designer-friendly and streamline event
-              management.
+              I initially implemented each event as a separate actor or
+              component, but design-team feedback made it clear they needed a
+              more unified approach — better control over everything
+              collectively, rather than juggling numerous individual pieces.
+              So I built a shared, designer-friendly event manager system to
+              streamline the whole workflow.
             </p>
           </div>
         </div>
@@ -732,10 +713,10 @@ const ProjectDefiance = () => {
         </div>
         <div className="mt-card-text" style={{ marginTop: "var(--space-4)" }}>
           <p>
-            The manager system is a two-part component consisting of a trigger and a
-            manager. The manager contains construction script code that tells the
-            designer whether the system is set up correctly via red and green sprite
-            indicators, helping streamline the system and make it easier to
+            The manager system has two parts: a trigger and a manager. The
+            manager's construction script tells the designer whether
+            everything is set up correctly via red and green sprite indicators
+            — a small touch that made the whole system much easier to
             understand.
           </p>
         </div>
@@ -815,13 +796,12 @@ const ProjectDefiance = () => {
               <li>Credits Page</li>
             </ul>
             <p>
-              These elements were added towards the end of the project. The Asset Pack
-              Level Viewer and Concept Art Page were introduced to allow all artists
-              to view their work in the engine, regardless of whether it was directly
-              used in the game. To streamline this process, I developed a system using
-              data tables for easy content management. Artists could simply name their
-              piece, input their name, and upload an image of their artwork. This
-              approach aimed to make the Concept Art Page user-friendly and efficient.
+              These were added towards the end of the project. The Asset Pack
+              Level Viewer and Concept Art Page let every artist view their
+              work in-engine, whether or not it made it into the game. I built
+              this around data tables for easy content management — artists
+              just named their piece, added their name, and uploaded an image,
+              keeping the whole page simple and efficient.
             </p>
           </div>
         </div>
@@ -832,18 +812,14 @@ const ProjectDefiance = () => {
         <h3 className="mt-card-title">Menu Polish</h3>
         <div className="mt-card-text">
           <p>
-            After fleshing out the main menu level, I focused on enhancing its
-            visual flair to better reflect the game's Midnight Taxi theme. This
-            involved integrating a variety of assets and themed UI elements to
-            align with the overall style and atmosphere of the game. I
-            collaborated closely with the art team to obtain the necessary artwork
-            and incorporated these pieces into the main menu, further refining its
-            appearance.
+            After fleshing out the main menu level, I focused on its visual
+            flair, integrating themed assets and UI elements that matched the
+            game's atmosphere. I worked closely with the art team to source
+            the artwork and weave it into the menu.
           </p>
           <p>
-            These visual improvements significantly enhanced the game's initial
-            presentation, making it feel more immersive and polished right from
-            the startup.
+            These visual touches made a real difference to the game's first
+            impression, feeling immersive and polished right from startup.
           </p>
         </div>
       </div>

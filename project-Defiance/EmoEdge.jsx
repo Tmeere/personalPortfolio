@@ -200,15 +200,15 @@ const ProjectDefiance = () => {
 
       <StageVideo stage="Stage 01" title="Overview" videoUrl="https://www.youtube.com/embed/idcMbMSL6Rk?autoplay=1&loop=1&playlist=idcMbMSL6Rk&mute=1">
         <p>
-          In this adrenaline-pumping shooter, you'll navigate through diverse
-          rooms and environments, engaging enemies that come at you
-          relentlessly. Match your actions with the unique abilities of each
-          environment to defeat these foes before the timer runs out.
+          In this adrenaline-pumping shooter, you'll navigate diverse rooms
+          and environments, engaging enemies that come at you relentlessly.
+          Match your abilities to each environment to take these foes down
+          before the timer runs out.
         </p>
         <p>
-          As I embarked on this project, my primary goal was to create an
-          engaging game while deepening my understanding of the Unreal Engine. I
-          aimed to achieve several key learning outcomes:
+          My primary goal for this project was to create an engaging game
+          while deepening my understanding of Unreal Engine, with a few key
+          learning outcomes in mind:
         </p>
         <ul>
           <li>Develop expertise as a Gameplay/Technical Designer</li>
@@ -229,7 +229,7 @@ const ProjectDefiance = () => {
           title="Click to expand"
         />
         <div className="ee-card-text" style={{ marginTop: "var(--space-4)", textAlign: "center" }}>
-          <p>When starting this project, I initially made a simplistic game loop to understand what I was aiming for.</p>
+          <p>When starting this project, I built a simple game loop first, to understand what I was aiming for.</p>
         </div>
       </div>
 
@@ -240,20 +240,19 @@ const ProjectDefiance = () => {
         media1={{ src: "/images/Site Files/ProjPlan.png", alt: "Project plan and timeline sketch", tag: "Project Plan", contain: true }}
         media2={{ src: "/images/Site Files/Inspo.png", alt: "Inspiration reference for similar titles", tag: "Inspiration", contain: true }}
       >
-        <p>Alongside this, I researched similar titles for inspiration and planned out the project's timeline and scope.</p>
+        <p>Alongside this, I researched similar titles for inspiration and mapped out the project's timeline and scope.</p>
       </StageDual>
 
       <StageVideo stage="Stage 03" title="Initial Phases" videoUrl="https://www.youtube.com/embed/7oGpFN4gbcg?autoplay=1&loop=1&playlist=7oGpFN4gbcg&mute=1">
         <p>
-          In the early stages of the project, I focused on prototyping simple
-          line trace functions that would apply damage to the cube only if the
-          player was in the correct Enum State.
+          In the early stages, I focused on prototyping simple line-trace
+          functions that applied damage to the cube only when the player was
+          in the correct Enum State.
         </p>
         <p>Each Aspect featured a unique ability, governed by a mana meter that regenerated over time.</p>
         <p>
-          To differentiate each system, the fire modes varied, ranging
-          from automatic firing to charged single shots. These modes were all
-          managed through the Enum State.
+          Each system's fire mode varied — from automatic firing to charged
+          single shots — all managed through the Enum State.
         </p>
       </StageVideo>
 
@@ -314,39 +313,36 @@ const ProjectDefiance = () => {
           <li>Dodging</li>
         </ul>
         <p>
-          When building these systems, it was important not just to implement
-          each mechanic individually, but to ensure they all worked well
-          together from a design perspective.
+          Building these systems meant not just implementing each mechanic
+          individually, but making sure they all worked well together from a
+          design perspective.
         </p>
       </StageText>
 
       <StageMedia stage="Stage 09" title="Wall-Running System: Technical Breakdown" src="/images/Site Files/WallRun.png" alt="Player Ability Example">
         <p>The wall-running component is built using a three-part system for the player.</p>
         <p>
-          When the player jumps, a wall check is performed on either side. This
-          check determines if the player is adjacent to a yellow wall, indicating a
-          wall-running zone. If so, the player transitions to a new movement mode
-          called <b>flying</b>.
+          When the player jumps, a wall check runs on either side to see if
+          they're adjacent to a yellow wall — a wall-running zone. If so, the
+          player transitions into a new movement mode called <b>flying</b>.
         </p>
         <p>
-          During this mode, the player is smoothly tilted towards the wall and
-          receives a constant force that propels them along it. The system
-          continuously checks to ensure the player remains attached to the wall. If
-          they move away or the wall-running ends, the player exits this movement
-          mode.
+          During this mode, the player tilts smoothly toward the wall and
+          receives a constant force propelling them along it. The system
+          continuously checks that they remain attached — if they move away
+          or the run ends, they exit the mode.
         </p>
       </StageMedia>
 
       <StageMedia stage="Stage 10" title="Wall-Running System: Gameplay Feel" src="/images/Site Files/Wall Running.gif" alt="Player Ability Example" flip>
         <p>
-          To add more feel to the wall-running system, players receive a boosted
-          jump when detaching from the wall. This enhanced jump not only adds to the
-          gameplay but also allows a smooth transition into other movement
-          mechanics, such as sliding.
+          To add more feel to wall running, players get a boosted jump when
+          detaching from the wall — one that also smooths the transition into
+          other movement mechanics like sliding.
         </p>
         <p>
-          This integration improves the game's feel throughout all levels and
-          encounters, making movement more dynamic and satisfying.
+          This makes movement feel more dynamic and satisfying across every
+          level and encounter.
         </p>
       </StageMedia>
 
@@ -364,17 +360,16 @@ const ProjectDefiance = () => {
 
       <StageMedia stage="Stage 12" title="Sliding: Technical Breakdown" src="/images/Site Files/WallRunDia.png" alt="Player Ability Example">
         <p>
-          In addition to the wall-running feature, a sliding mechanic was developed
-          for the game. Initially, I implemented an actor-checking method to
-          determine when the player could slide, similar to the approach used for
-          wall running. While this method was functional, it proved to be
-          performance-intensive and less versatile for various sloped surfaces.
+          Alongside wall running, I developed a sliding mechanic. I first used
+          an actor-checking method similar to wall running's approach, but it
+          proved performance-intensive and less versatile across sloped
+          surfaces.
         </p>
         <p>
-          To improve the system, I switched to a floor-checking method. When the
-          player crouches, the system checks if the floor's angle exceeds 17
-          degrees. This approach is more efficient and adaptable to any sloped
-          surface rather than relying on specific objects.
+          I switched to a floor-checking method instead: when the player
+          crouches, the system checks whether the floor's angle exceeds 17
+          degrees. It's more efficient and works on any sloped surface,
+          rather than relying on specific objects.
         </p>
         <p>
           To achieve a smooth sliding experience and integrate it seamlessly with
@@ -402,36 +397,32 @@ const ProjectDefiance = () => {
 
       <StageVideo stage="Stage 14" title="Sliding: Gameplay Feel" videoUrl="https://www.youtube.com/embed/NiXJ4G9YhXc?autoplay=1&loop=1&playlist=NiXJ4G9YhXc&mute=1">
         <p>
-          These adjustments collectively enhance the sliding feel, making it
-          both smooth and responsive while complementing the game's other
-          movement systems.
+          Together, these adjustments make sliding feel smooth and
+          responsive, complementing the game's other movement systems.
         </p>
         <p>
-          Alongside these changes to the sliding, small additional components
-          were added to the sliding mechanics like FOV changes, camera shakes,
-          and tilts to make the sliding feel more impactful.
+          I also layered on small touches like FOV changes, camera shakes,
+          and tilts to make the slide feel more impactful.
         </p>
       </StageVideo>
 
       <StageMedia stage="Stage 15" title="Grapple: Technical Breakdown" src="/images/Site Files/GrappleDia.jpg" alt="Player Ability Example" flip>
         <p>
-          Through player testing with the initial builds, players found they were
-          lacking connectivity between movement-based mechanics and wanted more
-          forms of high-octane movement. For this, I looked into making a grapple
-          mechanic, similar to Ghostrunner's system.
+          Player testing on the initial builds showed players wanted better
+          connectivity between movement mechanics and more high-octane
+          movement options. That led me to build a grapple mechanic, similar
+          to Ghostrunner's system.
         </p>
         <p>
-          This initially started with a simple lerp vector should a line trace hit
-          an actor with the tag "Grapple." However, additional components like
-          forces that launch the player after the lerp were added to give further
-          movement.
+          It started as a simple lerp vector triggered when a line trace hit
+          an actor tagged "Grapple." I later added launch forces after the
+          lerp for extra movement.
         </p>
         <p>
-          Alongside the initial simple lerp, a cable was added to the player and
-          bound to the hand. This would appear only when grappling and would bind to
-          the end position.
+          I also attached a cable to the player's hand that appears only
+          while grappling, bound to the grapple's end position.
         </p>
-        <p>Alongside the sliding mechanic, this helped to further connect the high-octane movement mechanics.</p>
+        <p>Combined with sliding, this helped tie the high-octane movement mechanics together.</p>
       </StageMedia>
 
       <StageVideoImg
@@ -444,11 +435,11 @@ const ProjectDefiance = () => {
 
       <StageVideo stage="Stage 17" title="Dashing: Gameplay Feel" videoUrl="https://www.youtube.com/embed/D0hg8HAqsAg?autoplay=1&loop=1&playlist=D0hg8HAqsAg&mute=1">
         <p>
-          One of the key player mechanics I developed is the dodging system.
-          Players have two dash charges that regenerate while they are idle. By
-          using their movement input, players can dash in the desired direction.
+          One of the key player mechanics I developed is the dodge system.
+          Players have two dash charges that regenerate while idle, and dash
+          in whichever direction they're moving.
         </p>
-        <p>To improve the feel of the dash, custom time dilation is applied to the player, and ground friction is adjusted to make the dodge feel smooth and impactful.</p>
+        <p>To sell the feel, I applied custom time dilation and adjusted ground friction, making the dodge feel smooth and impactful.</p>
       </StageVideo>
 
       <StageVideoImg
@@ -473,22 +464,19 @@ const ProjectDefiance = () => {
 
       <StageText stage="Stage 20" title="Melee Options">
         <p>
-          In addition to the movement-based mechanics, I also developed combat
-          features to complement the shooting system. These include kicking and
-          throwing mechanics, which provide players with alternative options
-          when they run out of ammo or are engaged with other gameplay elements.
-          This added depth ensures players have versatile strategies at their
-          disposal during combat.
+          Alongside the movement mechanics, I developed combat features to
+          complement the shooting system — kicking and throwing mechanics
+          that give players alternative options when they're out of ammo.
+          This added depth gives players more versatile strategies in combat.
         </p>
       </StageText>
 
       <StageText stage="Stage 21" title="AI Development">
         <p>
-          During the project, I had to learn AI prototyping, which was the
-          second key component I looked at initially. For initial testing, I
-          created a simple AI class and made a cube go to the player's position.
-          Although this was a good place to start, it required more, so I got
-          in contact with programmers to get some pointers on AI development.
+          AI prototyping was the second key component I tackled early on. For
+          initial testing, I built a simple AI class that moved a cube to the
+          player's position. It was a good starting point, but I needed more,
+          so I reached out to programmers for pointers on AI development.
         </p>
       </StageText>
 
@@ -507,12 +495,11 @@ const ProjectDefiance = () => {
           <li>Behavior Trees</li>
         </ul>
         <p>
-          Weighing the pros and cons of each, I decided to move forward with
-          finite state machines. This came down to needing to learn a range of
-          new topics under a constrained timeline, as well as wanting to
-          implement several AI states quickly within one class. After some trial
-          and error, I created four different AI states for the four enemy
-          archetypes in the game.
+          Weighing the pros and cons, I went with finite state machines — I
+          had a range of new topics to learn under a tight timeline, and
+          wanted to implement several AI states quickly within one class.
+          After some trial and error, I built four distinct AI states for the
+          game's four enemy archetypes.
         </p>
         <p>The state selector is dictated by an Enum variable for what behavior is going to play.</p>
       </StageMedia>
@@ -521,13 +508,11 @@ const ProjectDefiance = () => {
 
       <StageText stage="Stage 24" title="AI Improvement">
         <p>
-          When I first developed the AI, I encountered issues stemming from
-          nested timers conflicting with each other within the blueprint. This
-          resulted in incorrect states being triggered at the wrong times. To
-          resolve this, I revamped the structure by converting nearly all events
-          into tasks. Now, each task must be completed before the next function
-          can fire or be triggered again. This is mostly controlled by bools and
-          gates.
+          When I first built the AI, nested timers conflicted with each other
+          inside the blueprint, triggering incorrect states at the wrong
+          times. To fix this, I revamped the structure, converting nearly all
+          events into tasks — each one must complete before the next function
+          can fire, controlled mostly through bools and gates.
         </p>
       </StageText>
 
@@ -546,10 +531,9 @@ const ProjectDefiance = () => {
         media2={{ src: "/images/Site Files/Anim2.png", alt: "Player animation state machine", tag: "Player", contain: true }}
       >
         <p>
-          As the project scaled up in scope and new challenges arose, I wanted
-          to tackle understanding how to use animation state machines across all
-          the game's entities. With this in mind, I made a total of 3 different
-          animation behaviors in the game:
+          As the project scaled up, I wanted to properly understand animation
+          state machines across all the game's entities. I ended up building
+          three distinct animation behaviors:
         </p>
         <ul>
           <li>Enemy AI</li>
@@ -557,12 +541,12 @@ const ProjectDefiance = () => {
           <li>Lower Body Legs</li>
         </ul>
         <p>
-          One of the interesting challenges arrived from attempting both leg
-          animations and first person arm animations for the player. This had me
-          breaking them into two different components and animating their
-          behaviors separately rather than under one shared tree. For the legs,
-          the upper torso is hidden, only allowing for the player to be seen
-          from the waist down.
+          One interesting challenge came from handling both leg animations
+          and first-person arm animations for the player. I ended up
+          splitting them into two separate components animated
+          independently, rather than one shared tree — for the legs, the
+          upper torso is hidden so the player only sees themselves from the
+          waist down.
         </p>
       </StageDual>
 
@@ -572,15 +556,15 @@ const ProjectDefiance = () => {
 
       <StageText stage="Stage 26" title="Level Iteration">
         <p>
-          While it wasn't a primary goal, level design was paramount to
-          showcasing a high-octane shooter. Different maps were made over the
+          Level design wasn't a primary goal, but it was essential for
+          showcasing a high-octane shooter. Several maps were built over the
           project's development cycle.
         </p>
         <p>
-          Initially, these started as a testing ground for the player
-          mechanics. From here, full levels were built. These were user-tested
-          and iterated on, and in the final version, two levels were created to
-          showcase all the gameplay mechanics.
+          They started as testing grounds for the player mechanics, then
+          grew into full levels. These were user-tested and iterated on, and
+          the final version shipped with two levels showcasing all the
+          gameplay mechanics.
         </p>
       </StageText>
 
@@ -630,27 +614,25 @@ const ProjectDefiance = () => {
 
       <StageText stage="Stage 32" title="Conclusion">
         <p>
-          Overall, I'm very pleased with the final results of the project. My
-          primary goals were to deepen my understanding of Unreal Engine and to
-          enhance my skills with Blueprints. This was accomplished through the
-          development of a complex player character, dynamic AI, and various
-          mechanics. While the project was a significant success, there are
-          several areas where I see room for improvement.
+          Overall, I'm very pleased with the final results. My primary goals
+          were to deepen my understanding of Unreal Engine and sharpen my
+          Blueprint skills, and building a complex player character, dynamic
+          AI, and a range of mechanics delivered on that. It was a
+          significant success, though there are still areas I see room to
+          improve.
         </p>
         <p>
-          Moving forward, I plan to explore more advanced aspects of AI, such as
-          behavior trees and complex systems, as I found the challenge of
-          learning AI particularly rewarding. Additionally, I intend to focus
-          more on optimization. As the player character's abilities and
-          mechanics grew in complexity, performance issues arose. I will work on
-          breaking down components and optimizing mechanics like wall running,
-          which can become resource-intensive due to frequent use.
+          Moving forward, I plan to explore more advanced AI, like behavior
+          trees, since I found learning AI particularly rewarding. I also
+          want to focus more on optimization — as the player's abilities and
+          mechanics grew in complexity, performance issues crept in, and I'll
+          be breaking down components and optimizing resource-intensive
+          mechanics like wall running.
         </p>
         <p>
-          I'm proud to have achieved the objectives outlined in my initial
-          MoSCoW briefs. This project has successfully advanced my technical
-          skills in Unreal Engine and provided valuable insights for future
-          endeavors.
+          I'm proud to have hit the objectives outlined in my initial MoSCoW
+          briefs. This project advanced my technical skills in Unreal Engine
+          and gave me insights I'll carry into future projects.
         </p>
       </StageText>
 

@@ -4,7 +4,53 @@
 
 .projects-heading {
   font-size: 1.6rem;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+/* ---------------- Category filter toggle ---------------- */
+
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.projects-filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--fg-dim);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.projects-filter-btn:hover {
+  color: var(--fg);
+  border-color: var(--fg-dim);
+  transform: translateY(-1px);
+}
+
+.projects-filter-btn--all.is-active {
+  color: var(--fg);
+  background: var(--panel-raised);
+  border-color: var(--fg-dim);
+}
+
+.projects-filter-btn--web.is-active {
+  color: var(--wire);
+  background: color-mix(in srgb, var(--wire) 14%, transparent);
+  border-color: var(--wire);
+}
+
+.projects-filter-btn--game.is-active {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border-color: var(--accent);
 }
 
 /* ---------------- Category pin (shared by cards + archive rows) ---------------- */
